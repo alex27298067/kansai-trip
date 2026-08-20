@@ -870,12 +870,43 @@ input,textarea,select{font:inherit;color:inherit}
 .tilebadge{position:absolute;left:9px;bottom:9px;z-index:500;background:rgba(255,255,255,.9);
   border-radius:8px;padding:3px 8px;font-size:9.5px;color:var(--muted);font-weight:700;
   box-shadow:var(--shL);display:none}
+.gmhero{background:linear-gradient(135deg,#EAF1FD 0%,#F7FAFF 100%);border:1px solid #D5E3FA;
+  border-radius:16px;padding:15px 16px;margin-bottom:12px;box-shadow:var(--sh)}
+.gmhero .eyebrow{font-size:10px;font-weight:800;letter-spacing:1.2px;color:#1A5FC4}
+.gmhero h3{font-size:17px;line-height:1.45;margin-top:5px;letter-spacing:.2px}
+.gmhero p{font-size:11.5px;color:var(--ink2);line-height:1.75;margin-top:5px}
+.gmroute{background:var(--card);border-radius:15px;padding:13px 14px;margin-bottom:10px;
+  box-shadow:var(--sh)}
+.gmroute .topline{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.gmroute .rt{font-size:13.5px;font-weight:800;line-height:1.45}
+.gmroute .rs{font-size:10.5px;color:var(--muted);line-height:1.55;margin-top:3px}
+.gmroute .openroute{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;
+  margin-top:10px;padding:10px 12px;border-radius:11px;background:#1A73E8;color:#fff;
+  font-size:12.5px;font-weight:800}
+.gmroute .openroute svg{width:16px;height:16px}
+.gmstops{background:var(--card);border-radius:15px;padding:3px 13px;margin-top:12px;box-shadow:var(--sh)}
+.gmstop{display:flex;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line2)}
+.gmstop:last-child{border-bottom:none}
+.gmstop .num{width:26px;height:26px;flex:0 0 26px;border-radius:50%;display:flex;
+  align-items:center;justify-content:center;background:var(--day);color:#fff;font-size:10.5px;font-weight:800}
+.gmstop .mid{min-width:0;flex:1}
+.gmstop .time{font-size:9.5px;color:var(--day);font-weight:800;letter-spacing:.3px}
+.gmstop .name{font-size:12.8px;font-weight:700;line-height:1.45;margin-top:1px}
+.gmstop .area{font-size:10px;color:var(--muted);margin-top:2px}
+.gmstop .acts{display:flex;gap:6px;flex:0 0 auto}
+.gmstop .acts a{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;
+  justify-content:center;background:#EAF1FD;color:#1A5FC4}
+.gmstop .acts a.navto{background:var(--sunk);color:var(--ink2);border:1px solid var(--line)}
+.gmstop .acts svg{width:16px;height:16px}
+.gmall{display:grid;grid-template-columns:1fr;gap:9px}
+.gmall .gmroute{margin:0}
 
 /* ================= segmented / route / rail ================= */
 .seg{display:flex;background:var(--sunk);border:1px solid var(--line);border-radius:13px;
   padding:3px;margin-bottom:13px}
 .seg button{flex:1;padding:9px;border-radius:10px;font-size:13px;font-weight:700;color:var(--muted)}
 .seg button.on{background:var(--card);color:var(--day);box-shadow:var(--shL)}
+.seg.sm2 button{padding:8px 4px;font-size:12px}
 .route{background:var(--card);border-radius:14px;padding:12px 13px;margin-bottom:12px;box-shadow:var(--sh)}
 .route .rh{font-size:10.5px;font-weight:800;letter-spacing:1.2px;color:var(--muted);margin-bottom:9px}
 .legs{display:flex;flex-wrap:wrap;align-items:center;gap:5px 3px}
@@ -887,18 +918,87 @@ input,textarea,select{font:inherit;color:inherit}
 .legs .ln .mn{font-size:9.5px;color:var(--muted)}
 .legs .ln .nt{font-size:9px;color:#B0762E;line-height:1.3;margin-top:2px}
 .legs .gap{flex-basis:100%;height:5px}
-#railmap{height:380px;height:clamp(300px,48dvh,470px);width:100%;background:#FBF9F5}
-.rlbl{font-size:10.5px;font-weight:700;color:#1B2025;white-space:nowrap;
-  text-shadow:0 0 3px #FBF9F5,0 0 3px #FBF9F5,0 0 3px #FBF9F5,0 0 3px #FBF9F5;pointer-events:none}
+#railmap{height:420px;height:clamp(340px,52dvh,510px);width:100%;background:transparent}
+.railhead{position:relative;overflow:hidden;border-radius:17px;margin-bottom:12px;padding:17px 18px;
+  color:#fff;background:linear-gradient(135deg,#172B47 0%,#224B72 62%,#2E6A88 100%);
+  box-shadow:0 14px 30px -20px rgba(14,38,66,.85)}
+.railhead:after{content:"";position:absolute;right:-38px;top:-58px;width:155px;height:155px;
+  border:25px solid rgba(255,255,255,.07);border-radius:50%}
+.railhead .rey{position:relative;z-index:1;font-size:9.5px;font-weight:800;letter-spacing:1.7px;
+  color:#A9D8EC}
+.railhead h3{position:relative;z-index:1;font-size:20px;line-height:1.35;margin-top:5px;letter-spacing:.3px}
+.railhead p{position:relative;z-index:1;font-size:11px;line-height:1.65;margin-top:5px;color:#D8E6F1}
+.railstats{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.railstat{display:inline-flex;align-items:center;gap:5px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.09);border-radius:99px;padding:5px 9px;font-size:9.5px;font-weight:700}
+.railstat b{font-size:11px;color:#fff}
+.railbox{border:1px solid #D9E0E5;background-color:#F6F7F5;
+  background-image:linear-gradient(rgba(31,68,96,.035) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(31,68,96,.035) 1px,transparent 1px),
+  radial-gradient(circle at 75% 18%,rgba(83,151,180,.10),transparent 36%),
+  radial-gradient(circle at 15% 78%,rgba(222,136,56,.08),transparent 34%);
+  background-size:22px 22px,22px 22px,100% 100%,100% 100%;
+  box-shadow:0 16px 34px -24px rgba(24,49,71,.8)}
+.rlbl{display:inline-flex;flex-direction:column;gap:1px;max-width:145px;padding:4px 7px;
+  border:1px solid rgba(40,55,66,.12);border-radius:7px;background:rgba(255,255,255,.94);
+  box-shadow:0 3px 9px rgba(28,42,52,.12);font-size:10px;color:#1B2B37;white-space:nowrap;
+  pointer-events:none;line-height:1.2}
+.rlbl b{font-size:10.5px;font-weight:800;letter-spacing:.05px}
+.rlbl small{font-size:8.5px;font-weight:650;color:#78838B;letter-spacing:.15px}
 .rlbl.lft{transform:translateX(-100%);margin-left:-22px}
-.rlbl.btm{transform:translate(-50%,15px);margin-left:-11px}
-.rlbl.big{font-size:12px;font-weight:800}
-.rlbl.star{color:#B24630}
+.rlbl.btm{transform:translate(-50%,17px);margin-left:-13px}
+.rlbl.dimmed{opacity:.3}
+.rline{padding:3px 7px;border-radius:99px;background:rgba(255,255,255,.95);border:1px solid currentColor;
+  box-shadow:0 2px 7px rgba(28,42,52,.10);font-size:9.5px;font-weight:800;white-space:nowrap;
+  pointer-events:none}
+.rstub{padding:4px 7px;border-radius:7px;background:rgba(255,255,255,.92);border:1px dashed #B4B9BC;
+  box-shadow:0 2px 7px rgba(28,42,52,.08);font-size:9px;font-weight:700;color:#5E6870;
+  white-space:nowrap;line-height:1.45;pointer-events:none}
+.rlbl.big b{font-size:11.5px}
+.rlbl.star{border-color:#D99062;background:#FFF8F1}
+.rlbl.star b{color:#A34C2F}
+.raillegend{display:flex;flex-wrap:wrap;gap:7px;margin:10px 1px 2px}
+.railli{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);
+  border-radius:99px;padding:5px 8px 5px 6px;font-size:9.5px;font-weight:700;color:var(--ink2)}
+.railli i{display:block;width:18px;height:5px;border-radius:99px}
+.railli.walk i{height:0;border-top:2px dashed #9EA5A8;border-radius:0}
 .legend{background:var(--card);border-radius:14px;padding:13px 14px;margin-top:12px;box-shadow:var(--sh)}
 .legend h4{font-size:12px;font-weight:800;letter-spacing:1px;color:var(--muted);margin-bottom:9px}
 .legend div.li{display:flex;align-items:center;gap:9px;padding:4px 0}
 .legend i{width:22px;height:5px;border-radius:3px;flex:0 0 22px}
 .legend span{font-size:11.5px;color:var(--ink2)}
+
+/* ================= same-day brief / itinerary audit ================= */
+.todaybrief{border-radius:17px;background:linear-gradient(150deg,#FFF 0%,#F7FAFC 100%);
+  border:1px solid #DCE4E9;padding:14px 15px;margin:0 0 12px;box-shadow:var(--sh)}
+.briefhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+.briefhead .ey{font-size:9.5px;font-weight:800;letter-spacing:1.25px;color:var(--day)}
+.briefhead h3{font-size:16px;line-height:1.4;margin-top:2px}
+.briefdate{flex:0 0 auto;background:var(--dayT);color:var(--day);border-radius:9px;padding:6px 8px;
+  font-size:10px;font-weight:800}
+.briefgrid{display:grid;grid-template-columns:1fr;gap:8px}
+.briefsec{border:1px solid var(--line2);border-radius:12px;background:rgba(255,255,255,.74);padding:10px 11px}
+.briefsec h4{font-size:10px;letter-spacing:.8px;color:var(--muted);margin-bottom:7px}
+.briefline{display:grid;grid-template-columns:50px minmax(0,1fr);gap:8px;padding:4px 0;
+  border-bottom:1px dashed var(--line2);font-size:10.8px;line-height:1.55;color:var(--ink2)}
+.briefline:last-child{border:none;padding-bottom:0}
+.briefline b{color:var(--day);font-size:10px}
+.briefalerts{margin-top:8px;border-radius:12px;background:#FFF7EA;border:1px solid #F2DFC2;padding:9px 11px}
+.briefalert{position:relative;padding-left:14px;font-size:10.8px;color:#6D512E;line-height:1.6;margin:2px 0}
+.briefalert:before{content:"!";position:absolute;left:0;top:1px;font-size:9px;font-weight:900}
+.auditcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:13px 14px;
+  margin-bottom:13px;box-shadow:var(--shL)}
+.auditcard .ah{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
+.auditcard .ah h3{font-size:12px;letter-spacing:.6px}
+.auditcard .ah span{font-size:9px;color:var(--muted);font-weight:700}
+.auditrow{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:8px;align-items:start;
+  padding:8px 0;border-top:1px solid var(--line2);font-size:10.8px;line-height:1.55;color:var(--ink2)}
+.auditstate{border-radius:99px;padding:3px 6px;text-align:center;font-size:8.8px;font-weight:800;letter-spacing:.2px}
+.auditstate.ok{background:#EAF5EC;color:#327047}.auditstate.warn{background:#FFF0DE;color:#9A5B1C}
+.auditstate.check{background:#F3EDF9;color:#73508E}
+.auditrow a{font-size:9.5px;color:#1A5FC4;font-weight:700;white-space:nowrap}
+.plmeta{font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px}
+.plmeta b{color:var(--day)}
 
 /* ================= places / nearby ================= */
 .search{position:relative;margin-bottom:12px}
@@ -1007,12 +1107,18 @@ nav button.on:before{content:"";position:absolute;top:5px;width:26px;height:3px;
   <section class="view" id="v-map">
     <div class="wrap">
       <div class="seg" id="mapSeg">
-        <button data-mode="geo" class="on">實景地圖</button>
+        <button data-mode="google" class="on">Google Maps</button>
+        <button data-mode="geo">概覽圖</button>
         <button data-mode="rail">路網圖</button>
       </div>
 
-      <div id="modeGeo">
-        <div class="chipbar inline" id="mapChips"></div>
+      <div class="chipbar inline" id="mapChips"></div>
+
+      <div id="modeGoogle">
+        <div id="gmRouteBody"></div>
+      </div>
+
+      <div id="modeGeo" style="display:none">
         <div class="mapbox"><div id="map"></div><div class="tilebadge" id="tileBadge"></div></div>
         <div class="btns">
           <button class="btn" id="locBtn">
@@ -1029,17 +1135,19 @@ nav button.on:before{content:"";position:absolute;top:5px;width:26px;height:3px;
       </div>
 
       <div id="modeRail" style="display:none">
-        <div class="mapbox"><div id="railmap"></div></div>
-        <div class="btns">
-          <button class="btn" id="railFit">全圖</button>
-          <button class="btn" id="railOsaka">大阪市區</button>
-          <button class="btn" id="railKyoto">京都</button>
+        <div class="seg sm2" id="railSeg">
+          <button data-lay="osaka" class="on">大阪市中心</button>
+          <button data-lay="kansai">關西廣域</button>
+          <button data-lay="kyoto">京都市區</button>
         </div>
-        <p class="mnote">可雙指縮放與拖曳。點站名看那一站在行程裡的用途。★ 為兩處住宿。<br>
-          示意圖，站距非實際比例。</p>
-        <div class="legend" id="railLegend"></div>
+        <div class="chipbar inline" id="railDayChips"></div>
+        <div class="railhead" id="railHead"></div>
+        <div class="mapbox railbox"><div id="railmap"></div></div>
+        <div class="raillegend" id="railLegend"></div>
+        <div class="btns"><button class="btn" id="railFit">回到預設大小</button>
+          <button class="btn" id="railWhole">縮到全圖</button></div>
+        <p class="mnote" id="railNote"></p>
       </div>
-    </div>
   </section>
 
   <section class="view" id="v-place">
@@ -1082,8 +1190,290 @@ const store=(()=>{let mem={},ok=false;
     ok(){return ok}}})();
 
 /* ===================== 資料 ===================== */
-const POI={"hotel_kyoto": {"n": "京都住宿（左京區・和國町）", "ja": "京都市左京区和国町407-6", "lat": 35.0112, "lng": 135.7758, "area": "左京區・岡崎", "p": 0, "pre": "area", "kind": "hotel", "memo": "〒606-8363　最近站：京阪「三条」步行約 6 分／地下鐵東西線「東山」約 7 分"}, "sanjo_st": {"n": "京阪三条・三条京阪站", "ja": "三条駅 京阪", "lat": 35.0093, "lng": 135.7727, "area": "左京區・岡崎", "p": 0, "pre": "exact", "kind": "hub"}, "kamogawa": {"n": "鴨川・三条大橋", "ja": "三条大橋", "lat": 35.009, "lng": 135.7712, "area": "左京區・岡崎", "p": 3, "pre": "exact"}, "nanzenji": {"n": "南禪寺", "ja": "南禅寺", "lat": 35.0114, "lng": 135.7943, "area": "左京區・岡崎", "p": 2, "pre": "exact", "url": "https://nanzenji.or.jp/"}, "eikando": {"n": "永觀堂 禪林寺", "ja": "永観堂 禅林寺", "lat": 35.0148, "lng": 135.7947, "area": "左京區・岡崎", "p": 2, "pre": "exact", "url": "https://www.eikando.or.jp/"}, "heianjingu": {"n": "平安神宮", "ja": "平安神宮", "lat": 35.016, "lng": 135.7823, "area": "左京區・岡崎", "p": 3, "pre": "exact", "url": "https://www.heianjingu.or.jp/"}, "kiyomizu": {"n": "清水寺", "ja": "清水寺", "lat": 34.9949, "lng": 135.785, "area": "東山・祇園", "p": 1, "pre": "exact", "url": "https://www.kiyomizudera.or.jp/"}, "ninenzaka": {"n": "二寧坂・產寧坂", "ja": "二年坂 産寧坂", "lat": 34.9974, "lng": 135.7807, "area": "東山・祇園", "p": 1, "pre": "exact"}, "yasaka": {"n": "八坂神社", "ja": "八坂神社", "lat": 35.0036, "lng": 135.7785, "area": "東山・祇園", "p": 1, "pre": "exact", "url": "https://www.yasaka-jinja.or.jp/"}, "maruyama": {"n": "圓山公園", "ja": "円山公園", "lat": 35.0038, "lng": 135.7809, "area": "東山・祇園", "p": 2, "pre": "exact"}, "hanamikoji": {"n": "花見小路", "ja": "花見小路通", "lat": 35.0016, "lng": 135.7754, "area": "東山・祇園", "p": 1, "pre": "exact"}, "shirakawa": {"n": "祇園白川・巽橋", "ja": "祇園白川 巽橋", "lat": 35.0052, "lng": 135.7744, "area": "東山・祇園", "p": 1, "pre": "exact"}, "gionduck": {"n": "Gion Duck Noodles", "ja": "Gion Duck Noodles 祇園町北側", "lat": 35.0043, "lng": 135.7757, "area": "東山・祇園", "p": 1, "pre": "area", "kind": "food"}, "kimono": {"n": "和服租借（五条坂一帶）", "ja": "着物レンタル 五条坂", "lat": 34.9968, "lng": 135.7807, "area": "東山・祇園", "p": 1, "pre": "area"}, "kenninji": {"n": "建仁寺", "ja": "建仁寺", "lat": 35.0, "lng": 135.7738, "area": "東山・祇園", "p": 3, "pre": "exact", "url": "https://www.kenninji.jp/"}, "fushimi": {"n": "伏見稻荷大社・千本鳥居", "ja": "伏見稲荷大社", "lat": 34.9671, "lng": 135.7727, "area": "伏見", "p": 1, "pre": "exact", "url": "http://inari.jp/"}, "inari_st": {"n": "JR 稻荷站", "ja": "稲荷駅", "lat": 34.9673, "lng": 135.7659, "area": "伏見", "p": 0, "pre": "exact", "kind": "hub"}, "tofukuji": {"n": "東福寺（通天橋）", "ja": "東福寺", "lat": 34.9761, "lng": 135.7742, "area": "伏見", "p": 2, "pre": "exact", "url": "https://tofukuji.jp/"}, "ricoland": {"n": "RICOLAND 京都店", "ja": "ライコランド京都店", "lat": 34.9503, "lng": 135.753, "area": "伏見", "p": 3, "pre": "area", "kind": "shop", "url": "https://www.ricoland.co.jp/shopinfo/kyoto/index.html"}, "kyotostation": {"n": "京都站", "ja": "京都駅", "lat": 34.9858, "lng": 135.7588, "area": "京都市區", "p": 0, "pre": "exact", "kind": "hub"}, "takagi": {"n": "高木批發超市 三条店", "ja": "タカギ 三条店", "lat": 35.0088, "lng": 135.77, "area": "京都市區", "p": 2, "pre": "area", "kind": "shop"}, "kawaramachi": {"n": "四條河原町", "ja": "四条河原町", "lat": 35.0037, "lng": 135.7681, "area": "京都市區", "p": 2, "pre": "exact"}, "hotel_osaka": {"n": "大阪住宿（惠美須西・新今宮）", "ja": "大阪市浪速区恵美須西3-14-13", "lat": 34.6497, "lng": 135.4992, "area": "新世界・新今宮", "p": 0, "pre": "area", "kind": "hotel", "memo": "〒556-0003　最近站：地下鐵「動物園前」步行約 3 分／JR・南海「新今宮」約 5 分"}, "doubutsuen_st": {"n": "動物園前站（御堂筋線・堺筋線）", "ja": "動物園前駅", "lat": 34.6494, "lng": 135.5015, "area": "新世界・新今宮", "p": 0, "pre": "exact", "kind": "hub"}, "shinimamiya_st": {"n": "新今宮站（JR・南海）", "ja": "新今宮駅", "lat": 34.6521, "lng": 135.5008, "area": "新世界・新今宮", "p": 0, "pre": "exact", "kind": "hub"}, "tsutenkaku": {"n": "通天閣", "ja": "通天閣", "lat": 34.6524, "lng": 135.5063, "area": "新世界・新今宮", "p": 1, "pre": "exact", "url": "https://www.tsutenkaku.co.jp/"}, "shinsekai": {"n": "新世界・串炸街", "ja": "新世界", "lat": 34.6516, "lng": 135.5052, "area": "新世界・新今宮", "p": 1, "pre": "exact", "kind": "food"}, "ebisucho_st": {"n": "惠美須町站（堺筋線）", "ja": "恵美須町駅", "lat": 34.6516, "lng": 135.5062, "area": "新世界・新今宮", "p": 0, "pre": "exact", "kind": "hub"}, "tennoji_st": {"n": "天王寺站・阿倍野", "ja": "天王寺駅", "lat": 34.6455, "lng": 135.5135, "area": "天王寺・阿倍野", "p": 0, "pre": "exact", "kind": "hub"}, "harukas": {"n": "阿倍野 HARUKAS 300 展望台", "ja": "あべのハルカス300 展望台", "lat": 34.6457, "lng": 135.5138, "area": "天王寺・阿倍野", "p": 1, "pre": "exact", "url": "https://www.abenoharukas-300.jp/observatory/"}, "tenshiba": {"n": "天王寺公園 てんしば", "ja": "天王寺公園 てんしば", "lat": 34.651, "lng": 135.51, "area": "天王寺・阿倍野", "p": 3, "pre": "exact"}, "shitennoji": {"n": "四天王寺", "ja": "四天王寺", "lat": 34.6543, "lng": 135.5165, "area": "天王寺・阿倍野", "p": 3, "pre": "exact", "url": "https://www.shitennoji.or.jp/"}, "dendentown": {"n": "日本橋でんでんタウン・オタロード", "ja": "日本橋でんでんタウン", "lat": 34.6592, "lng": 135.5045, "area": "日本橋・難波", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.nipponbashi.jp/"}, "kuromon": {"n": "黑門市場", "ja": "黒門市場", "lat": 34.6653, "lng": 135.5062, "area": "日本橋・難波", "p": 2, "pre": "exact", "url": "https://kuromon.com/"}, "namba_st": {"n": "難波站（御堂筋線・南海・近鐵）", "ja": "なんば駅", "lat": 34.6656, "lng": 135.5013, "area": "日本橋・難波", "p": 0, "pre": "exact", "kind": "hub"}, "dotonbori": {"n": "道頓堀・戎橋・固力果", "ja": "道頓堀 戎橋", "lat": 34.6687, "lng": 135.5012, "area": "日本橋・難波", "p": 1, "pre": "exact"}, "hozenji": {"n": "法善寺橫丁", "ja": "法善寺横丁", "lat": 34.6673, "lng": 135.5031, "area": "日本橋・難波", "p": 1, "pre": "exact"}, "shinsaibashi": {"n": "心齋橋筋商店街", "ja": "心斎橋筋商店街", "lat": 34.6725, "lng": 135.501, "area": "日本橋・難波", "p": 1, "pre": "exact", "kind": "shop"}, "parco": {"n": "心齋橋 PARCO（CHIIKAWA LAND）", "ja": "心斎橋パルコ", "lat": 34.6746, "lng": 135.5012, "area": "日本橋・難波", "p": 1, "pre": "exact", "kind": "shop", "url": "https://shinsaibashi.parco.jp/"}, "osakajo": {"n": "大阪城天守閣", "ja": "大阪城天守閣", "lat": 34.6873, "lng": 135.5259, "area": "大阪城", "p": 1, "pre": "exact", "url": "https://www.osakacastle.net/"}, "kaiyodo": {"n": "海洋堂 Figure Museum 大阪城", "ja": "海洋堂フィギュアミュージアム ミライザ大阪城", "lat": 34.6863, "lng": 135.5266, "area": "大阪城", "p": 1, "pre": "area"}, "morinomiya_st": {"n": "森ノ宮站（JR・中央線）", "ja": "森ノ宮駅", "lat": 34.6807, "lng": 135.5335, "area": "大阪城", "p": 0, "pre": "exact", "kind": "hub"}, "hepfive": {"n": "HEP FIVE（阪急ファイブビル）", "ja": "HEP FIVE 大阪市北区角田町5-15", "lat": 34.7043, "lng": 135.5006, "area": "梅田", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.hepfive.jp/"}, "shop9090": {"n": "9090（HEP FIVE 5F）", "ja": "9090 HEP FIVE 5階", "lat": 34.7043, "lng": 135.5006, "area": "梅田", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.hepfive.jp/shop_list/detail/247"}, "majichiikawa": {"n": "まじかるちいかわストア（HEP FIVE B1F）", "ja": "まじかるちいかわストア HEP FIVE 地下1階", "lat": 34.7043, "lng": 135.5006, "area": "梅田", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.hepfive.jp/shop_list/detail/315"}, "skybuilding": {"n": "梅田空中庭園展望台", "ja": "梅田スカイビル 空中庭園展望台", "lat": 34.7053, "lng": 135.4903, "area": "梅田", "p": 1, "pre": "exact", "url": "https://www.skybldg.co.jp/"}, "hankyu3": {"n": "阪急三番街", "ja": "阪急三番街", "lat": 34.7052, "lng": 135.4986, "area": "梅田", "p": 2, "pre": "exact", "kind": "shop", "url": "https://www.h-sanbangai.com/"}, "daimaru": {"n": "大丸梅田店", "ja": "大丸梅田店", "lat": 34.7018, "lng": 135.4966, "area": "梅田", "p": 2, "pre": "exact", "kind": "shop"}, "osakasta": {"n": "大阪站・梅田站", "ja": "大阪駅", "lat": 34.7025, "lng": 135.4959, "area": "梅田", "p": 0, "pre": "exact", "kind": "hub"}, "usj": {"n": "日本環球影城 USJ", "ja": "ユニバーサル・スタジオ・ジャパン", "lat": 34.6654, "lng": 135.4323, "area": "USJ", "p": 1, "pre": "exact", "url": "https://www.usj.co.jp/"}, "universalcity": {"n": "Universal City 站", "ja": "ユニバーサルシティ駅", "lat": 34.6673, "lng": 135.436, "area": "USJ", "p": 0, "pre": "exact", "kind": "hub"}, "nishikujo_st": {"n": "西九条站（轉 ゆめ咲線）", "ja": "西九条駅", "lat": 34.6823, "lng": 135.4646, "area": "USJ", "p": 0, "pre": "exact", "kind": "hub"}, "jrnara_st": {"n": "JR 奈良站", "ja": "奈良駅", "lat": 34.6829, "lng": 135.8189, "area": "奈良", "p": 0, "pre": "exact", "kind": "hub"}, "kasuga": {"n": "春日大社", "ja": "春日大社", "lat": 34.6815, "lng": 135.8484, "area": "奈良", "p": 1, "pre": "exact", "url": "https://www.kasugataisha.or.jp/"}, "narapark": {"n": "奈良公園（餵鹿）", "ja": "奈良公園", "lat": 34.6851, "lng": 135.843, "area": "奈良", "p": 1, "pre": "exact"}, "todaiji": {"n": "東大寺大佛殿", "ja": "東大寺 大仏殿", "lat": 34.689, "lng": 135.8398, "area": "奈良", "p": 1, "pre": "exact", "url": "https://www.todaiji.or.jp/"}, "wakakusa": {"n": "若草山", "ja": "若草山", "lat": 34.6866, "lng": 135.8514, "area": "奈良", "p": 1, "pre": "exact"}, "nakatanidou": {"n": "中谷堂（麻糬表演）", "ja": "中谷堂", "lat": 34.6836, "lng": 135.8272, "area": "奈良", "p": 1, "pre": "exact", "kind": "food", "url": "https://www.nakatanidou.jp/"}, "amanohashidate": {"n": "天橋立 View Land・智恩寺", "ja": "天橋立ビューランド", "lat": 35.5652, "lng": 135.1866, "area": "天橋立", "p": 1, "pre": "exact", "url": "https://www.viewland.jp/"}, "ine": {"n": "伊根舟屋", "ja": "伊根の舟屋", "lat": 35.6752, "lng": 135.2926, "area": "天橋立", "p": 1, "pre": "exact", "url": "https://www.ine-kankou.jp/"}, "kix": {"n": "關西國際機場 T1", "ja": "関西国際空港 第1ターミナル", "lat": 34.4342, "lng": 135.2328, "area": "機場", "p": 0, "pre": "exact", "kind": "hub", "url": "https://www.kansai-airport.or.jp/"}, "tpe": {"n": "桃園國際機場 T1", "ja": "桃園国際空港", "lat": 25.0797, "lng": 121.2342, "area": "機場", "p": 0, "pre": "exact", "kind": "hub", "noMap": 1}};
-const DAYS=[{"d": "2026-11-07", "w": "六", "th": "kyoto", "city": "京都", "t": "抵達關西 → 京都", "s": "落地日不排硬性景點，進左京區飯店後傍晚走祇園。", "stay": "京都・左京區（和國町）", "tips": ["11 月京都日落約 16:50，17:00 後就是夜景時段", "飯店在京阪「三条」旁，去祇園四条只要 1 站 3 分", "行李多時京都站直接搭計程車約 15 分，比拖行李轉兩次地下鐵省力"], "route": [{"f": "關西機場 T1", "t": "京都", "l": "JR HARUKA 特急", "c": "#0071BC", "m": "75-90", "n": "T1 2F 連絡橋 → JR Kansai Airport Station"}, {"f": "京都", "t": "烏丸御池", "l": "地下鐵 烏丸線", "c": "#0D9488", "m": "5"}, {"f": "烏丸御池", "t": "三条京阪", "l": "地下鐵 東西線", "c": "#B31E56", "m": "4", "n": "出站步行約 6 分到飯店"}], "it": [{"a": "08:00", "b": "09:00", "n": "報到、安檢、登機（SL396）", "o": "tpe", "k": "transit", "x": "國際線抓 2 小時"}, {"a": "09:00", "b": "12:20", "n": "泰國獅航 SL396 飛行中", "k": "transit", "x": "飛行 2 小時 20 分，12:20 落地"}, {"a": "12:20", "b": "13:40", "n": "入境、領行李、領取交通票券", "o": "kix", "x": "抓 60-80 分"}, {"a": "13:40", "b": "15:10", "n": "JR HARUKA → 京都站", "o": "kyotostation", "k": "transit", "x": "移動 75-90 分"}, {"a": "15:10", "b": "16:00", "n": "京都站 → 左京區飯店，Check-in", "o": "hotel_kyoto", "x": "烏丸線→烏丸御池→東西線→三条京阪 約 20 分；行李多建議計程車 15 分"}, {"a": "16:00", "b": "16:50", "n": "鴨川・三条大橋周邊散步", "o": "kamogawa", "p": 3, "x": "飯店步行 6 分，看夕陽"}, {"a": "17:00", "b": "18:30", "n": "京阪三条 → 祇園四条：祇園白川、巽橋、花見小路", "o": "shirakawa", "p": 1, "x": "京阪 1 站 3 分；燈籠亮起最美"}, {"a": "18:30", "b": "20:00", "n": "晚餐：Gion Duck Noodles 或祇園、河原町", "o": "gionduck", "p": 1, "k": "food", "x": "熱門店留 90 分"}]}, {"d": "2026-11-08", "w": "日", "th": "kyoto", "city": "京都", "t": "東山一日 ＋ 傍晚南禪寺", "s": "白天清水寺、坂道、和服；傍晚繞回飯店那側走南禪寺與岡崎。", "stay": "京都・左京區（和國町）", "tips": ["清水寺與和服拍照一定放白天，09:30 前入場最舒服", "南禪寺拝観 08:40-17:00（受付 16:40 截止），16:00 到剛好趕上最後一輪", "永觀堂秋季夜間拜觀 2025 年是 11/15 才開始，11/8 多半還沒開燈，出發前務必查官網", "南禪寺、岡崎就在飯店同側，走回去只要 15-20 分", "11 月京都市巴士極塞，東山區內以步行與京阪為主"], "route": [{"f": "三条", "t": "清水五条", "l": "京阪本線", "c": "#00913A", "m": "5", "n": "2 站，出站步行 12 分到五条坂"}, {"f": "清水五条", "t": "三条", "l": "京阪本線", "c": "#00913A", "m": "5", "n": "傍晚回程"}, {"f": "三条京阪", "t": "蹴上", "l": "地下鐵 東西線", "c": "#B31E56", "m": "4", "n": "1 站，步行 10 分到南禪寺"}], "it": [{"a": "08:00", "b": "08:45", "n": "早餐，京阪三条 → 清水五条，前往和服店", "o": "kimono", "k": "transit", "x": "京阪 2 站"}, {"a": "08:45", "b": "09:30", "n": "和服租借、換裝", "o": "kimono", "x": "多數店 09:00 開始營業"}, {"a": "09:30", "b": "11:00", "n": "清水寺參拜、奧之院、子安塔", "o": "kiyomizu", "p": 1, "x": "11 月人潮大，越早越好"}, {"a": "11:00", "b": "12:15", "n": "二寧坂、產寧坂、清水坂小店街", "o": "ninenzaka", "p": 1, "x": "同區順路，一路往下走"}, {"a": "12:15", "b": "13:15", "n": "午餐 / 咖啡 / 拍照緩衝", "k": "food", "x": "避免穿和服走太久"}, {"a": "13:15", "b": "14:00", "n": "八坂神社、圓山公園（紅葉）", "o": "yasaka", "p": 1, "x": "兩個景點相鄰"}, {"a": "14:00", "b": "14:45", "n": "花見小路、祇園白川拍照", "o": "hanamikoji", "p": 1, "x": "下午光線最好"}, {"a": "14:45", "b": "15:20", "n": "歸還和服", "o": "kimono", "x": "避免逾時加價"}, {"a": "15:20", "b": "16:00", "n": "京阪回三条 →（東西線 1 站）蹴上 → 步行南禪寺", "o": "nanzenji", "k": "transit", "x": "約 40 分含步行"}, {"a": "16:00", "b": "17:00", "n": "南禪寺：水路閣、三門、方丈庭園", "o": "nanzenji", "p": 2, "x": "受付 16:40 截止，要趕最後一輪"}, {"a": "17:00", "b": "18:15", "n": "永觀堂前、岡崎一帶散步，走回飯店", "o": "eikando", "p": 3, "x": "夜間拜觀多半 11/15 才開始；沒開就只走外圍"}, {"a": "18:30", "b": "20:00", "n": "晚餐：三条／河原町；高木批發超市補貨", "o": "takagi", "p": 2, "k": "shop", "x": "飯店步行圈"}]}, {"d": "2026-11-09", "w": "一", "th": "nara", "city": "京都 → 大阪", "t": "伏見稻荷 → 移動大阪", "s": "早上伏見稻荷，東福寺視體力加，中午後轉大阪住新今宮。", "stay": "大阪・惠美須西（新今宮）", "tips": ["行李先寄京都站置物櫃，稻荷與東福寺都在 JR 奈良線上，回程順路取", "東福寺已降為 P2，時間不夠或人太多可以直接跳過，提早進大阪", "東福寺 11/1-11/13 拜觀 09:00-16:00（閉門 16:30）", "新今宮站是本趟交通中樞：往奈良、USJ、關西機場都從這裡直達", "RICOLAND 已降為 P3、本次未排入；真要去可與東福寺二選一（京阪竹田一帶）"], "route": [{"f": "三条京阪", "t": "京都", "l": "東西線 → 烏丸線（烏丸御池轉）", "c": "#0D9488", "m": "18"}, {"f": "京都", "t": "稻荷", "l": "JR 奈良線", "c": "#6FA524", "m": "5"}, {"f": "稻荷", "t": "東福寺", "l": "JR 奈良線", "c": "#6FA524", "m": "3", "n": "P2，可跳過"}, {"f": "東福寺", "t": "京都", "l": "JR 奈良線", "c": "#6FA524", "m": "2", "n": "取行李"}, {"f": "京都", "t": "大阪", "l": "JR 京都線 新快速", "c": "#0071BC", "m": "29"}, {"f": "大阪", "t": "新今宮", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "16", "n": "出站步行約 5 分到飯店"}], "it": [{"a": "08:00", "b": "08:45", "n": "退房，行李搬到京都站置物櫃", "o": "kyotostation", "k": "transit", "x": "東西線→烏丸御池→烏丸線 約 18 分；行李多可計程車 15 分"}, {"a": "08:45", "b": "09:00", "n": "JR 奈良線 京都 → 稻荷", "o": "inari_st", "k": "transit", "x": "5 分，出站就是參道"}, {"a": "09:00", "b": "10:45", "n": "伏見稻荷大社、千本鳥居", "o": "fushimi", "p": 1, "x": "越早越好，10 點後人潮爆量"}, {"a": "10:45", "b": "11:05", "n": "JR 稻荷 → 東福寺", "o": "tofukuji", "k": "transit", "x": "1 站 3 分"}, {"a": "11:05", "b": "12:20", "n": "東福寺 通天橋、方丈庭園紅葉", "o": "tofukuji", "p": 2, "x": "11/1-11/13 為 09:00-16:00；秋季通天橋、臥雲橋上可能禁止攝影"}, {"a": "12:20", "b": "12:40", "n": "JR 東福寺 → 京都站，取行李", "o": "kyotostation", "k": "transit", "x": "2 分"}, {"a": "12:40", "b": "13:40", "n": "京都站午餐（拉麵小路 / 伊勢丹）", "o": "kyotostation", "k": "food", "x": "京都最後一餐"}, {"a": "13:40", "b": "14:55", "n": "京都 → 大阪 → 新今宮", "o": "shinimamiya_st", "k": "transit", "x": "新快速 29 分＋環狀線 16 分"}, {"a": "14:55", "b": "15:40", "n": "大阪飯店 Check-in（惠美須西）", "o": "hotel_osaka", "x": "動物園前步行約 3 分"}, {"a": "15:40", "b": "17:00", "n": "新世界、通天閣", "o": "tsutenkaku", "p": 1, "x": "飯店步行 8-10 分，10:00-20:00"}, {"a": "17:00", "b": "18:30", "n": "晚餐：新世界串炸", "o": "shinsekai", "p": 1, "k": "food", "x": "住宿旁邊，走路就到"}, {"a": "18:30", "b": "20:00", "n": "飯店周邊超市補給、休息", "o": "hotel_osaka", "p": 3, "k": "shop", "x": "移動日不要再排遠景點"}]}, {"d": "2026-11-10", "w": "二", "th": "osaka", "city": "大阪", "t": "天橋立跟團日", "s": "大阪出發往返，丹後海上列車・天橋立・伊根舟屋，整天保留。", "stay": "大阪・惠美須西（新今宮）", "tips": ["集合時間與地點以 KKday 憑證與前一晚通知為準", "最少成團 4 人，出發前務必確認是否成團", "團費不含餐，午餐自理；車程長，備暈車藥", "日本海側 11 月早晚偏冷，外套與雨具要帶"], "route": [{"f": "動物園前", "t": "難波", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "4", "n": "2 站"}, {"f": "動物園前", "t": "梅田", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "13", "n": "集合點若在梅田走這條"}], "it": [{"a": "06:30", "b": "07:20", "n": "早餐、御堂筋線前往集合點", "o": "doubutsuen_st", "k": "transit", "x": "難波 4 分／梅田 13 分"}, {"a": "07:20", "b": "07:50", "n": "報到、集合", "o": "namba_st", "x": "提前 10 分到，逾時不候"}, {"a": "07:50", "b": "10:30", "n": "前往丹後（含丹後海上列車）", "k": "transit", "x": "實際時段依旅行社安排"}, {"a": "10:30", "b": "13:00", "n": "天橋立纜車 View Land、智恩寺", "o": "amanohashidate", "p": 1, "x": "展望約 120 分，可在此午餐"}, {"a": "13:00", "b": "15:30", "n": "伊根舟屋遊船、舟屋群展望所", "o": "ine", "p": 1, "x": "停留約 60 分"}, {"a": "15:30", "b": "19:00", "n": "返回大阪、解散", "k": "transit", "x": "全程約 10 小時"}, {"a": "19:00", "b": "20:30", "n": "晚餐、休息", "o": "hotel_osaka", "k": "food", "x": "不排遠景點"}]}, {"d": "2026-11-11", "w": "三", "th": "osaka", "city": "大阪", "t": "日本環球影城 USJ", "s": "整天保留，不排任何其他景點。", "stay": "大阪・惠美須西（新今宮）", "tips": ["USJ 整天不切割", "前一晚確認官方開閉園時間（11 月常見 09:00-20:00 或 21:00）", "11 月中通常已進入聖誕季，夜間表演值得留", "先裝 USJ App，整理券與表演時間以 App 為準", "新今宮直接搭 JR 環狀線，不必繞去難波"], "route": [{"f": "新今宮", "t": "西九条", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "11", "n": "往西九条方向"}, {"f": "西九条", "t": "環球影城", "l": "JR ゆめ咲線", "c": "#5BB7E5", "m": "5", "n": "同月台轉乘，全程含轉乘約 20-25 分"}], "it": [{"a": "07:45", "b": "08:25", "n": "JR 新今宮 → 西九条 → Universal City", "o": "universalcity", "k": "transit", "x": "約 20-25 分"}, {"a": "08:25", "b": "09:00", "n": "入園排隊 / App / 整理券準備", "o": "usj", "p": 1, "x": "建議開園前 35-45 分抵達"}, {"a": "09:00", "b": "20:00", "n": "日本環球影城整天", "o": "usj", "p": 1, "x": "先處理整理券與熱門區，午餐錯開尖峰"}, {"a": "20:00", "b": "21:00", "n": "返回飯店", "o": "hotel_osaka", "k": "transit", "x": "依當日閉園時間"}]}, {"d": "2026-11-12", "w": "四", "th": "nara", "city": "大阪 ↔ 奈良", "t": "奈良一日", "s": "新今宮有 JR 大和路快速直達奈良，先到春日大社再一路往回走。", "stay": "大阪・惠美須西（新今宮）", "tips": ["新今宮 → JR奈良 有直達的大和路快速，不用轉車", "先春日大社再往回走東大寺、奈良公園，不折返", "日落約 16:50，若草山 16:30 前要開始下山", "鹿仙貝只在指定攤位買；地圖與票券不要外露"], "route": [{"f": "新今宮", "t": "JR奈良", "l": "JR 大和路快速（直達）", "c": "#96BE28", "m": "35", "n": "部分班次需在天王寺轉車，上車前看月台顯示"}, {"f": "JR奈良站", "t": "春日大社", "l": "奈良交通巴士", "c": "#8A8175", "m": "12", "n": "站前 2 號乘車處"}], "it": [{"a": "08:00", "b": "08:45", "n": "JR 大和路快速 新今宮 → JR奈良", "o": "jrnara_st", "k": "transit", "x": "直達約 35 分"}, {"a": "08:45", "b": "09:00", "n": "JR奈良站 → 巴士 → 春日大社", "k": "transit", "x": "約 12 分"}, {"a": "09:00", "b": "10:15", "n": "春日大社", "o": "kasuga", "p": 1, "x": "先到本殿再往回走"}, {"a": "10:15", "b": "11:15", "n": "奈良公園餵鹿 / 散步", "o": "narapark", "p": 1, "x": "11 月紅葉＋鹿"}, {"a": "11:15", "b": "12:45", "n": "東大寺大佛殿", "o": "todaiji", "p": 1, "x": "11 月開放 08:00-17:00"}, {"a": "12:45", "b": "14:00", "n": "午餐 / 休息", "k": "food", "x": "不要壓縮太短"}, {"a": "14:00", "b": "15:00", "n": "中谷堂麻糬表演 / 點心", "o": "nakatanidou", "p": 1, "x": "表演時間不定"}, {"a": "15:00", "b": "16:30", "n": "若草山", "o": "wakakusa", "p": 1, "x": "開山期 09:00-17:00；下雨或體力下降可直接刪"}, {"a": "16:30", "b": "17:30", "n": "JR奈良 → 新今宮", "k": "transit", "x": "約 35 分"}, {"a": "17:30", "b": "19:30", "n": "晚餐：新世界或飯店周邊", "o": "shinsekai", "p": 2, "k": "food", "x": "走路就到"}]}, {"d": "2026-11-13", "w": "五", "th": "osaka", "city": "大阪", "t": "大阪城 → 梅田吉伊卡哇", "s": "上午大阪城與海洋堂，下午到傍晚整段留給梅田角色商品與夜景。", "stay": "大阪・惠美須西（新今宮）", "tips": ["HEP FIVE＝阪急ファイブビル，北區角田町 5-15，館內 11:00-21:00", "9090 原 5F ⑩，官方公告已移至 5F ⑭；まじかるちいかわストア在 B1F ⑭", "先攻 B1F：限定品與整理券最可能一早就發完", "日落約 16:50，空中庭園卡在 16:15 進場剛好", "這天是本趟最大採購日，行李空間先預留"], "route": [{"f": "新今宮", "t": "森ノ宮", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "13", "n": "往京橋方向"}, {"f": "森ノ宮", "t": "大阪（梅田）", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "11"}, {"f": "梅田", "t": "動物園前", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "13", "n": "晚上回程"}], "it": [{"a": "08:00", "b": "09:00", "n": "JR 環狀線 新今宮 → 森ノ宮，步行進大阪城", "o": "morinomiya_st", "k": "transit", "x": "車程 13 分＋站到天守閣步行 15-20 分"}, {"a": "09:00", "b": "10:30", "n": "大阪城天守閣", "o": "osakajo", "p": 1, "x": "09:00-17:00，最後入館 16:30"}, {"a": "10:30", "b": "11:30", "n": "海洋堂 Figure Museum 大阪城", "o": "kaiyodo", "p": 1, "x": "在 MIRAIZA 大阪城內"}, {"a": "11:30", "b": "12:15", "n": "JR 環狀線 森ノ宮 → 大阪（梅田）", "o": "osakasta", "k": "transit", "x": "約 11 分"}, {"a": "12:15", "b": "13:15", "n": "梅田午餐", "k": "food"}, {"a": "13:15", "b": "14:45", "n": "HEP FIVE B1F まじかるちいかわストア → 5F 9090", "o": "majichiikawa", "p": 1, "k": "shop", "x": "限定品可能發整理券或線上抽選，先攻 B1F"}, {"a": "14:45", "b": "15:45", "n": "HEP FIVE 館內、阪急三番街 / 大丸梅田", "o": "hankyu3", "p": 2, "k": "shop", "x": "多數 20:00-21:00 打烊"}, {"a": "15:45", "b": "16:15", "n": "步行梅田空中庭園", "o": "skybuilding", "k": "transit", "x": "15-20 分，走大阪站北側"}, {"a": "16:15", "b": "17:45", "n": "梅田空中庭園 夕陽＋夜景", "o": "skybuilding", "p": 1, "x": "日落約 16:50"}, {"a": "17:45", "b": "19:15", "n": "梅田晚餐", "k": "food"}, {"a": "19:15", "b": "20:00", "n": "御堂筋線 梅田 → 動物園前", "o": "hotel_osaka", "k": "transit", "x": "約 13 分"}]}, {"d": "2026-11-14", "w": "六", "th": "osaka", "city": "大阪", "t": "阿倍野・日本橋・心齋橋", "s": "從住宿往北一路玩上去：展望台 → 電電町 → 心齋橋 → 道頓堀夜景收尾。", "stay": "大阪・惠美須西（新今宮）", "tips": ["今天動線是一條直線往北，全都在御堂筋線／堺筋線上", "HARUKAS 300 是 09:00-22:00，最後入場 21:30，早上人最少", "心齋橋 PARCO 營業至 20:00，CHIIKAWA LAND 要在那之前逛完", "週六人潮多，四天王寺與天王寺公園是 P3，時間不夠先砍這兩個", "這是最後一個完整日，該買的今天買完"], "route": [{"f": "動物園前", "t": "天王寺", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "2", "n": "1 站"}, {"f": "天王寺", "t": "四天王寺前夕陽ヶ丘", "l": "Osaka Metro 谷町線", "c": "#6A2E8C", "m": "2", "n": "P3"}, {"f": "動物園前／惠美須町", "t": "日本橋", "l": "Osaka Metro 堺筋線", "c": "#8E5B2E", "m": "4"}, {"f": "日本橋", "t": "難波", "l": "Osaka Metro 千日前線", "c": "#E5548E", "m": "2"}, {"f": "難波", "t": "心齋橋", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "2"}], "it": [{"a": "08:30", "b": "09:00", "n": "御堂筋線 動物園前 → 天王寺", "o": "tennoji_st", "k": "transit", "x": "1 站 2 分"}, {"a": "09:00", "b": "10:30", "n": "阿倍野 HARUKAS 300 展望台", "o": "harukas", "p": 1, "x": "09:00-22:00，票價 2026/7 起調整，查官網"}, {"a": "10:30", "b": "11:15", "n": "天王寺公園 てんしば", "o": "tenshiba", "p": 3, "x": "時間不夠可跳"}, {"a": "11:15", "b": "12:30", "n": "四天王寺", "o": "shitennoji", "p": 3, "x": "谷町線 1 站；時間不夠可跳"}, {"a": "12:30", "b": "13:30", "n": "午餐（天王寺／阿倍野）", "k": "food"}, {"a": "13:30", "b": "15:15", "n": "日本橋でんでんタウン・オタロード", "o": "dendentown", "p": 1, "k": "shop", "x": "模型、動漫、電器一條街"}, {"a": "15:15", "b": "16:00", "n": "黑門市場", "o": "kuromon", "p": 2, "x": "傍晚部分攤商已收"}, {"a": "16:00", "b": "17:30", "n": "心齋橋筋、心齋橋 PARCO CHIIKAWA LAND", "o": "parco", "p": 1, "k": "shop", "x": "20:00 前完成"}, {"a": "17:30", "b": "19:00", "n": "晚餐：道頓堀大阪燒 / 串炸", "o": "dotonbori", "p": 1, "k": "food", "x": "建議訂位"}, {"a": "19:00", "b": "20:30", "n": "戎橋、固力果、法善寺橫丁夜景", "o": "hozenji", "p": 1, "x": "夜景最佳"}]}, {"d": "2026-11-15", "w": "日", "th": "osaka", "city": "大阪 → 關西機場", "t": "返程日", "s": "13:40 起飛，10:40 前到機場。新今宮有南海直達，比難波還近。", "stay": "—", "tips": ["新今宮直接搭南海，不必先到難波", "10:40 前抵達機場（國際線抓 3 小時）", "最晚 09:30 從新今宮出發", "退稅單與免稅商品封條前一晚先整理好"], "route": [{"f": "新今宮", "t": "關西機場", "l": "南海 特急ラピート", "c": "#0E4C96", "m": "35", "n": "需另購特急券"}, {"f": "新今宮", "t": "關西機場", "l": "南海 空港急行", "c": "#0E4C96", "m": "43", "n": "不用加價"}], "it": [{"a": "08:00", "b": "08:45", "n": "早餐、整理行李、退房", "o": "hotel_osaka", "x": "不排景點"}, {"a": "08:45", "b": "09:30", "n": "飯店周邊最後補貨", "o": "hotel_osaka", "k": "shop", "x": "百貨多 10:00 後才開"}, {"a": "09:30", "b": "10:20", "n": "南海 新今宮 → 關西機場", "o": "kix", "k": "transit", "x": "ラピート 35 分／空港急行 43 分"}, {"a": "10:20", "b": "13:40", "n": "報到、安檢、退稅、免稅店、午餐", "o": "kix", "x": "13:40 起飛"}, {"a": "13:40", "b": "15:40", "n": "泰國獅航 SL397 飛行中", "o": "tpe", "k": "transit", "x": "飛行 3 小時，15:40 抵達 TPE"}]}];
+const POI={"hotel_kyoto": {"n": "京都住宿（左京區・和國町）", "ja": "京都市左京区和国町407-6", "lat": 35.0112, "lng": 135.7758, "area": "左京區・岡崎", "p": 0, "pre": "area", "kind": "hotel", "memo": "〒606-8363　最近站：京阪「三条」步行約 6 分／地下鐵東西線「東山」約 7 分"}, "sanjo_st": {"n": "京阪三条・三条京阪站", "ja": "三条駅 京阪", "lat": 35.0093, "lng": 135.7727, "area": "左京區・岡崎", "p": 0, "pre": "exact", "kind": "hub"}, "kamogawa": {"n": "鴨川・三条大橋", "ja": "三条大橋", "lat": 35.009, "lng": 135.7712, "area": "左京區・岡崎", "p": 3, "pre": "exact"}, "nanzenji": {"n": "南禪寺", "ja": "南禅寺", "lat": 35.0114, "lng": 135.7943, "area": "左京區・岡崎", "p": 2, "pre": "exact", "url": "https://nanzenji.or.jp/"}, "eikando": {"n": "永觀堂 禪林寺", "ja": "永観堂 禅林寺", "lat": 35.0148, "lng": 135.7947, "area": "左京區・岡崎", "p": 2, "pre": "exact", "url": "https://www.eikando.or.jp/"}, "heianjingu": {"n": "平安神宮", "ja": "平安神宮", "lat": 35.016, "lng": 135.7823, "area": "左京區・岡崎", "p": 3, "pre": "exact", "url": "https://www.heianjingu.or.jp/"}, "kiyomizu": {"n": "清水寺", "ja": "清水寺", "lat": 34.9949, "lng": 135.785, "area": "東山・祇園", "p": 1, "pre": "exact", "url": "https://www.kiyomizudera.or.jp/"}, "ninenzaka": {"n": "二寧坂・產寧坂", "ja": "二年坂 産寧坂", "lat": 34.9974, "lng": 135.7807, "area": "東山・祇園", "p": 1, "pre": "exact"}, "yasaka": {"n": "八坂神社", "ja": "八坂神社", "lat": 35.0036, "lng": 135.7785, "area": "東山・祇園", "p": 1, "pre": "exact", "url": "https://www.yasaka-jinja.or.jp/"}, "maruyama": {"n": "圓山公園", "ja": "円山公園", "lat": 35.0038, "lng": 135.7809, "area": "東山・祇園", "p": 2, "pre": "exact"}, "hanamikoji": {"n": "花見小路", "ja": "花見小路通", "lat": 35.0016, "lng": 135.7754, "area": "東山・祇園", "p": 1, "pre": "exact"}, "shirakawa": {"n": "祇園白川・巽橋", "ja": "祇園白川 巽橋", "lat": 35.0052, "lng": 135.7744, "area": "東山・祇園", "p": 1, "pre": "exact"}, "gionduck": {"n": "Gion Duck Noodles", "ja": "Gion Duck Noodles 祇園町北側", "lat": 35.0043, "lng": 135.7757, "area": "東山・祇園", "p": 1, "pre": "area", "kind": "food"}, "kimono": {"n": "和服租借（五条坂一帶）", "ja": "着物レンタル 五条坂", "lat": 34.9968, "lng": 135.7807, "area": "東山・祇園", "p": 1, "pre": "area"}, "kenninji": {"n": "建仁寺", "ja": "建仁寺", "lat": 35.0, "lng": 135.7738, "area": "東山・祇園", "p": 3, "pre": "exact", "url": "https://www.kenninji.jp/"}, "fushimi": {"n": "伏見稻荷大社・千本鳥居", "ja": "伏見稲荷大社", "lat": 34.9671, "lng": 135.7727, "area": "伏見", "p": 1, "pre": "exact", "url": "http://inari.jp/"}, "inari_st": {"n": "JR 稻荷站", "ja": "稲荷駅", "lat": 34.9673, "lng": 135.7659, "area": "伏見", "p": 0, "pre": "exact", "kind": "hub"}, "tofukuji": {"n": "東福寺（通天橋）", "ja": "東福寺", "lat": 34.9761, "lng": 135.7742, "area": "伏見", "p": 2, "pre": "exact", "url": "https://tofukuji.jp/"}, "ricoland": {"n": "RICOLAND 京都店", "ja": "ライコランド京都店", "lat": 34.9503, "lng": 135.753, "area": "伏見", "p": 3, "pre": "area", "kind": "shop", "url": "https://www.ricoland.co.jp/shopinfo/kyoto/index.html"}, "kyotostation": {"n": "京都站", "ja": "京都駅", "lat": 34.9858, "lng": 135.7588, "area": "京都市區", "p": 0, "pre": "exact", "kind": "hub"}, "takagi": {"n": "高木批發超市 三条店", "ja": "タカギ 三条店", "lat": 35.0088, "lng": 135.77, "area": "京都市區", "p": 2, "pre": "area", "kind": "shop"}, "kawaramachi": {"n": "四條河原町", "ja": "四条河原町", "lat": 35.0037, "lng": 135.7681, "area": "京都市區", "p": 2, "pre": "exact"}, "hotel_osaka": {"n": "大阪住宿（惠美須西・新今宮）", "ja": "大阪市浪速区恵美須西3-14-13", "lat": 34.6497, "lng": 135.4992, "area": "新世界・新今宮", "p": 0, "pre": "area", "kind": "hotel", "memo": "〒556-0003　最近站：地下鐵「動物園前」步行約 3 分／JR・南海「新今宮」約 5 分"}, "doubutsuen_st": {"n": "動物園前站（御堂筋線・堺筋線）", "ja": "動物園前駅", "lat": 34.6494, "lng": 135.5015, "area": "新世界・新今宮", "p": 0, "pre": "exact", "kind": "hub"}, "shinimamiya_st": {"n": "新今宮站（JR・南海）", "ja": "新今宮駅", "lat": 34.6521, "lng": 135.5008, "area": "新世界・新今宮", "p": 0, "pre": "exact", "kind": "hub"}, "tsutenkaku": {"n": "通天閣", "ja": "通天閣", "lat": 34.6524, "lng": 135.5063, "area": "新世界・新今宮", "p": 1, "pre": "exact", "url": "https://www.tsutenkaku.co.jp/"}, "shinsekai": {"n": "新世界・串炸街", "ja": "新世界", "lat": 34.6516, "lng": 135.5052, "area": "新世界・新今宮", "p": 1, "pre": "exact", "kind": "food"}, "ebisucho_st": {"n": "惠美須町站（堺筋線）", "ja": "恵美須町駅", "lat": 34.6516, "lng": 135.5062, "area": "新世界・新今宮", "p": 0, "pre": "exact", "kind": "hub"}, "tennoji_st": {"n": "天王寺站・阿倍野", "ja": "天王寺駅", "lat": 34.6455, "lng": 135.5135, "area": "天王寺・阿倍野", "p": 0, "pre": "exact", "kind": "hub"}, "harukas": {"n": "阿倍野 HARUKAS 300 展望台", "ja": "あべのハルカス300 展望台", "lat": 34.6457, "lng": 135.5138, "area": "天王寺・阿倍野", "p": 1, "pre": "exact", "url": "https://www.abenoharukas-300.jp/observatory/"}, "tenshiba": {"n": "天王寺公園 てんしば", "ja": "天王寺公園 てんしば", "lat": 34.651, "lng": 135.51, "area": "天王寺・阿倍野", "p": 3, "pre": "exact"}, "shitennoji": {"n": "四天王寺", "ja": "四天王寺", "lat": 34.6543, "lng": 135.5165, "area": "天王寺・阿倍野", "p": 3, "pre": "exact", "url": "https://www.shitennoji.or.jp/"}, "dendentown": {"n": "日本橋でんでんタウン・オタロード", "ja": "日本橋でんでんタウン", "lat": 34.6592, "lng": 135.5045, "area": "日本橋・難波", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.nipponbashi.jp/"}, "kuromon": {"n": "黑門市場", "ja": "黒門市場", "lat": 34.6653, "lng": 135.5062, "area": "日本橋・難波", "p": 2, "pre": "exact", "url": "https://kuromon.com/"}, "namba_st": {"n": "難波站（御堂筋線・南海・近鐵）", "ja": "なんば駅", "lat": 34.6656, "lng": 135.5013, "area": "日本橋・難波", "p": 0, "pre": "exact", "kind": "hub"}, "dotonbori": {"n": "道頓堀・戎橋・固力果", "ja": "道頓堀 戎橋", "lat": 34.6687, "lng": 135.5012, "area": "日本橋・難波", "p": 1, "pre": "exact"}, "hozenji": {"n": "法善寺橫丁", "ja": "法善寺横丁", "lat": 34.6673, "lng": 135.5031, "area": "日本橋・難波", "p": 1, "pre": "exact"}, "shinsaibashi": {"n": "心齋橋筋商店街", "ja": "心斎橋筋商店街", "lat": 34.6725, "lng": 135.501, "area": "日本橋・難波", "p": 1, "pre": "exact", "kind": "shop"}, "parco": {"n": "心齋橋 PARCO（CHIIKAWA LAND）", "ja": "心斎橋パルコ", "lat": 34.6746, "lng": 135.5012, "area": "日本橋・難波", "p": 1, "pre": "exact", "kind": "shop", "url": "https://shinsaibashi.parco.jp/"}, "osakajo": {"n": "大阪城天守閣", "ja": "大阪城天守閣", "lat": 34.6873, "lng": 135.5259, "area": "大阪城", "p": 1, "pre": "exact", "url": "https://www.osakacastle.net/"}, "kaiyodo": {"n": "海洋堂 Figure Museum 大阪城", "ja": "海洋堂フィギュアミュージアム ミライザ大阪城", "lat": 34.6863, "lng": 135.5266, "area": "大阪城", "p": 1, "pre": "area"}, "morinomiya_st": {"n": "森ノ宮站（JR・中央線）", "ja": "森ノ宮駅", "lat": 34.6807, "lng": 135.5335, "area": "大阪城", "p": 0, "pre": "exact", "kind": "hub"}, "hepfive": {"n": "HEP FIVE（阪急ファイブビル）", "ja": "HEP FIVE 大阪市北区角田町5-15", "lat": 34.7043, "lng": 135.5006, "area": "梅田", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.hepfive.jp/"}, "shop9090": {"n": "9090（HEP FIVE 5F）", "ja": "9090 HEP FIVE 5階", "lat": 34.7043, "lng": 135.5006, "area": "梅田", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.hepfive.jp/shop_list/detail/247"}, "majichiikawa": {"n": "まじかるちいかわストア（HEP FIVE B1F）", "ja": "まじかるちいかわストア HEP FIVE 地下1階", "lat": 34.7043, "lng": 135.5006, "area": "梅田", "p": 1, "pre": "exact", "kind": "shop", "url": "https://www.hepfive.jp/shop_list/detail/315"}, "skybuilding": {"n": "梅田空中庭園展望台", "ja": "梅田スカイビル 空中庭園展望台", "lat": 34.7053, "lng": 135.4903, "area": "梅田", "p": 1, "pre": "exact", "url": "https://www.skybldg.co.jp/"}, "hankyu3": {"n": "阪急三番街", "ja": "阪急三番街", "lat": 34.7052, "lng": 135.4986, "area": "梅田", "p": 2, "pre": "exact", "kind": "shop", "url": "https://www.h-sanbangai.com/"}, "daimaru": {"n": "大丸梅田店", "ja": "大丸梅田店", "lat": 34.7018, "lng": 135.4966, "area": "梅田", "p": 2, "pre": "exact", "kind": "shop"}, "osakasta": {"n": "大阪站・梅田站", "ja": "大阪駅", "lat": 34.7025, "lng": 135.4959, "area": "梅田", "p": 0, "pre": "exact", "kind": "hub"}, "usj": {"n": "日本環球影城 USJ", "ja": "ユニバーサル・スタジオ・ジャパン", "lat": 34.6654, "lng": 135.4323, "area": "USJ", "p": 1, "pre": "exact", "url": "https://www.usj.co.jp/"}, "universalcity": {"n": "Universal City 站", "ja": "ユニバーサルシティ駅", "lat": 34.6673, "lng": 135.436, "area": "USJ", "p": 0, "pre": "exact", "kind": "hub"}, "nishikujo_st": {"n": "西九条站（轉 ゆめ咲線）", "ja": "西九条駅", "lat": 34.6823, "lng": 135.4646, "area": "USJ", "p": 0, "pre": "exact", "kind": "hub"}, "jrnara_st": {"n": "JR 奈良站", "ja": "奈良駅", "lat": 34.6829, "lng": 135.8189, "area": "奈良", "p": 0, "pre": "exact", "kind": "hub"}, "kasuga": {"n": "春日大社", "ja": "春日大社", "lat": 34.6815, "lng": 135.8484, "area": "奈良", "p": 1, "pre": "exact", "url": "https://www.kasugataisha.or.jp/"}, "narapark": {"n": "奈良公園（餵鹿）", "ja": "奈良公園", "lat": 34.6851, "lng": 135.843, "area": "奈良", "p": 1, "pre": "exact"}, "todaiji": {"n": "東大寺大佛殿", "ja": "東大寺 大仏殿", "lat": 34.689, "lng": 135.8398, "area": "奈良", "p": 1, "pre": "exact", "url": "https://www.todaiji.or.jp/"}, "wakakusa": {"n": "若草山", "ja": "若草山", "lat": 34.6866, "lng": 135.8514, "area": "奈良", "p": 1, "pre": "exact"}, "nakatanidou": {"n": "中谷堂（麻糬表演）", "ja": "中谷堂", "lat": 34.6836, "lng": 135.8272, "area": "奈良", "p": 1, "pre": "exact", "kind": "food", "url": "https://www.nakatanidou.jp/"}, "nipponbashi_meet": {"n": "日本橋車站 2 號出口（天橋立集合點）", "ja": "大阪市中央区日本橋1丁目5-12 日本橋駅 2番出口", "lat": 34.6677, "lng": 135.5063, "area": "日本橋・難波", "p": 0, "pre": "exact", "kind": "hub", "memo": "11/10 集合 06:55／出發 07:10"}, "amanohashidate": {"n": "天橋立 View Land・智恩寺", "ja": "天橋立ビューランド", "lat": 35.5652, "lng": 135.1866, "area": "天橋立", "p": 1, "pre": "exact", "url": "https://www.viewland.jp/"}, "ine": {"n": "伊根舟屋", "ja": "伊根の舟屋", "lat": 35.6752, "lng": 135.2926, "area": "天橋立", "p": 1, "pre": "exact", "url": "https://www.ine-kankou.jp/"}, "kix": {"n": "關西國際機場 T1", "ja": "関西国際空港 第1ターミナル", "lat": 34.4342, "lng": 135.2328, "area": "機場", "p": 0, "pre": "exact", "kind": "hub", "url": "https://www.kansai-airport.or.jp/"}, "tpe": {"n": "桃園國際機場 T1", "ja": "桃園国際空港", "lat": 25.0797, "lng": 121.2342, "area": "機場", "p": 0, "pre": "exact", "kind": "hub", "noMap": 1}};
+const DAYS=[{"d": "2026-11-07", "w": "六", "th": "kyoto", "city": "京都", "t": "抵達關西 → 京都", "s": "落地日不排硬性景點，進左京區飯店後傍晚走祇園。", "stay": "京都・左京區（和國町）", "tips": ["11 月京都日落約 16:50，17:00 後就是夜景時段", "飯店在京阪「三条」旁，去祇園四条只要 1 站 3 分", "行李多時京都站直接搭計程車約 15 分，比拖行李轉兩次地下鐵省力"], "route": [{"f": "關西機場 T1", "t": "京都", "l": "JR HARUKA 特急", "c": "#0071BC", "m": "75-90", "n": "T1 2F 連絡橋 → JR Kansai Airport Station"}, {"f": "京都", "t": "烏丸御池", "l": "地下鐵 烏丸線", "c": "#0D9488", "m": "5"}, {"f": "烏丸御池", "t": "三条京阪", "l": "地下鐵 東西線", "c": "#B31E56", "m": "4", "n": "出站步行約 6 分到飯店"}], "it": [{"a": "08:00", "b": "09:00", "n": "報到、安檢、登機（SL396）", "o": "tpe", "k": "transit", "x": "國際線抓 2 小時"}, {"a": "09:00", "b": "12:20", "n": "泰國獅航 SL396 飛行中", "k": "transit", "x": "飛行 2 小時 20 分，12:20 落地"}, {"a": "12:20", "b": "13:40", "n": "入境、領行李、領取交通票券", "o": "kix", "x": "抓 60-80 分"}, {"a": "13:40", "b": "15:10", "n": "JR HARUKA → 京都站", "o": "kyotostation", "k": "transit", "x": "移動 75-90 分"}, {"a": "15:10", "b": "16:00", "n": "京都站 → 左京區飯店，Check-in", "o": "hotel_kyoto", "x": "烏丸線→烏丸御池→東西線→三条京阪 約 20 分；行李多建議計程車 15 分"}, {"a": "16:00", "b": "16:50", "n": "鴨川・三条大橋周邊散步", "o": "kamogawa", "p": 3, "x": "飯店步行 6 分，看夕陽"}, {"a": "17:00", "b": "18:30", "n": "京阪三条 → 祇園四条：祇園白川、巽橋、花見小路", "o": "shirakawa", "p": 1, "x": "京阪 1 站 3 分；燈籠亮起最美"}, {"a": "18:30", "b": "20:00", "n": "晚餐：Gion Duck Noodles 或祇園、河原町", "o": "gionduck", "p": 1, "k": "food", "x": "熱門店留 90 分"}]}, {"d": "2026-11-08", "w": "日", "th": "kyoto", "city": "京都", "t": "東山一日 ＋ 傍晚南禪寺", "s": "白天清水寺、坂道、和服；傍晚繞回飯店那側走南禪寺與岡崎。", "stay": "京都・左京區（和國町）", "tips": ["清水寺與和服拍照一定放白天，09:30 前入場最舒服", "南禪寺拝観 08:40-17:00（受付 16:40 截止），16:00 到剛好趕上最後一輪", "永觀堂秋季夜間拜觀 2025 年是 11/15 才開始，11/8 多半還沒開燈，出發前務必查官網", "南禪寺、岡崎就在飯店同側，走回去只要 15-20 分", "11 月京都市巴士極塞，東山區內以步行與京阪為主"], "route": [{"f": "三条", "t": "清水五条", "l": "京阪本線", "c": "#00913A", "m": "5", "n": "2 站，出站步行 12 分到五条坂"}, {"f": "清水五条", "t": "三条", "l": "京阪本線", "c": "#00913A", "m": "5", "n": "傍晚回程"}, {"f": "三条京阪", "t": "蹴上", "l": "地下鐵 東西線", "c": "#B31E56", "m": "4", "n": "1 站，步行 10 分到南禪寺"}], "it": [{"a": "08:00", "b": "08:45", "n": "早餐，京阪三条 → 清水五条，前往和服店", "o": "kimono", "k": "transit", "x": "京阪 2 站"}, {"a": "08:45", "b": "09:30", "n": "和服租借、換裝", "o": "kimono", "x": "多數店 09:00 開始營業"}, {"a": "09:30", "b": "11:00", "n": "清水寺參拜、奧之院、子安塔", "o": "kiyomizu", "p": 1, "x": "11 月人潮大，越早越好"}, {"a": "11:00", "b": "12:15", "n": "二寧坂、產寧坂、清水坂小店街", "o": "ninenzaka", "p": 1, "x": "同區順路，一路往下走"}, {"a": "12:15", "b": "13:15", "n": "午餐 / 咖啡 / 拍照緩衝", "k": "food", "x": "避免穿和服走太久"}, {"a": "13:15", "b": "14:00", "n": "八坂神社、圓山公園（紅葉）", "o": "yasaka", "p": 1, "x": "兩個景點相鄰"}, {"a": "14:00", "b": "14:45", "n": "花見小路、祇園白川拍照", "o": "hanamikoji", "p": 1, "x": "下午光線最好"}, {"a": "14:45", "b": "15:20", "n": "歸還和服", "o": "kimono", "x": "避免逾時加價"}, {"a": "15:20", "b": "16:00", "n": "京阪回三条 →（東西線 1 站）蹴上 → 步行南禪寺", "o": "nanzenji", "k": "transit", "x": "約 40 分含步行"}, {"a": "16:00", "b": "17:00", "n": "南禪寺：水路閣、三門、方丈庭園", "o": "nanzenji", "p": 2, "x": "受付 16:40 截止，要趕最後一輪"}, {"a": "17:00", "b": "18:15", "n": "永觀堂前、岡崎一帶散步，走回飯店", "o": "eikando", "p": 3, "x": "夜間拜觀多半 11/15 才開始；沒開就只走外圍"}, {"a": "18:30", "b": "20:00", "n": "晚餐：三条／河原町；高木批發超市補貨", "o": "takagi", "p": 2, "k": "shop", "x": "飯店步行圈"}]}, {"d": "2026-11-09", "w": "一", "th": "nara", "city": "京都 → 大阪", "t": "伏見稻荷 → 移動大阪", "s": "早上伏見稻荷，東福寺視體力加，中午後轉大阪住新今宮。", "stay": "大阪・惠美須西（新今宮）", "tips": ["行李先寄京都站置物櫃，稻荷與東福寺都在 JR 奈良線上，回程順路取", "東福寺已降為 P2，時間不夠或人太多可以直接跳過，提早進大阪", "東福寺 11/1-11/13 拜觀 09:00-16:00（閉門 16:30）", "新今宮站是本趟交通中樞：往奈良、USJ、關西機場都從這裡直達", "RICOLAND 已降為 P3、本次未排入；真要去可與東福寺二選一（京阪竹田一帶）"], "route": [{"f": "三条京阪", "t": "京都", "l": "東西線 → 烏丸線（烏丸御池轉）", "c": "#0D9488", "m": "18"}, {"f": "京都", "t": "稻荷", "l": "JR 奈良線", "c": "#6FA524", "m": "5"}, {"f": "稻荷", "t": "東福寺", "l": "JR 奈良線", "c": "#6FA524", "m": "3", "n": "P2，可跳過"}, {"f": "東福寺", "t": "京都", "l": "JR 奈良線", "c": "#6FA524", "m": "2", "n": "取行李"}, {"f": "京都", "t": "大阪", "l": "JR 京都線 新快速", "c": "#0071BC", "m": "29"}, {"f": "大阪", "t": "新今宮", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "16", "n": "出站步行約 5 分到飯店"}], "it": [{"a": "08:00", "b": "08:45", "n": "退房，行李搬到京都站置物櫃", "o": "kyotostation", "k": "transit", "x": "東西線→烏丸御池→烏丸線 約 18 分；行李多可計程車 15 分"}, {"a": "08:45", "b": "09:00", "n": "JR 奈良線 京都 → 稻荷", "o": "inari_st", "k": "transit", "x": "5 分，出站就是參道"}, {"a": "09:00", "b": "10:45", "n": "伏見稻荷大社、千本鳥居", "o": "fushimi", "p": 1, "x": "越早越好，10 點後人潮爆量"}, {"a": "10:45", "b": "11:05", "n": "JR 稻荷 → 東福寺", "o": "tofukuji", "k": "transit", "x": "1 站 3 分"}, {"a": "11:05", "b": "12:20", "n": "東福寺 通天橋、方丈庭園紅葉", "o": "tofukuji", "p": 2, "x": "11/1-11/13 為 09:00-16:00；秋季通天橋、臥雲橋上可能禁止攝影"}, {"a": "12:20", "b": "12:40", "n": "JR 東福寺 → 京都站，取行李", "o": "kyotostation", "k": "transit", "x": "2 分"}, {"a": "12:40", "b": "13:40", "n": "京都站午餐（拉麵小路 / 伊勢丹）", "o": "kyotostation", "k": "food", "x": "京都最後一餐"}, {"a": "13:40", "b": "14:55", "n": "京都 → 大阪 → 新今宮", "o": "shinimamiya_st", "k": "transit", "x": "新快速 29 分＋環狀線 16 分"}, {"a": "14:55", "b": "15:40", "n": "大阪飯店 Check-in（惠美須西）", "o": "hotel_osaka", "x": "動物園前步行約 3 分"}, {"a": "15:40", "b": "17:00", "n": "新世界、通天閣", "o": "tsutenkaku", "p": 1, "x": "飯店步行 8-10 分，10:00-20:00"}, {"a": "17:00", "b": "18:30", "n": "晚餐：新世界串炸", "o": "shinsekai", "p": 1, "k": "food", "x": "住宿旁邊，走路就到"}, {"a": "18:30", "b": "20:00", "n": "飯店周邊超市補給、休息", "o": "hotel_osaka", "p": 3, "k": "shop", "x": "移動日不要再排遠景點"}]}, {"d": "2026-11-10", "w": "二", "th": "osaka", "city": "大阪", "t": "天橋立跟團日", "s": "日本橋車站 2 號出口集合，前往丹後海上列車・天橋立・伊根舟屋，整天保留。", "stay": "大阪・惠美須西（新今宮）", "tips": ["集合地點：日本橋車站 2 號出口（大阪市中央區日本橋 1 丁目 5-12）", "集合時間 06:55，07:10 準時出發；建議 06:45 前抵達出口確認", "團費不含餐，午餐自理；車程長，備暈車藥", "日本海側 11 月早晚偏冷，外套與雨具要帶"], "route": [{"f": "動物園前", "t": "日本橋 2 號出口", "l": "Osaka Metro 堺筋線", "c": "#8E5B2E", "m": "4", "n": "2 站；到站由 2 號出口出站"}], "it": [{"a": "06:00", "b": "06:45", "n": "早餐、從住宿搭堺筋線前往日本橋車站 2 號出口", "o": "nipponbashi_meet", "k": "transit", "x": "動物園前 → 日本橋 2 站約 4 分；06:45 前抵達"}, {"a": "06:55", "b": "07:10", "n": "報到、集合", "o": "nipponbashi_meet", "x": "集合 06:55，07:10 準時出發"}, {"a": "07:10", "b": "10:30", "n": "前往丹後（含丹後海上列車）", "k": "transit", "x": "實際時段依旅行社安排"}, {"a": "10:30", "b": "13:00", "n": "天橋立纜車 View Land、智恩寺", "o": "amanohashidate", "p": 1, "x": "展望約 120 分，可在此午餐"}, {"a": "13:00", "b": "15:30", "n": "伊根舟屋遊船、舟屋群展望所", "o": "ine", "p": 1, "x": "停留約 60 分"}, {"a": "15:30", "b": "19:00", "n": "返回大阪、解散", "k": "transit", "x": "實際時間依旅行社安排"}, {"a": "19:00", "b": "20:30", "n": "晚餐、休息", "o": "hotel_osaka", "k": "food", "x": "不排遠景點"}]}, {"d": "2026-11-11", "w": "三", "th": "osaka", "city": "大阪", "t": "日本環球影城 USJ", "s": "整天保留，不排任何其他景點。", "stay": "大阪・惠美須西（新今宮）", "tips": ["USJ 整天不切割", "前一晚確認官方開閉園時間（11 月常見 09:00-20:00 或 21:00）", "11 月中通常已進入聖誕季，夜間表演值得留", "先裝 USJ App，整理券與表演時間以 App 為準", "新今宮直接搭 JR 環狀線，不必繞去難波"], "route": [{"f": "新今宮", "t": "西九条", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "11", "n": "往西九条方向"}, {"f": "西九条", "t": "環球影城", "l": "JR ゆめ咲線", "c": "#5BB7E5", "m": "5", "n": "同月台轉乘，全程含轉乘約 20-25 分"}], "it": [{"a": "07:45", "b": "08:25", "n": "JR 新今宮 → 西九条 → Universal City", "o": "universalcity", "k": "transit", "x": "約 20-25 分"}, {"a": "08:25", "b": "09:00", "n": "入園排隊 / App / 整理券準備", "o": "usj", "p": 1, "x": "建議開園前 35-45 分抵達"}, {"a": "09:00", "b": "20:00", "n": "日本環球影城整天", "o": "usj", "p": 1, "x": "先處理整理券與熱門區，午餐錯開尖峰"}, {"a": "20:00", "b": "21:00", "n": "返回飯店", "o": "hotel_osaka", "k": "transit", "x": "依當日閉園時間"}]}, {"d": "2026-11-12", "w": "四", "th": "nara", "city": "大阪 ↔ 奈良", "t": "奈良一日", "s": "新今宮有 JR 大和路快速直達奈良，先到春日大社再一路往回走。", "stay": "大阪・惠美須西（新今宮）", "tips": ["新今宮 → JR奈良 有直達的大和路快速，不用轉車", "先春日大社再往回走東大寺、奈良公園，不折返", "日落約 16:50，若草山 16:30 前要開始下山", "鹿仙貝只在指定攤位買；地圖與票券不要外露"], "route": [{"f": "新今宮", "t": "JR奈良", "l": "JR 大和路快速（直達）", "c": "#96BE28", "m": "35", "n": "部分班次需在天王寺轉車，上車前看月台顯示"}, {"f": "JR奈良站", "t": "春日大社", "l": "奈良交通巴士", "c": "#8A8175", "m": "12", "n": "站前 2 號乘車處"}], "it": [{"a": "08:00", "b": "08:45", "n": "JR 大和路快速 新今宮 → JR奈良", "o": "jrnara_st", "k": "transit", "x": "直達約 35 分"}, {"a": "08:45", "b": "09:00", "n": "JR奈良站 → 巴士 → 春日大社", "k": "transit", "x": "約 12 分"}, {"a": "09:00", "b": "10:15", "n": "春日大社", "o": "kasuga", "p": 1, "x": "先到本殿再往回走"}, {"a": "10:15", "b": "11:15", "n": "奈良公園餵鹿 / 散步", "o": "narapark", "p": 1, "x": "11 月紅葉＋鹿"}, {"a": "11:15", "b": "12:45", "n": "東大寺大佛殿", "o": "todaiji", "p": 1, "x": "11 月開放 08:00-17:00"}, {"a": "12:45", "b": "14:00", "n": "午餐 / 休息", "k": "food", "x": "不要壓縮太短"}, {"a": "14:00", "b": "15:00", "n": "中谷堂麻糬表演 / 點心", "o": "nakatanidou", "p": 1, "x": "表演時間不定"}, {"a": "15:00", "b": "16:30", "n": "若草山", "o": "wakakusa", "p": 1, "x": "開山期 09:00-17:00；下雨或體力下降可直接刪"}, {"a": "16:30", "b": "17:30", "n": "JR奈良 → 新今宮", "k": "transit", "x": "約 35 分"}, {"a": "17:30", "b": "19:30", "n": "晚餐：新世界或飯店周邊", "o": "shinsekai", "p": 2, "k": "food", "x": "走路就到"}]}, {"d": "2026-11-13", "w": "五", "th": "osaka", "city": "大阪", "t": "大阪城 → 梅田吉伊卡哇", "s": "上午大阪城與海洋堂，下午到傍晚整段留給梅田角色商品與夜景。", "stay": "大阪・惠美須西（新今宮）", "tips": ["HEP FIVE＝阪急ファイブビル，北區角田町 5-15，館內 11:00-21:00", "9090 原 5F ⑩，官方公告已移至 5F ⑭；まじかるちいかわストア在 B1F ⑭", "先攻 B1F：限定品與整理券最可能一早就發完", "日落約 16:50，空中庭園卡在 16:15 進場剛好", "這天是本趟最大採購日，行李空間先預留"], "route": [{"f": "新今宮", "t": "森ノ宮", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "13", "n": "往京橋方向"}, {"f": "森ノ宮", "t": "大阪（梅田）", "l": "JR 大阪環狀線", "c": "#F18E1D", "m": "11"}, {"f": "梅田", "t": "動物園前", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "13", "n": "晚上回程"}], "it": [{"a": "08:00", "b": "09:00", "n": "JR 環狀線 新今宮 → 森ノ宮，步行進大阪城", "o": "morinomiya_st", "k": "transit", "x": "車程 13 分＋站到天守閣步行 15-20 分"}, {"a": "09:00", "b": "10:30", "n": "大阪城天守閣", "o": "osakajo", "p": 1, "x": "09:00-17:00，最後入館 16:30"}, {"a": "10:30", "b": "11:30", "n": "海洋堂 Figure Museum 大阪城", "o": "kaiyodo", "p": 1, "x": "在 MIRAIZA 大阪城內"}, {"a": "11:30", "b": "12:15", "n": "JR 環狀線 森ノ宮 → 大阪（梅田）", "o": "osakasta", "k": "transit", "x": "約 11 分"}, {"a": "12:15", "b": "13:15", "n": "梅田午餐", "k": "food"}, {"a": "13:15", "b": "14:45", "n": "HEP FIVE B1F まじかるちいかわストア → 5F 9090", "o": "majichiikawa", "p": 1, "k": "shop", "x": "限定品可能發整理券或線上抽選，先攻 B1F"}, {"a": "14:45", "b": "15:45", "n": "HEP FIVE 館內、阪急三番街 / 大丸梅田", "o": "hankyu3", "p": 2, "k": "shop", "x": "多數 20:00-21:00 打烊"}, {"a": "15:45", "b": "16:15", "n": "步行梅田空中庭園", "o": "skybuilding", "k": "transit", "x": "15-20 分，走大阪站北側"}, {"a": "16:15", "b": "17:45", "n": "梅田空中庭園 夕陽＋夜景", "o": "skybuilding", "p": 1, "x": "日落約 16:50"}, {"a": "17:45", "b": "19:15", "n": "梅田晚餐", "k": "food"}, {"a": "19:15", "b": "20:00", "n": "御堂筋線 梅田 → 動物園前", "o": "hotel_osaka", "k": "transit", "x": "約 13 分"}]}, {"d": "2026-11-14", "w": "六", "th": "osaka", "city": "大阪", "t": "阿倍野・日本橋・心齋橋", "s": "從住宿往北一路玩上去：展望台 → 電電町 → 心齋橋 → 道頓堀夜景收尾。", "stay": "大阪・惠美須西（新今宮）", "tips": ["今天動線是一條直線往北，全都在御堂筋線／堺筋線上", "HARUKAS 300 是 09:00-22:00，最後入場 21:30，早上人最少", "心齋橋 PARCO 營業至 20:00，CHIIKAWA LAND 要在那之前逛完", "週六人潮多，四天王寺與天王寺公園是 P3，時間不夠先砍這兩個", "這是最後一個完整日，該買的今天買完"], "route": [{"f": "動物園前", "t": "天王寺", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "2", "n": "1 站"}, {"f": "天王寺", "t": "四天王寺前夕陽ヶ丘", "l": "Osaka Metro 谷町線", "c": "#6A2E8C", "m": "2", "n": "P3"}, {"f": "動物園前／惠美須町", "t": "日本橋", "l": "Osaka Metro 堺筋線", "c": "#8E5B2E", "m": "4"}, {"f": "日本橋", "t": "難波", "l": "Osaka Metro 千日前線", "c": "#E5548E", "m": "2"}, {"f": "難波", "t": "心齋橋", "l": "Osaka Metro 御堂筋線", "c": "#E31F26", "m": "2"}], "it": [{"a": "08:30", "b": "09:00", "n": "御堂筋線 動物園前 → 天王寺", "o": "tennoji_st", "k": "transit", "x": "1 站 2 分"}, {"a": "09:00", "b": "10:30", "n": "阿倍野 HARUKAS 300 展望台", "o": "harukas", "p": 1, "x": "09:00-22:00，票價 2026/7 起調整，查官網"}, {"a": "10:30", "b": "11:15", "n": "天王寺公園 てんしば", "o": "tenshiba", "p": 3, "x": "時間不夠可跳"}, {"a": "11:15", "b": "12:30", "n": "四天王寺", "o": "shitennoji", "p": 3, "x": "谷町線 1 站；時間不夠可跳"}, {"a": "12:30", "b": "13:30", "n": "午餐（天王寺／阿倍野）", "k": "food"}, {"a": "13:30", "b": "15:15", "n": "日本橋でんでんタウン・オタロード", "o": "dendentown", "p": 1, "k": "shop", "x": "模型、動漫、電器一條街"}, {"a": "15:15", "b": "16:00", "n": "黑門市場", "o": "kuromon", "p": 2, "x": "傍晚部分攤商已收"}, {"a": "16:00", "b": "17:30", "n": "心齋橋筋、心齋橋 PARCO CHIIKAWA LAND", "o": "parco", "p": 1, "k": "shop", "x": "20:00 前完成"}, {"a": "17:30", "b": "19:00", "n": "晚餐：道頓堀大阪燒 / 串炸", "o": "dotonbori", "p": 1, "k": "food", "x": "建議訂位"}, {"a": "19:00", "b": "20:30", "n": "戎橋、固力果、法善寺橫丁夜景", "o": "hozenji", "p": 1, "x": "夜景最佳"}]}, {"d": "2026-11-15", "w": "日", "th": "osaka", "city": "大阪 → 關西機場", "t": "返程日", "s": "13:40 起飛，10:40 前到機場。新今宮有南海直達，比難波還近。", "stay": "—", "tips": ["新今宮直接搭南海，不必先到難波", "10:40 前抵達機場（國際線抓 3 小時）", "最晚 09:30 從新今宮出發", "退稅單與免稅商品封條前一晚先整理好"], "route": [{"f": "新今宮", "t": "關西機場", "l": "南海 特急ラピート", "c": "#0E4C96", "m": "35", "n": "需另購特急券"}, {"f": "新今宮", "t": "關西機場", "l": "南海 空港急行", "c": "#0E4C96", "m": "43", "n": "不用加價"}], "it": [{"a": "08:00", "b": "08:45", "n": "早餐、整理行李、退房", "o": "hotel_osaka", "x": "不排景點"}, {"a": "08:45", "b": "09:30", "n": "飯店周邊最後補貨", "o": "hotel_osaka", "k": "shop", "x": "百貨多 10:00 後才開"}, {"a": "09:30", "b": "10:20", "n": "南海 新今宮 → 關西機場", "o": "kix", "k": "transit", "x": "ラピート 35 分／空港急行 43 分"}, {"a": "10:20", "b": "13:40", "n": "報到、安檢、退稅、免稅店、午餐", "o": "kix", "x": "13:40 起飛"}, {"a": "13:40", "b": "15:40", "n": "泰國獅航 SL397 飛行中", "o": "tpe", "k": "transit", "x": "飛行 3 小時，15:40 抵達 TPE"}]}];
+
+/* 2026-08-20：依官方資訊補上營業時間、適合時段與季節檢查。
+   未列入 DAYS 的地點只會出現在「全部地點／附近」，不會混入固定行程。 */
+Object.assign(POI.shop9090,{
+  n:'9090 HEP FIVE 店（5F 13）',
+  ja:'9090 HEP FIVE店 大阪市北区角田町5-15 5F',
+  hours:'11:00–21:00',best:'白天／傍晚購物',unscheduled:1,
+  memo:'P1 備選；不排固定時段。HEP FIVE 5F 13。'
+});
+Object.assign(POI,{
+  shop9090_osaka:{n:'9090 Osaka Store（南堀江）',ja:'9090 Osaka Store 大阪市西区南堀江1丁目14-5',
+    lat:34.6714,lng:135.4960,area:'南堀江・心齋橋',p:1,pre:'area',kind:'shop',
+    hours:'11:00–20:00',best:'白天／傍晚購物',unscheduled:1,
+    memo:'P1 備選；不排固定時段。',url:'https://yz-store.com/en/pages/stores'},
+  maruhachi_namba:{n:'Super Maruhachi Namba',ja:'スーパーマルハチ 難波店 大阪市浪速区湊町2丁目1番9号',
+    lat:34.6655,lng:135.4952,area:'日本橋・難波',p:2,pre:'area',kind:'shop',
+    hours:'09:00–22:00',best:'返飯店前補貨',unscheduled:1,
+    memo:'P2 備選；不排固定時段。JR 難波／OCAT 一帶。',url:'https://www.supermaruhachi.co.jp/shop/nanba/'}
+});
+
+const POI_META={
+  gionduck:{hours:'11:00–21:00（排隊制）',best:'晚餐時段',url:'https://www.gionducknoodles.com/'},
+  kimono:{hours:'多數店約 09:00–18:00；須預約',best:'白天拍照',season:'11 月早晚偏冷，內搭避免高領'},
+  kiyomizu:{hours:'06:00–18:00（11/8）',best:'早上 09:30 前',season:'紅葉通常 11 月中下旬；11/8 可能才開始轉色'},
+  nanzenji:{hours:'08:40–17:00；最終受付 16:40',best:'白天；16:00 入場偏緊',season:'紅葉通常 11 月中下旬'},
+  eikando:{hours:'日間通常 09:00–17:00；11/8 無夜間點燈',best:'白天',season:'2026 夜間點燈 11/20 才開始'},
+  fushimi:{hours:'境內全天；授與所多為日間',best:'早上 10:00 前',season:'全年適合'},
+  tofukuji:{hours:'09:00–16:00；16:30 閉門（11/9）',best:'上午',season:'紅葉通常 11 月中下旬；11/9 可能尚未高峰'},
+  tsutenkaku:{hours:'10:00–20:00；最終入場 19:30',best:'白天／傍晚',season:'全年適合'},
+  amanohashidate:{hours:'09:00–17:30；售票至 17:00',best:'白天展望',season:'11 月風大偏冷，雨天能見度較差'},
+  ine:{hours:'遊覽船約 09:00–16:00；依天候運航',best:'白天',season:'11 月偏冷，海況可能影響船班'},
+  usj:{hours:'11/11 官方開閉園時間尚未公告',best:'整天；開園前 35–45 分抵達',season:'25 週年與 ONE PIECE 活動期間；夜間偏冷'},
+  kasuga:{hours:'07:00–17:00；特別參拜 09:00–16:00',best:'上午',season:'11 月紅葉適合'},
+  todaiji:{hours:'08:00–17:00（11 月）',best:'上午／中午',season:'11 月適合'},
+  wakakusa:{hours:'09:00–17:00；11 月開山',best:'15:00 後金色光線',season:'秋季芒草與夕陽適合；雨天不建議'},
+  nakatanidou:{hours:'營業與搗麻糬時刻不固定',best:'下午順路碰運氣',season:'全年適合'},
+  osakajo:{hours:'09:00–18:00；最終入館 17:30',best:'上午',season:'11 月氣候舒適'},
+  kaiyodo:{hours:'09:30–17:30；最終入館 17:00；不定休',best:'上午／下午',season:'室內，全年適合'},
+  hepfive:{hours:'購物 11:00–21:00',best:'下午／傍晚',season:'室內，全年適合'},
+  majichiikawa:{hours:'HEP FIVE 購物時段 11:00–21:00',best:'下午；抽選／整理券另確認',season:'室內，全年適合'},
+  skybuilding:{hours:'09:30–22:30；最終入場 22:00',best:'16:15 入場看夕陽＋夜景',season:'11 月屋頂風大偏冷'},
+  harukas:{hours:'09:00–22:00；最終入場 21:30',best:'早上人少',season:'全年適合；雨天能見度較差'},
+  shitennoji:{hours:'08:30–16:00（11 月）',best:'白天',season:'11 月適合'},
+  dendentown:{hours:'多數店鋪約 11:00 後營業',best:'下午購物',season:'全年適合'},
+  kuromon:{hours:'各店不同；多數 16:00–18:00 陸續收攤',best:'午前／午餐；最晚 16:00 前',season:'全年適合'},
+  parco:{hours:'物販 10:00–20:00',best:'下午／傍晚',season:'室內，全年適合'}
+};
+Object.entries(POI_META).forEach(([id,v])=>Object.assign(POI[id],v));
+
+const dayItem=(di,needle,patch)=>{const x=DAYS[di].it.find(v=>v.n.includes(needle));if(x)Object.assign(x,patch)};
+DAYS[1].tips=[
+  '和服店多數 09:00 開門：08:45 是抵達與報到，務必預約 09:00 換裝',
+  '清水寺 11/8 開放 06:00–18:00；白天拍和服最合適',
+  '南禪寺最終受付 16:40，16:00 到場可行但偏緊，先看方丈庭園再拍水路閣',
+  '永觀堂 2026 夜間點燈 11/20 才開始；11/8 17:00 後只走外圍，不視為夜間參拜',
+  '京都紅葉多在 11 月中下旬見頃，11/8 可能只是初轉色；市巴士易塞，以步行與京阪為主'
+];
+dayItem(1,'和服租借',{n:'抵達和服店、09:00 開始換裝（須預約）',x:'多數店 09:00 開門；08:45 先報到，預約 09:00 時段'});
+dayItem(1,'南禪寺：',{x:'最終受付 16:40；先進方丈庭園／三門，水路閣放最後'});
+dayItem(1,'永觀堂前',{n:'永觀堂外圍、岡崎一帶散步，走回飯店',x:'11/8 沒有夜間點燈；17:00 後不安排入內參拜'});
+
+DAYS[2].tips=[
+  '行李先寄京都站；稻荷與東福寺都在 JR 奈良線上，回程順路取行李',
+  '東福寺 11/9 開放 09:00–16:00、16:30 閉門；11:05 入場符合營業時間',
+  '京都紅葉高峰通常在 11 月中下旬，11/9 可能未到最盛期；東福寺仍保留 P2',
+  '通天閣 10:00–20:00、最終入場 19:30；15:40 安排合適',
+  'RICOLAND 為 P3、本次不排；真要去可與東福寺二選一'
+];
+dayItem(2,'東福寺 通天橋',{x:'09:00–16:00 入場、16:30 閉門；紅葉可能尚未高峰'});
+dayItem(2,'新世界、通天閣',{x:'通天閣 10:00–20:00、最終入場 19:30'});
+
+DAYS[3].tips=[
+  '集合地點：日本橋車站 2 號出口（大阪市中央區日本橋 1 丁目 5-12）',
+  '集合 06:55、07:10 準時出發；建議 06:45 前抵達出口確認',
+  'View Land 11/10 售票 09:00–17:00、運行至 17:30；預排 10:30 合適',
+  '伊根灣遊覽船約 09:00–16:00、每 30 分一班；海況與天候可能停航',
+  '團費不含餐，午餐自理；日本海側 11 月偏冷，備暈車藥、外套與雨具'
+];
+
+DAYS[4].tips=[
+  'USJ 11/11 官方開閉園時間尚未公布；目前 09:00–20:00 只是排程暫定值',
+  '出發前一週與前一晚再查官方營業日曆，依實際開園時間提早 35–45 分抵達',
+  '2026/11/11 在 25 週年與 ONE PIECE PREMIER SUMMER 活動期間',
+  '先裝 USJ App；整理券、表演與臨時休止以 App 為準',
+  '11 月夜間偏冷，新今宮搭 JR 環狀線到西九条轉乘最快'
+];
+dayItem(4,'日本環球影城整天',{n:'日本環球影城整天（營業時間待官方公告）',x:'09:00–20:00 為暫定排程；開閉園時間公布後再調整'});
+
+DAYS[5].s='上午春日大社、奈良公園與東大寺；下午往中谷堂，再為若草山黃昏光線折返東側。';
+DAYS[5].tips=[
+  '春日大社 07:00–17:00、特別參拜 09:00–16:00；東大寺 08:00–17:00',
+  '若草山 09:00–17:00，15:00–16:30 的秋季金色光線很合適，16:30 開始下山',
+  '為保留若草山黃昏，從中谷堂會往東折返；累了可搭巴士／計程車或刪除若草山',
+  '中谷堂搗麻糬沒有固定時刻，不保證碰得到表演',
+  '鹿仙貝只在指定攤位買；雨天取消若草山'
+];
+dayItem(5,'若草山',{x:'09:00–17:00；15:00 後光線好，但會從中谷堂折返東側'});
+
+DAYS[6].tips=[
+  '大阪城 09:00–18:00、最終入館 17:30；09:00 入場最省排隊',
+  '海洋堂 09:30–17:30、最終入館 17:00且不定休，前一晚查臨時休館',
+  'HEP FIVE 購物 11:00–21:00；まじかるちいかわ的抽選／整理券另查官網',
+  '9090 HEP FIVE 與南堀江兩店都列為 P1 備選，不排固定時段',
+  '空中庭園 09:30–22:30；16:15 入場可一次看夕陽與夜景，屋頂風大要帶外套'
+];
+dayItem(6,'大阪城天守閣',{x:'09:00–18:00，最終入館 17:30'});
+dayItem(6,'海洋堂 Figure',{x:'09:30–17:30，最終入館 17:00；不定休，前一晚再確認'});
+dayItem(6,'HEP FIVE B1F',{n:'HEP FIVE B1F まじかるちいかわストア＋館內購物',x:'HEP FIVE 11:00–21:00；9090 兩店只列備選，不排入行程'});
+
+DAYS[7].tips=[
+  'HARUKAS 300 09:00–22:00、最終入場 21:30；09:00 安排人少且合適',
+  '四天王寺 11 月 08:30–16:00；11:15 入場符合營業時間',
+  '日本橋商店多在 11:00 後開；13:30–15:15 是合適購物時段',
+  '黑門市場各店不同，多數 16:00–18:00 收攤；15:15 到場務必在 16:00 前完成',
+  '心齋橋 PARCO 物販 10:00–20:00；道頓堀與法善寺橫丁留晚上最適合'
+];
+dayItem(7,'四天王寺',{x:'11 月 08:30–16:00；時間不夠可跳過'});
+dayItem(7,'黑門市場',{x:'各店不同，多數 16:00–18:00 收攤；16:00 前完成較保險'});
+
+const DAY_AUDIT=[
+  [
+    {s:'ok',t:'HARUKA 與京都市區轉乘時間有留入境、行李與轉車緩衝'},
+    {s:'ok',t:'祇園白川、花見小路放在 17:00 後，夜間氣氛合適'},
+    {s:'ok',t:'Gion Duck Noodles 11:00–21:00，18:30 晚餐符合營業時間',u:'https://www.gionducknoodles.com/'}
+  ],[
+    {s:'ok',t:'清水寺 06:00–18:00；09:30 入場與和服日間拍攝合適',u:'https://www.kiyomizudera.or.jp/access.php'},
+    {s:'warn',t:'南禪寺 16:40 停止受付；16:00 入場可行但偏緊',u:'https://nanzenji.or.jp/about_rinzaishu/visit'},
+    {s:'warn',t:'永觀堂 2026 夜間點燈 11/20 才開始；11/8 只排外圍',u:'https://www.eikando.or.jp/osirase.html'},
+    {s:'warn',t:'京都紅葉通常 11 月中下旬見頃，11/8 可能未到高峰',u:'https://ja.kyoto.travel/flower/momiji/'}
+  ],[
+    {s:'ok',t:'東福寺 11/9 09:00–16:00、16:30 閉門；11:05 安排合適',u:'https://tofukuji.jp/guide/'},
+    {s:'warn',t:'11/9 可能未到京都紅葉高峰，保留 P2 是合理安排'},
+    {s:'ok',t:'通天閣 15:40 到訪符合 10:00–20:00 營業時段',u:'https://www.tsutenkaku.co.jp/Guide-pdf/mishiranguide_taiwan.pdf'}
+  ],[
+    {s:'ok',t:'View Land 10:30 到訪符合 09:00–17:30 營運時段',u:'https://www.viewland.jp/eigyou/'},
+    {s:'ok',t:'伊根遊船排在白天，符合約 09:00–16:00 航班時段',u:'https://www.ine-kankou.jp/view/inewanmeguri'},
+    {s:'check',t:'日本海側 11 月海況多變；纜車與遊船需當天確認運航'}
+  ],[
+    {s:'check',t:'11/11 官方開閉園時間尚未公布；09:00–20:00 暫不可當定案',u:'https://www.usj.co.jp/web/ja/jp/park-guide/schedule/park-hour'},
+    {s:'ok',t:'25 週年與 ONE PIECE 活動期間相符；夜間偏冷需保暖'},
+    {s:'ok',t:'整天只排 USJ，不再切割其他景點，安排合理'}
+  ],[
+    {s:'ok',t:'春日大社與東大寺都在官方開放時段內',u:'https://www.kasugataisha.or.jp/about/basic/'},
+    {s:'ok',t:'若草山 15:00–16:30 適合秋季芒草與黃昏光線',u:'https://narashikanko.or.jp/spot/detail_10108.html'},
+    {s:'warn',t:'中谷堂後再去若草山會折返；保留黃昏優先，累了改搭車或刪除'},
+    {s:'check',t:'中谷堂搗麻糬時刻不固定，不能把表演當保證行程'}
+  ],[
+    {s:'ok',t:'大阪城、HEP FIVE 與空中庭園均符合營業時間',u:'https://www.osakacastle.net/guide/'},
+    {s:'check',t:'海洋堂 09:30–17:30 且不定休，前一晚確認臨時休館',u:'https://miraiza.jp/shop'},
+    {s:'ok',t:'空中庭園 16:15 入場可銜接約 16:50 日落與夜景',u:'https://www.skybldg.co.jp/observatory/information/'},
+    {s:'ok',t:'兩間 9090 皆為 P1 備選，未排入固定時程'}
+  ],[
+    {s:'ok',t:'HARUKAS、四天王寺與 PARCO 均在官方營業時段內',u:'https://www.abenoharukas-300.jp/observatory/information.html'},
+    {s:'warn',t:'黑門 15:15 稍晚；多數店 16:00 後選擇變少，需準時離開',u:'https://kuromon.com/jp/'},
+    {s:'ok',t:'道頓堀與法善寺橫丁留到晚上，時段比白天更合適'},
+    {s:'ok',t:'Super Maruhachi Namba 為 P2 備選，09:00–22:00 且未排固定時段'}
+  ],[
+    {s:'ok',t:'09:30 從新今宮出發，預計 10:20 抵達，保留超過 3 小時辦理登機'},
+    {s:'ok',t:'南海新今宮可直達關西機場，不必繞到難波'}
+  ]
+];
+
+/* 2026-08-21：京都住宿改至南西海子町 442，重新計算京都三日動線並加入錦市場。 */
+Object.assign(POI.hotel_kyoto,{
+  n:'京都住宿（東山站・南西海子町）',
+  ja:'京都府京都市東山区南西海子町442 〒605-0013',
+  lat:35.0093,lng:135.7806,area:'東山・岡崎',pre:'area',kind:'hotel',
+  memo:'最近站：地下鐵東西線「東山」步行約 1–2 分（約 64–80m）／京阪「三条」步行約 5–10 分。'
+});
+POI.nishiki={
+  n:'錦市場',ja:'京都錦市場商店街 京都市中京区西大文字町609',
+  lat:35.0050,lng:135.7648,area:'京都市區',p:1,pre:'area',kind:'food',
+  hours:'各店不同；多數約 10:00–17:00',best:'11:00–14:00 午餐與採買',
+  season:'全年適合；拱廊內雨天也可安排',
+  memo:'市場約 390m。不可邊走邊吃，請在購買店家前或店內食用；個別店休與營業時間不同。',
+  url:'https://www.kyoto-nishiki.or.jp/'
+};
+
+DAYS[0].s='抵達京都後以地下鐵到東山站住宿；傍晚沿白川步行進祇園，不再繞回京阪搭一站。';
+DAYS[0].stay='京都・東山（南西海子町／東山站）';
+DAYS[0].route=[
+  {f:'關西機場 T1',t:'京都',l:'JR HARUKA 特急',c:'#0071BC',m:'75-90',n:'T1 2F 連絡橋 → JR Kansai Airport Station'},
+  {f:'京都',t:'烏丸御池',l:'地下鐵 烏丸線',c:'#0D9488',m:'5'},
+  {f:'烏丸御池',t:'東山',l:'地下鐵 東西線',c:'#B31E56',m:'6',n:'東山站 2 號出口；步行約 1–2 分到住宿'},
+  {f:'東山住宿',t:'祇園白川',l:'白川沿い步行',c:'#8A8175',m:'15',n:'沿古川町商店街、白川往南走'}
+];
+DAYS[0].tips=[
+  '新住宿在地下鐵東山站旁，步行約 1–2 分；從京都站於烏丸御池轉東西線最穩定',
+  '京阪三条步行約 5–10 分，隔天去清水五条仍可照原本搭京阪',
+  '傍晚直接沿白川步行約 15 分到祇園白川，比先走去京阪三条再搭一站更順',
+  '11 月京都日落約 16:50；17:00 後祇園白川、花見小路適合看夜間氣氛',
+  '行李多時京都站搭計程車到住宿約 15–20 分，可省下烏丸御池轉乘'
+];
+Object.assign(DAYS[0].it[4],{
+  n:'京都站 → 東山站住宿，Check-in',o:'hotel_kyoto',
+  x:'烏丸線 → 烏丸御池轉東西線 → 東山，約 20 分；東山站步行約 1–2 分'
+});
+Object.assign(DAYS[0].it[5],{
+  n:'古川町商店街、白川沿い、三条大橋散步',o:'kamogawa',
+  x:'住宿出門就是古川町商店街；往西約 10–12 分到三条大橋'
+});
+Object.assign(DAYS[0].it[6],{
+  n:'沿白川步行 → 祇園白川、巽橋、花見小路',o:'shirakawa',
+  x:'住宿到祇園白川步行約 15 分，不必特地搭京阪一站'
+});
+
+DAYS[1].stay='京都・東山（南西海子町／東山站）';
+DAYS[1].route=[
+  {f:'東山住宿',t:'京阪三条',l:'步行',c:'#8A8175',m:'8',n:'沿三条通往西'},
+  {f:'三条',t:'清水五条',l:'京阪本線',c:'#00913A',m:'5',n:'2 站；再步行約 12 分到五条坂'},
+  {f:'清水五条',t:'三条',l:'京阪本線',c:'#00913A',m:'5',n:'歸還和服後回程'},
+  {f:'三条京阪',t:'蹴上',l:'地下鐵 東西線',c:'#B31E56',m:'4',n:'2 站；步行約 10 分到南禪寺'},
+  {f:'南禪寺',t:'東山住宿',l:'步行',c:'#8A8175',m:'15',n:'永觀堂外圍、岡崎一路走回'}
+];
+DAYS[1].tips=[
+  '住宿到地下鐵東山站約 1–2 分、到京阪三条約 5–10 分；08:00 出發仍有足夠緩衝',
+  '和服店多數 09:00 開門：08:45 是抵達與報到，務必預約 09:00 換裝',
+  '清水寺 11/8 開放 06:00–18:00；白天拍和服最合適',
+  '南禪寺最終受付 16:40，16:00 到場偏緊；先進方丈庭園，再拍水路閣',
+  '永觀堂 2026 夜間點燈 11/20 才開始；11/8 17:00 後只走外圍，再步行約 15 分回住宿'
+];
+Object.assign(DAYS[1].it[0],{
+  n:'早餐，住宿步行到京阪三条 → 清水五条，前往和服店',
+  x:'住宿到京阪三条約 5–10 分；京阪 2 站後再步行約 12 分'
+});
+
+DAYS[2].t='伏見稻荷・東福寺・錦市場 → 大阪';
+DAYS[2].s='退房後先把行李寄在京都站；上午伏見稻荷、東福寺，中午到錦市場，取行李後進大阪。';
+DAYS[2].route=[
+  {f:'東山',t:'京都',l:'東西線 → 烏丸線（烏丸御池轉）',c:'#0D9488',m:'18',n:'京都站寄放行李'},
+  {f:'京都',t:'稻荷',l:'JR 奈良線',c:'#6FA524',m:'5'},
+  {f:'稻荷',t:'東福寺',l:'JR 奈良線',c:'#6FA524',m:'3',n:'P2，可視人潮跳過'},
+  {f:'東福寺',t:'京都',l:'JR 奈良線',c:'#6FA524',m:'2'},
+  {f:'京都',t:'四条',l:'地下鐵 烏丸線',c:'#0D9488',m:'4',n:'步行約 5 分到錦市場'},
+  {f:'四条',t:'京都',l:'地下鐵 烏丸線',c:'#0D9488',m:'4',n:'回京都站取行李'},
+  {f:'京都',t:'大阪',l:'JR 京都線 新快速',c:'#0071BC',m:'29'},
+  {f:'大阪',t:'新今宮',l:'JR 大阪環狀線',c:'#F18E1D',m:'16',n:'出站步行約 5 分到飯店'}
+];
+DAYS[2].it=[
+  {a:'08:00',b:'08:40',n:'退房，東山站 → 京都站，寄放行李',o:'kyotostation',k:'transit',x:'東西線→烏丸御池→烏丸線約 18 分；住宿離東山站約 1–2 分'},
+  {a:'08:40',b:'09:00',n:'JR 奈良線 京都 → 稻荷',o:'inari_st',k:'transit',x:'車程約 5 分，預留找月台時間'},
+  {a:'09:00',b:'10:35',n:'伏見稻荷大社、千本鳥居',o:'fushimi',p:1,x:'越早越好，10 點後人潮增加'},
+  {a:'10:35',b:'10:55',n:'JR 稻荷 → 東福寺',o:'tofukuji',k:'transit',x:'1 站 3 分，含步行緩衝'},
+  {a:'10:55',b:'12:00',n:'東福寺 通天橋、方丈庭園',o:'tofukuji',p:2,x:'09:00–16:00 入場；紅葉可能尚未高峰，人多可提早離開'},
+  {a:'12:00',b:'12:20',n:'JR 東福寺 → 京都站',o:'kyotostation',k:'transit',x:'車程約 2 分'},
+  {a:'12:20',b:'12:40',n:'地下鐵京都 → 四条，步行前往錦市場',o:'nishiki',k:'transit',x:'烏丸線約 4 分；四条站步行約 5 分'},
+  {a:'12:40',b:'13:50',n:'錦市場散步＋午餐',o:'nishiki',p:1,k:'food',x:'各店營業時間不同；不可邊走邊吃，請在店前或店內食用'},
+  {a:'13:50',b:'14:15',n:'四条 → 京都站，取行李',o:'kyotostation',k:'transit',x:'烏丸線約 4 分，預留步行與開置物櫃時間'},
+  {a:'14:15',b:'15:35',n:'京都 → 大阪 → 新今宮',o:'shinimamiya_st',k:'transit',x:'新快速 29 分＋環狀線 16 分，含轉車緩衝'},
+  {a:'15:35',b:'16:10',n:'大阪飯店 Check-in（惠美須西）',o:'hotel_osaka',x:'新今宮步行約 5 分／動物園前約 3 分'},
+  {a:'16:10',b:'17:30',n:'新世界、通天閣',o:'tsutenkaku',p:1,x:'通天閣 10:00–20:00、最終入場 19:30'},
+  {a:'17:30',b:'19:00',n:'晚餐：新世界串炸',o:'shinsekai',p:1,k:'food',x:'住宿旁邊，走路就到'},
+  {a:'19:00',b:'20:00',n:'飯店周邊補給、休息',o:'hotel_osaka',p:3,k:'shop',x:'移動日不再安排遠景點'}
+];
+DAYS[2].tips=[
+  '新住宿最近站改為東山；退房後從東山站到京都站約 18 分，行李仍寄京都站最穩',
+  '東福寺 10:55 入場符合 09:00–16:00；紅葉可能尚未高峰，維持 P2 可彈性跳過',
+  '錦市場安排 12:40–13:50，落在多數店約 10:00–17:00 的核心時段；各店店休不同',
+  '錦市場禁止邊走邊吃，請在店前或店內完成；京都站往返改搭烏丸線避免公車塞車',
+  '15:35 左右抵達新今宮仍可在 16:10 前往通天閣，營業時間與晚餐銜接都沒問題'
+];
+
+DAY_AUDIT[0]=[
+  {s:'ok',t:'新住宿距地下鐵東山站約 64–80m；京都站經烏丸御池轉乘約 20 分',u:'https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/menu0132.htm'},
+  {s:'ok',t:'改為沿白川步行約 15 分進祇園，動線比繞去京阪三条搭一站更直接'},
+  {s:'ok',t:'祇園白川、花見小路放在 17:00 後，夜間氣氛合適'},
+  {s:'ok',t:'Gion Duck Noodles 11:00–21:00，18:30 晚餐符合營業時間',u:'https://www.gionducknoodles.com/'}
+];
+DAY_AUDIT[1]=[
+  {s:'ok',t:'住宿到京阪三条約 5–10 分；08:00 出發可在和服店 08:45 前後報到'},
+  {s:'ok',t:'清水寺 06:00–18:00；09:30 入場與和服日間拍攝合適',u:'https://www.kiyomizudera.or.jp/access.php'},
+  {s:'warn',t:'南禪寺 16:40 停止受付；16:00 入場可行但偏緊',u:'https://nanzenji.or.jp/about_rinzaishu/visit'},
+  {s:'warn',t:'永觀堂 2026 夜間點燈 11/20 才開始；11/8 只排外圍',u:'https://www.eikando.or.jp/osirase.html'},
+  {s:'ok',t:'南禪寺／永觀堂走回新住宿約 15 分，新地址反而更有利'}
+];
+DAY_AUDIT[2]=[
+  {s:'ok',t:'東山站到京都站、寄行李、再搭 JR 奈良線的 40 分鐘安排可行'},
+  {s:'ok',t:'東福寺 10:55 入場符合 09:00–16:00、16:30 閉門',u:'https://tofukuji.jp/guide/'},
+  {s:'ok',t:'錦市場 12:40–13:50 落在多數店的日間營業時段；各店店休仍需個別確認',u:'https://www.kyoto-nishiki.or.jp/stores/'},
+  {s:'ok',t:'四条往返京都站使用烏丸線，避開京都市中心公車壅塞',u:'https://kyoto.travel/en/getting-around/comfortable-access-to-central-kyoto-city-nishiki-market/'},
+  {s:'ok',t:'15:35 抵達大阪後再訪通天閣，仍符合 10:00–20:00 營業時間'}
+];
 
 const PHRASES=[
  {g:'交通',l:[
@@ -1125,16 +1515,30 @@ const TELS=[
 
 const CHECKS=[
  ['交通','HARUKA / 京阪本線 / 南海電鐵 / 京都→大阪 / 奈良往返路線，前一晚存 Google Maps 或 NAVITIME。'],
- ['票券','USJ 門票 / Express Pass、梅田空中庭園、通天閣、大阪城；東福寺 11/10 為 09:00 開門。'],
- ['跟團','天橋立（KKday 528649，大阪出發）集合時間、地點、是否成團（最少 4 人）、解散點。'],
- ['住宿','京都：東山大和大路五条上る山崎町；大阪：心齋橋 / 難波 / 大阪難波 / 近鐵日本橋擇一。'],
+ ['票券','USJ 門票 / Express Pass、梅田空中庭園、通天閣、大阪城；東福寺 11/9 為 09:00 開門。'],
+ ['跟團','天橋立（KKday 528649）：11/10 日本橋車站 2 號出口 06:55 集合、07:10 出發；前一晚再確認領隊與解散資訊。'],
+ ['住宿','京都：東山區南西海子町 442（地下鐵東山站步行約 1–2 分）；大阪：惠美須西（近動物園前／新今宮）。'],
  ['餐廳','燒肉弘 四條高倉、ABURIYA、Gion Duck Noodles 等熱門店先訂位或確認排隊策略。'],
- ['紅葉','東福寺、清水寺在 11 月中旬進入見頃，開門即入；夜間特別拜觀日期出發前查官網。'],
+ ['紅葉','京都紅葉多在 11 月中下旬見頃；11/8–9 可能才初轉色。永觀堂 2026 夜間點燈 11/20 才開始。'],
  ['衣物','11 月京都早晚 8-10°C，日落約 16:50。外套、圍巾、暖暖包；USJ 整天在戶外更冷。'],
- ['返程','11/15 13:40 起飛，10:40 前抵達 KIX；09:40 前從難波出發。']
+ ['返程','11/15 13:40 起飛，10:40 前抵達 KIX；09:30 從新今宮搭南海直達。']
 ];
 
-const RAIL={"S": {"kyoto": {"n": "京都", "ja": "京都", "x": 150, "y": 14, "big": 1, "tag": "JR"}, "tofukuji": {"n": "東福寺", "ja": "東福寺", "x": 150, "y": 26, "tag": "JR"}, "inari": {"n": "稻荷", "ja": "稲荷", "x": 150, "y": 34, "tag": "JR"}, "sanjo": {"n": "三条", "ja": "三条", "x": 180, "y": 9, "big": 1, "tag": "京阪", "star": "京都住宿"}, "gionshijo": {"n": "祇園四条", "ja": "祇園四条", "x": 180, "y": 17, "tag": "京阪"}, "kiyomizu5": {"n": "清水五条", "ja": "清水五条", "x": 180, "y": 25, "tag": "京阪"}, "tofukujiK": {"n": "東福寺", "ja": "東福寺", "x": 180, "y": 33, "tag": "京阪"}, "fushimiK": {"n": "伏見稻荷", "ja": "伏見稲荷", "x": 180, "y": 41, "tag": "京阪"}, "karasumaoike": {"n": "烏丸御池", "ja": "烏丸御池", "x": 164, "y": 4, "tag": "地下鐵"}, "sanjokeihan": {"n": "三条京阪", "ja": "三条京阪", "x": 180, "y": 0, "tag": "東西線"}, "osaka": {"n": "大阪", "ja": "大阪", "x": 56, "y": 30, "big": 1, "tag": "JR"}, "umeda": {"n": "梅田", "ja": "梅田", "x": 50, "y": 34, "big": 1, "tag": "M"}, "higashiumeda": {"n": "東梅田", "ja": "東梅田", "x": 66, "y": 30, "tag": "T"}, "yodoyabashi": {"n": "淀屋橋", "ja": "淀屋橋", "x": 50, "y": 44, "tag": "M・京阪"}, "honmachi": {"n": "本町", "ja": "本町", "x": 50, "y": 54, "tag": "M・C"}, "shinsaibashi": {"n": "心齋橋", "ja": "心斎橋", "x": 50, "y": 64, "big": 1, "tag": "M"}, "namba": {"n": "難波", "ja": "なんば・大阪難波", "x": 50, "y": 74, "big": 1, "tag": "M・S・近鐵・南海"}, "daikokucho": {"n": "大國町", "ja": "大国町", "x": 50, "y": 82, "tag": "M・Y"}, "doubutsuen": {"n": "動物園前", "ja": "動物園前", "x": 50, "y": 92, "big": 1, "tag": "M・K", "star": "大阪住宿"}, "sakaisuji": {"n": "堺筋本町", "ja": "堺筋本町", "x": 70, "y": 54, "tag": "K・C"}, "nagahori": {"n": "長堀橋", "ja": "長堀橋", "x": 70, "y": 64, "tag": "K"}, "nipponbashi": {"n": "日本橋", "ja": "日本橋", "x": 70, "y": 74, "big": 1, "tag": "K・S"}, "ebisucho": {"n": "惠美須町", "ja": "恵美須町", "x": 70, "y": 82, "tag": "K"}, "tanimachi4": {"n": "谷町四丁目", "ja": "谷町四丁目", "x": 88, "y": 54, "tag": "C・T"}, "morinomiya": {"n": "森ノ宮", "ja": "森ノ宮", "x": 106, "y": 54, "big": 1, "tag": "JR・C"}, "tanimachi9": {"n": "谷町九丁目", "ja": "谷町九丁目", "x": 88, "y": 74, "tag": "T・S"}, "shitennoji": {"n": "四天王寺前", "ja": "四天王寺前夕陽ヶ丘", "x": 80, "y": 90, "tag": "T"}, "shinimamiya": {"n": "新今宮", "ja": "新今宮", "x": 60, "y": 92, "big": 1, "tag": "JR・南海"}, "tennoji": {"n": "天王寺", "ja": "天王寺・あべの", "x": 60, "y": 104, "big": 1, "tag": "JR・M・T"}, "kyobashi": {"n": "京橋", "ja": "京橋", "x": 98, "y": 30, "tag": "JR"}, "tsuruhashi": {"n": "鶴橋", "ja": "鶴橋", "x": 106, "y": 74, "tag": "JR・近鐵"}, "nishikujo": {"n": "西九条", "ja": "西九条", "x": 26, "y": 54, "big": 1, "tag": "JR"}, "usj": {"n": "環球影城", "ja": "ユニバーサルシティ", "x": 8, "y": 64, "big": 1, "tag": "JR"}, "kix": {"n": "關西機場", "ja": "関西空港", "x": 25, "y": 112, "big": 1, "tag": "南海・JR"}, "jrnara": {"n": "JR奈良", "ja": "奈良", "x": 150, "y": 108, "big": 1, "tag": "JR"}, "kintetsunara": {"n": "近鐵奈良", "ja": "近鉄奈良", "x": 168, "y": 92, "tag": "近鐵"}}, "L": [{"id": "midosuji", "n": "Osaka Metro 御堂筋線", "s": "M", "c": "#E31F26", "p": ["umeda", "yodoyabashi", "honmachi", "shinsaibashi", "namba", "daikokucho", "doubutsuen", "tennoji"]}, {"id": "sakaisuji", "n": "Osaka Metro 堺筋線", "s": "K", "c": "#8E5B2E", "p": ["sakaisuji", "nagahori", "nipponbashi", "ebisucho", "doubutsuen"]}, {"id": "chuo", "n": "Osaka Metro 中央線", "s": "C", "c": "#00A65B", "p": ["honmachi", "sakaisuji", "tanimachi4", "morinomiya"]}, {"id": "tanimachi", "n": "Osaka Metro 谷町線", "s": "T", "c": "#6A2E8C", "p": ["higashiumeda", "tanimachi4", "tanimachi9", "shitennoji", "tennoji"]}, {"id": "sennichi", "n": "Osaka Metro 千日前線", "s": "S", "c": "#E5548E", "p": ["namba", "nipponbashi", "tanimachi9"]}, {"id": "loop", "n": "JR 大阪環狀線", "s": "O", "c": "#F18E1D", "p": ["osaka", "kyobashi", "tsuruhashi", "tennoji", "shinimamiya", "nishikujo", "osaka"]}, {"id": "yumesaki", "n": "JR ゆめ咲線（往 USJ）", "s": "JR", "c": "#5BB7E5", "p": ["nishikujo", "usj"]}, {"id": "yamatoji", "n": "JR 大和路線（往奈良）", "s": "JR", "c": "#96BE28", "p": ["shinimamiya", "tennoji", "jrnara"]}, {"id": "kyotoline", "n": "JR 京都線 新快速", "s": "JR", "c": "#0071BC", "p": ["osaka", "kyoto"]}, {"id": "narajr", "n": "JR 奈良線（京都↔稻荷）", "s": "JR", "c": "#6FA524", "p": ["kyoto", "tofukuji", "inari"]}, {"id": "nankai", "n": "南海本線・空港線", "s": "NK", "c": "#0E4C96", "p": ["namba", "shinimamiya", "kix"]}, {"id": "kintetsu", "n": "近鐵奈良線", "s": "KT", "c": "#C4262E", "p": ["namba", "tsuruhashi", "kintetsunara"]}, {"id": "keihan", "n": "京阪本線", "s": "KH", "c": "#00913A", "p": ["sanjo", "gionshijo", "kiyomizu5", "tofukujiK", "fushimiK"]}, {"id": "tozai", "n": "京都地下鐵 東西線", "s": "T", "c": "#B31E56", "p": ["sanjokeihan", "karasumaoike"]}, {"id": "karasuma", "n": "京都地下鐵 烏丸線", "s": "K", "c": "#0D9488", "p": ["karasumaoike", "kyoto"]}], "WALK": [["tofukuji", "tofukujiK"], ["inari", "fushimiK"], ["sanjo", "sanjokeihan"], ["osaka", "umeda"], ["umeda", "higashiumeda"], ["doubutsuen", "shinimamiya"], ["namba", "nipponbashi"]], "USE": {"sanjo": "京都住宿最近站（步行約 6 分）", "gionshijo": "11/7 祇園白川・花見小路", "kiyomizu5": "11/8 清水寺・二寧坂・八坂", "inari": "11/9 伏見稻荷（JR 稻荷站更近參道）", "fushimiK": "11/9 伏見稻荷（京阪側）", "tofukuji": "11/9 東福寺紅葉 P2", "kyoto": "11/7 抵達、11/9 寄行李與轉車", "doubutsuen": "大阪住宿最近站（步行約 3 分）", "shinimamiya": "住宿旁大站：往奈良、USJ、關西機場都從這裡", "sanjokeihan": "11/7、11/9 飯店往京都站（東西線轉烏丸線）", "karasumaoike": "東西線 ↔ 烏丸線 轉乘點", "ebisucho": "11/9 新世界・通天閣、11/14 日本橋電電町", "tennoji": "11/14 阿倍野 HARUKAS 300", "shitennoji": "11/14 四天王寺 P3", "nipponbashi": "11/14 日本橋でんでんタウン・黑門市場", "shinsaibashi": "11/14 心齋橋 PARCO CHIIKAWA LAND", "namba": "11/10 天橋立集合點候選、道頓堀", "umeda": "11/13 HEP FIVE 吉伊卡哇、梅田空中庭園", "morinomiya": "11/13 大阪城天守閣・海洋堂", "nishikujo": "11/11 往 USJ 的轉車站", "usj": "11/11 日本環球影城", "jrnara": "11/12 奈良一日", "kix": "11/7 抵達、11/15 返程"}, "LEFT": ["daikokucho", "doubutsuen", "honmachi", "inari", "jrnara", "kix", "kyoto", "namba", "nishikujo", "osaka", "shinsaibashi", "tennoji", "tofukuji", "umeda", "usj", "yodoyabashi"], "BELOW": ["shitennoji", "tanimachi4", "tanimachi9", "tsuruhashi"], "L0": ["kyoto", "osaka", "shinimamiya", "jrnara", "kix", "usj", "tennoji", "morinomiya", "sanjo", "namba", "nishikujo"]};
+const RAIL={"LAYOUTS": {"osaka": {"title": "大阪市中心", "sub": "住宿在動物園前／新今宮。★ 為住宿位置，灰虛線為站間步行轉乘。", "S": {"osaka": {"n": "大阪", "x": 22, "y": 10, "big": 1, "tag": "JR"}, "umeda": {"n": "梅田", "x": 44, "y": 10, "big": 1, "tag": "御堂筋"}, "higashiumeda": {"n": "東梅田", "x": 68, "y": 10, "tag": "谷町"}, "yodoyabashi": {"n": "淀屋橋", "x": 44, "y": 34, "tag": "御堂筋・京阪"}, "honmachi": {"n": "本町", "x": 44, "y": 58, "tag": "御堂筋・中央"}, "shinsaibashi": {"n": "心齋橋", "x": 44, "y": 80, "big": 1, "tag": "御堂筋"}, "namba": {"n": "難波", "x": 44, "y": 102, "big": 1, "tag": "御堂筋・千日前・南海・近鐵"}, "daikokucho": {"n": "大國町", "x": 44, "y": 120, "tag": "御堂筋"}, "doubutsuen": {"n": "動物園前", "x": 44, "y": 140, "big": 1, "tag": "御堂筋・堺筋", "star": "大阪住宿"}, "tennoji": {"n": "天王寺", "x": 62, "y": 168, "big": 1, "tag": "JR・御堂筋・谷町"}, "shinimamiya": {"n": "新今宮", "x": 26, "y": 152, "big": 1, "tag": "JR・南海"}, "sakaisuji": {"n": "堺筋本町", "x": 88, "y": 58, "tag": "堺筋・中央"}, "nagahori": {"n": "長堀橋", "x": 88, "y": 80, "tag": "堺筋"}, "nipponbashi": {"n": "日本橋", "x": 88, "y": 102, "big": 1, "tag": "堺筋・千日前"}, "ebisucho": {"n": "惠美須町", "x": 88, "y": 120, "tag": "堺筋"}, "tanimachi4": {"n": "谷町四丁目", "x": 120, "y": 58, "tag": "谷町・中央"}, "morinomiya": {"n": "森ノ宮", "x": 150, "y": 58, "big": 1, "tag": "JR・中央"}, "tanimachi9": {"n": "谷町九丁目", "x": 120, "y": 102, "tag": "谷町・千日前"}, "shitennoji": {"n": "四天王寺前", "x": 114, "y": 140, "tag": "谷町"}, "kyobashi": {"n": "京橋", "x": 150, "y": 24, "tag": "JR"}, "tsuruhashi": {"n": "鶴橋", "x": 150, "y": 110, "tag": "JR・近鐵"}, "nishikujo": {"n": "西九条", "x": 4, "y": 58, "big": 1, "tag": "JR"}}, "pad": [96, 175, 112, 104], "L": [{"n": "御堂筋線", "c": "#E31F26", "lbl": [48, 92], "p": ["umeda", "yodoyabashi", "honmachi", "shinsaibashi", "namba", "daikokucho", "doubutsuen", "tennoji"]}, {"n": "堺筋線", "c": "#8E5B2E", "lbl": [92, 92], "p": ["sakaisuji", "nagahori", "nipponbashi", "ebisucho", "doubutsuen"]}, {"n": "中央線", "c": "#00A65B", "lbl": [103, 54], "p": ["honmachi", "sakaisuji", "tanimachi4", "morinomiya"]}, {"n": "谷町線", "c": "#6A2E8C", "lbl": [124, 80], "p": ["higashiumeda", "tanimachi4", "tanimachi9", "shitennoji", "tennoji"]}, {"n": "千日前線", "c": "#E5548E", "lbl": [66, 98], "p": ["namba", "nipponbashi", "tanimachi9"]}, {"n": "JR 大阪環狀線", "c": "#F18E1D", "lbl": [96, 20], "p": ["osaka", "kyobashi", "tsuruhashi", "tennoji", "shinimamiya", "nishikujo", "osaka"]}], "DASH": [], "WALK": [["osaka", "umeda"], ["umeda", "higashiumeda"], ["doubutsuen", "shinimamiya"], ["namba", "nipponbashi"]], "STUB": [["osaka", 0, -18, "JR 京都線 新快速\n→ 京都 29 分"], ["nishikujo", 0, -26, "JR ゆめ咲線\n→ 環球影城 5 分"], ["shinimamiya", -10, 22, "南海本線\n→ 關西機場 35-43 分"], ["tennoji", 26, 14, "JR 大和路快速\n→ JR奈良 35 分"]], "LEFT": ["daikokucho", "doubutsuen", "honmachi", "namba", "nishikujo", "osaka", "shinimamiya", "shinsaibashi", "umeda", "yodoyabashi"], "BELOW": ["shitennoji", "tanimachi4", "tennoji"]}, "kansai": {"title": "關西廣域　從住宿出發", "sub": "以「動物園前／新今宮」為中心。每條線標的是實際會搭的車種與時間。", "S": {"home": {"n": "動物園前 / 新今宮", "x": 100, "y": 104, "big": 1, "star": "大阪住宿"}, "osaka": {"n": "大阪 / 梅田", "x": 100, "y": 54, "big": 1}, "kyoto": {"n": "京都", "x": 100, "y": 8, "big": 1}, "namba": {"n": "難波", "x": 100, "y": 80}, "tennoji": {"n": "天王寺", "x": 140, "y": 126}, "jrnara": {"n": "JR奈良", "x": 186, "y": 150, "big": 1}, "nishikujo": {"n": "西九条", "x": 52, "y": 72}, "usj": {"n": "環球影城", "x": 12, "y": 88, "big": 1}, "kix": {"n": "關西機場", "x": 100, "y": 186, "big": 1}, "amano": {"n": "天橋立・伊根", "x": 22, "y": 16, "big": 1}}, "pad": [120, 150, 80, 58], "L": [{"n": "JR 大阪環狀線 16 分", "c": "#F18E1D", "lbl": [106, 64], "p": ["home", "osaka"]}, {"n": "JR 京都線 新快速 29 分", "c": "#0071BC", "lbl": [104, 30], "p": ["osaka", "kyoto"]}, {"n": "JR 環狀線 11 分", "c": "#F18E1D", "lbl": [70, 84], "p": ["home", "nishikujo"]}, {"n": "JR ゆめ咲線 5 分", "c": "#5BB7E5", "lbl": [28, 78], "p": ["nishikujo", "usj"]}, {"n": "JR 大和路快速 35 分（直達）", "c": "#96BE28", "lbl": [150, 140], "p": ["home", "tennoji", "jrnara"]}, {"n": "南海 ラピート 35 分 / 空港急行 43 分", "c": "#0E4C96", "lbl": [104, 148], "p": ["home", "kix"]}, {"n": "御堂筋線 4 分", "c": "#E31F26", "lbl": [104, 92], "p": ["home", "namba"]}], "DASH": [{"n": "跟團巴士（日本橋站 2 號出口 06:55 集合）", "c": "#8A8175", "p": ["namba", "amano"], "lbl": [52, 50]}], "WALK": [], "STUB": [], "LEFT": ["amano", "home", "namba", "nishikujo", "usj"], "BELOW": ["jrnara", "kix", "tennoji"]}, "kyoto": {"title": "京都市區", "sub": "住左京區和國町，最近站是京阪「三条」。這 2 晚幾乎只用京阪本線＋地下鐵。", "S": {"keage": {"n": "蹴上", "x": 150, "y": 10, "tag": "東西線"}, "higashiyama": {"n": "東山", "x": 124, "y": 10, "tag": "東西線"}, "sanjokeihan": {"n": "三条京阪", "x": 96, "y": 10, "tag": "東西線"}, "karasumaoike": {"n": "烏丸御池", "x": 48, "y": 10, "tag": "東西線・烏丸線"}, "kyoto": {"n": "京都", "x": 20, "y": 52, "big": 1, "tag": "JR・烏丸線"}, "sanjo": {"n": "三条", "x": 96, "y": 44, "big": 1, "tag": "京阪", "star": "京都住宿"}, "gionshijo": {"n": "祇園四条", "x": 96, "y": 76, "big": 1, "tag": "京阪"}, "kiyomizu5": {"n": "清水五条", "x": 96, "y": 108, "big": 1, "tag": "京阪"}, "tofukujiK": {"n": "東福寺", "x": 96, "y": 146, "tag": "京阪"}, "fushimiK": {"n": "伏見稻荷", "x": 96, "y": 180, "big": 1, "tag": "京阪"}, "tofukuji": {"n": "東福寺", "x": 20, "y": 146, "tag": "JR"}, "inari": {"n": "稻荷", "x": 20, "y": 180, "big": 1, "tag": "JR"}}, "pad": [158, 150, 82, 52], "L": [{"n": "京阪本線", "c": "#00913A", "lbl": [100, 128], "p": ["sanjo", "gionshijo", "kiyomizu5", "tofukujiK", "fushimiK"]}, {"n": "地下鐵 東西線", "c": "#B31E56", "lbl": [58, 22], "p": ["keage", "higashiyama", "sanjokeihan", "karasumaoike"]}, {"n": "地下鐵 烏丸線", "c": "#0D9488", "lbl": [37, 37], "p": ["karasumaoike", "kyoto"]}, {"n": "JR 奈良線", "c": "#6FA524", "lbl": [24, 110], "p": ["kyoto", "tofukuji", "inari"]}], "DASH": [], "WALK": [["sanjo", "sanjokeihan"], ["tofukuji", "tofukujiK"], ["inari", "fushimiK"]], "STUB": [["kyoto", -14, 18, "JR 京都線 新快速\n→ 大阪 29 分"]], "LEFT": ["inari", "karasumaoike", "kyoto", "tofukuji"], "BELOW": []}}, "USE": {"三条": "京都住宿最近站，步行約 6 分", "祇園四条": "11/7 祇園白川・花見小路", "清水五条": "11/8 清水寺・二寧坂・八坂・祇園", "蹴上": "11/8 傍晚南禪寺（步行 10 分）", "東山": "京都住宿另一個最近站，步行約 7 分", "稻荷": "11/9 伏見稻荷（JR 側，出站就是參道）", "伏見稻荷": "11/9 伏見稻荷（京阪側）", "東福寺": "11/9 東福寺紅葉 P2，可跳過", "京都": "11/7 抵達、11/9 寄行李與轉車", "烏丸御池": "東西線 ↔ 烏丸線 轉乘點", "三条京阪": "11/7、11/9 飯店往京都站", "動物園前": "大阪住宿最近站，步行約 3 分", "動物園前 / 新今宮": "大阪住宿。往奈良、USJ、關西機場都從這裡直達", "新今宮": "往奈良、USJ、關西機場的直達站", "惠美須町": "11/9 新世界・通天閣、11/14 日本橋電電町", "天王寺": "11/14 阿倍野 HARUKAS 300", "四天王寺前": "11/14 四天王寺 P3", "日本橋": "11/10 天橋立 06:55 集合（2 號出口）、11/14 電電町・黑門市場", "心齋橋": "11/14 心齋橋 PARCO CHIIKAWA LAND", "難波": "道頓堀、11/14 日本橋・心齋橋周邊", "梅田": "11/13 HEP FIVE 吉伊卡哇、梅田空中庭園", "大阪 / 梅田": "11/13 HEP FIVE 吉伊卡哇、梅田空中庭園", "森ノ宮": "11/13 大阪城天守閣・海洋堂", "西九条": "11/11 往 USJ 的轉車站", "環球影城": "11/11 日本環球影城", "JR奈良": "11/12 奈良一日", "關西機場": "11/7 抵達、11/15 返程", "天橋立・伊根": "11/10 跟團一日"}};
+
+/* 新京都住宿與錦市場：同步到專業路網圖。 */
+const KYOTO_RAIL=RAIL.LAYOUTS.kyoto;
+KYOTO_RAIL.sub='住東山區南西海子町，地下鐵「東山」站步行約 1–2 分；京阪三条約 5–10 分。';
+delete KYOTO_RAIL.S.sanjo.star;
+Object.assign(KYOTO_RAIL.S.higashiyama,{big:1,star:'京都住宿'});
+KYOTO_RAIL.S.shijo={n:'四条',x:34,y:31,big:1,tag:'烏丸線・錦市場'};
+const KARASUMA_LINE=KYOTO_RAIL.L.find(l=>l.n==='地下鐵 烏丸線');
+if(KARASUMA_LINE)KARASUMA_LINE.p=['karasumaoike','shijo','kyoto'];
+RAIL.USE['東山']='京都住宿最近站，步行約 1–2 分；11/7 抵達、11/9 退房出發';
+RAIL.USE['三条']='京阪本線最近站，從住宿步行約 5–10 分';
+RAIL.USE['三条京阪']='京阪與地下鐵轉乘；從住宿步行約 5–10 分';
+RAIL.USE['四条']='11/9 錦市場；四条站步行約 5 分';
+RAIL.USE['京都']='11/7 抵達；11/9 寄行李、錦市場往返與前往大阪';
 
 /* ===================== 圖示 ===================== */
 const SVG=(d,f)=>'<svg viewBox="0 0 24 24" fill="'+(f||'none')+'" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>';
@@ -1177,6 +1581,14 @@ function gnav(o){
     ?'https://www.google.com/maps/dir/?api=1&destination='+o.lat+'%2C'+o.lng+'&travelmode=transit'
     :'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(o.ja||o.n)+'&travelmode=transit';
 }
+function gmPlace(o){return o.pre==='exact'?o.lat+','+o.lng:(o.ja||o.n)}
+function gmRoute(stops){
+  if(stops.length<2)return stops.length?gview(stops[0].o):'#';
+  const a=stops[0].o,b=stops[stops.length-1].o,mid=stops.slice(1,-1);
+  return'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(gmPlace(a))+
+    '&destination='+encodeURIComponent(gmPlace(b))+
+    (mid.length?'&waypoints='+encodeURIComponent(mid.map(x=>gmPlace(x.o)).join('|')):'');
+}
 function dist(a,b,c,d){const R=6371,r=Math.PI/180,dLa=(c-a)*r,dLo=(d-b)*r;
   const x=Math.sin(dLa/2)**2+Math.cos(a*r)*Math.cos(c*r)*Math.sin(dLo/2)**2;
   return 2*R*Math.asin(Math.sqrt(x))}
@@ -1214,6 +1626,35 @@ function setTheme(th){
   const mt=document.querySelector('meta[name=theme-color]');if(mt)mt.content=THC[th]||THC.kyoto;
 }
 
+function todayBrief(d,di){
+  const hrs=[],seen=new Set();
+  d.it.forEach(x=>{
+    const o=x.o&&POI[x.o];
+    if(o&&o.hours&&!seen.has(x.o)){seen.add(x.o);hrs.push({n:o.n,h:o.hours})}
+  });
+  const warns=(DAY_AUDIT[di]||[]).filter(a=>a.s!=='ok').slice(0,4);
+  const routes=(d.route||[]).map(r=>'<div class="briefline"><b>'+esc(r.m)+' 分</b><span>'+esc(r.f)+' → '+
+    esc(r.t)+' · '+esc(r.l)+'</span></div>').join('');
+  const shops=hrs.length?hrs.map(x=>'<div class="briefline"><b>營業</b><span>'+esc(x.n)+'<br>'+esc(x.h)+
+    '</span></div>').join(''):'<div class="briefline"><b>營業</b><span>今日無固定營業景點</span></div>';
+  return'<section class="todaybrief"><div class="briefhead"><div><div class="ey">TODAY ESSENTIALS</div>'+ 
+    '<h3>今日重要資訊</h3></div><div class="briefdate">D'+(di+1)+' · '+d.d.slice(5).replace('-','/')+'</div></div>'+ 
+    '<div class="briefgrid"><div class="briefsec"><h4>交通時間</h4>'+routes+'</div>'+ 
+    '<div class="briefsec"><h4>景點／店鋪營業</h4>'+shops+'</div></div>'+ 
+    (warns.length?'<div class="briefalerts">'+warns.map(a=>'<div class="briefalert">'+esc(a.t)+'</div>').join('')+'</div>':'')+
+    '</section>';
+}
+
+function auditCard(di){
+  const rows=DAY_AUDIT[di]||[];
+  if(!rows.length)return'';
+  const label={ok:'符合',warn:'注意',check:'再確認'};
+  return'<div class="auditcard"><div class="ah"><h3>營業時間・適合時段・季節檢查</h3>'+ 
+    '<span>官方資料核對 2026/08/21</span></div>'+rows.map(a=>
+      '<div class="auditrow"><span class="auditstate '+a.s+'">'+label[a.s]+'</span><span>'+esc(a.t)+'</span>'+ 
+      (a.u?'<a href="'+a.u+'" target="_blank" rel="noopener">官網</a>':'<span></span>')+'</div>').join('')+'</div>';
+}
+
 /* ===================== 今日 ===================== */
 function renderNow(){
   const info=nowInfo(),el=$('#nowBody');let h='';
@@ -1230,7 +1671,7 @@ function renderNow(){
       '<button class="chip" data-goday="'+i+'">'+d.d.slice(5).replace('-','/')+
       '<span class="d">'+d.w+'・'+d.city+'</span></button>').join('')+'</div>';
     h+='<div class="card"><div class="b sm">先試用「現在進行中」與「附近」</div>'+
-      '<p class="hint" style="margin-top:6px">預覽模式會假裝現在是 11/10 早上 09:30（東福寺紅葉那段），'+
+      '<p class="hint" style="margin-top:6px">預覽模式會假裝現在是 11/10 早上 09:30（天橋立跟團日），'+
       '讓你先看看旅程中的畫面長什麼樣。</p>'+
       '<div class="btns"><button class="btn pri" id="pvBtn">開啟預覽模式</button></div></div>';
   }else{
@@ -1247,6 +1688,7 @@ function renderNow(){
         IC.mapPin+'在 Google Maps 開啟</a>'+
         '<a class="btn" href="'+gnav(o)+'" target="_blank" rel="noopener">'+IC.nav+'導航</a></div>':'')+
       '</div>';
+    h+=todayBrief(d,info.di);
     if(live&&live.x)h+='<div class="card tight"><div class="sm ink2"><b>提醒　</b>'+esc(live.x)+'</div></div>';
     h+=routeStrip(d);
     h+='<div class="sec"><i></i><h2>接下來</h2></div>';
@@ -1303,6 +1745,7 @@ function renderPlan(){
     '<div class="prg"><div class="bar"><i style="width:'+(d.it.length?ok/d.it.length*100:0)+'%"></i></div>'+
     '<span>'+ok+' / '+d.it.length+'</span></div></div>';
   h+=routeStrip(d);
+  h+=auditCard(curDay);
 
   h+='<div class="tl">'+d.it.map((x,i)=>{
     const o=x.o?POI[x.o]:null,key=curDay+'_'+i,isDone=!!dn[key];
@@ -1319,6 +1762,9 @@ function renderPlan(){
         (p?'<span class="pill p'+p+'">P'+p+'</span>':'')+
       '</div><div class="det">'+
         (x.x?'<div class="kv"><b>注意　</b>'+esc(x.x)+'</div>':'')+
+        (o&&o.hours?'<div class="kv"><b>營業　</b>'+esc(o.hours)+'</div>':'')+
+        (o&&o.best?'<div class="kv"><b>時段　</b>'+esc(o.best)+'</div>':'')+
+        (o&&o.season?'<div class="kv"><b>季節　</b>'+esc(o.season)+'</div>':'')+
         (o&&o.memo?'<div class="kv"><b>資訊　</b>'+esc(o.memo)+'</div>':'')+
         (o&&o.pre==='area'?'<div class="kv warn">這個地點只有區域級座標，地圖連結改用日文名稱／地址搜尋，實際位置以 Google Maps 為準。</div>':'')+
         (o?'<div class="btns">'+
@@ -1362,65 +1808,124 @@ function routeStrip(d){
 }
 
 /* ===================== 路網圖 ===================== */
-const RSC=8;                       // 示意圖座標放大倍率
-let railMap=null, railLabels=[];
-const rxy=s=>[-s.y*RSC, s.x*RSC];  // CRS.Simple：lat 用 -y 讓上北下南
+const RSC=8;
+let railMap=null, railLay='osaka', railDay='all', railLayers=[];
+const rxy=(s)=>[-s.y*RSC, s.x*RSC];
+/* 一個站可能有多種寫法（動物園前 / 新今宮、JR奈良站…），全部拆開比對 */
+const rparts=s=>String(s).replace(/[\s（）()]/g,'').split('/')
+  .map(x=>x.replace(/站$|駅$/,'').replace(/住宿$/,'').replace(/前夕陽ヶ丘$/,'前').replace(/^JR/,''))
+  .filter(Boolean);
+const rhit=(name,set)=>!!set&&rparts(name).some(x=>set.has(x));
+
 function initRail(){
-  if(railMap){setTimeout(()=>railMap.invalidateSize(),60);return}
-  railMap=L.map('railmap',{crs:L.CRS.Simple,minZoom:-3,maxZoom:3,zoomSnap:.25,
-    attributionControl:false,zoomControl:true});
-  // 步行轉乘
-  RAIL.WALK.forEach(([a,b])=>L.polyline([rxy(RAIL.S[a]),rxy(RAIL.S[b])],
-    {color:'#BDB4A6',weight:2.5,dashArray:'3,6'}).addTo(railMap));
-  // 路線（先白底再上色）
-  RAIL.L.forEach(l=>L.polyline(l.p.map(id=>rxy(RAIL.S[id])),
-    {color:'#FBF9F5',weight:11,lineCap:'round',lineJoin:'round'}).addTo(railMap));
-  RAIL.L.forEach(l=>L.polyline(l.p.map(id=>rxy(RAIL.S[id])),
-    {color:l.c,weight:6.5,lineCap:'round',lineJoin:'round'}).addTo(railMap)
-    .bindTooltip(l.n,{sticky:true}));
+  if(!railMap){
+    railMap=L.map('railmap',{crs:L.CRS.Simple,minZoom:-4,maxZoom:4,zoomSnap:.25,
+      attributionControl:false,zoomControl:true});
+  }else{ railMap.invalidateSize() }
+  drawRail();
+}
+function railDayStations(){
+  if(railDay==='all')return null;
+  const set=new Set();
+  (DAYS[+railDay].route||[]).forEach(r=>{
+    rparts(r.f).forEach(x=>set.add(x)); rparts(r.t).forEach(x=>set.add(x))});
+  return set;
+}
+function renderRailMeta(lay,hi){
+  const used=hi?Object.values(lay.S).filter(s=>rhit(s.n,hi)).length:Object.keys(lay.S).length;
+  const active=hi?'D'+(+railDay+1)+' · '+DAYS[+railDay].d.slice(5).replace('-','/'):'全部日程';
+  $('#railHead').innerHTML='<div class="rey">KANSAI TRANSIT · SCHEMATIC 2026</div><h3>'+esc(lay.title)+'</h3>'+ 
+    '<p>'+esc(lay.sub)+'</p><div class="railstats"><span class="railstat"><b>'+used+'</b> 站</span>'+ 
+    '<span class="railstat"><b>'+lay.L.length+'</b> 路線</span><span class="railstat">'+esc(active)+'</span></div>';
+  $('#railLegend').innerHTML=lay.L.map(l=>'<span class="railli"><i style="background:'+l.c+'"></i>'+esc(l.n)+'</span>').join('')+
+    ((lay.DASH||[]).length?lay.DASH.map(l=>'<span class="railli"><i style="background:'+l.c+'"></i>'+esc(l.n)+'</span>').join(''):'')+
+    (lay.WALK.length?'<span class="railli walk"><i></i>步行轉乘</span>':'');
+}
+function drawRail(){
+  const lay=RAIL.LAYOUTS[railLay], S=lay.S;
+  railLayers.forEach(l=>railMap.removeLayer(l)); railLayers=[];
+  const hi=railDayStations();
+  const dim=hi?0.22:1;
+  const add=l=>{l.addTo(railMap);railLayers.push(l);return l};
+
+  lay.WALK.forEach(([a,b])=>add(L.polyline([rxy(S[a]),rxy(S[b])],
+    {color:'#9EA5A8',weight:2.3,dashArray:'2,6',opacity:dim,lineCap:'round'})));
+  (lay.DASH||[]).forEach(l=>add(L.polyline(l.p.map(i=>rxy(S[i])),
+    {color:'#F6F7F5',weight:9,dashArray:'8,6',opacity:dim,lineCap:'round'})));
+  (lay.DASH||[]).forEach(l=>add(L.polyline(l.p.map(i=>rxy(S[i])),
+    {color:l.c,weight:4.5,dashArray:'8,6',opacity:dim,lineCap:'round'})));
+  lay.L.forEach(l=>add(L.polyline(l.p.map(i=>rxy(S[i])),
+    {color:'#F6F7F5',weight:13,lineCap:'round',lineJoin:'round',opacity:dim})));
+  lay.L.forEach(l=>{
+    const on = hi ? l.p.some(i=>rhit(S[i].n,hi)) : true;
+    add(L.polyline(l.p.map(i=>rxy(S[i])),
+      {color:l.c,weight:6.5,lineCap:'round',lineJoin:'round',opacity:on?1:dim}))
+      .bindTooltip(l.n,{sticky:true});
+  });
+  // 往外地的虛線箭頭
+  (lay.STUB||[]).forEach(([sid,dx,dy,txt])=>{
+    const s=S[sid], e={x:s.x+dx*0.5, y:s.y+dy*0.5};
+    add(L.polyline([rxy(s),rxy(e)],{color:'#9A9284',weight:2.5,dashArray:'5,4',opacity:dim}));
+    add(L.marker(rxy(e),{interactive:false,icon:L.divIcon({className:'',iconSize:[0,0],
+      iconAnchor:[dx<0?110:(dx===0?55:-10),dy<0?26:-2],
+      html:'<div class="rstub">'+txt.split('\n').map(esc).join('<br>')+'</div>'})}));
+  });
+  // 線名
+  lay.L.concat(lay.DASH||[]).forEach(l=>{
+    if(!l.lbl)return;
+    add(L.marker(rxy({x:l.lbl[0],y:l.lbl[1]}),{interactive:false,
+      icon:L.divIcon({className:'',iconSize:[0,0],iconAnchor:[0,8],
+        html:'<div class="rline" style="color:'+l.c+'">'+esc(l.n)+'</div>'})}));
+  });
   // 站點
-  Object.entries(RAIL.S).forEach(([id,s])=>{
-    const big=!!s.big;
-    const mk=L.circleMarker(rxy(s),{radius:big?7:5,color:'#33302B',weight:big?2.8:2.1,
-      fillColor:'#fff',fillOpacity:1}).addTo(railMap);
-    if(s.star)L.circleMarker(rxy(s),{radius:3,color:'#E8873B',weight:0,
-      fillColor:'#E8873B',fillOpacity:1}).addTo(railMap);
-    const lines=RAIL.L.filter(l=>l.p.includes(id)).map(l=>
-      '<span style="display:inline-block;border-radius:4px;padding:1px 6px;margin:2px 3px 0 0;'+
-      'font-size:10.5px;color:#fff;background:'+l.c+'">'+esc(l.n)+'</span>').join('');
+  Object.entries(S).forEach(([id,s])=>{
+    const big=!!s.big, on = !hi || rhit(s.n,hi);
+    if(hi&&on)add(L.circleMarker(rxy(s),{radius:big?16:13,color:'#E8873B',weight:2.5,
+      fillColor:'#E8873B',fillOpacity:.14}));
+    const mk=add(L.circleMarker(rxy(s),{radius:big?8.5:5.5,color:big?'#203848':'#3B4B55',
+      weight:big?3:2,fillColor:'#fff',fillOpacity:1,opacity:on?1:.30}));
+    const lines=lay.L.filter(l=>l.p.includes(id)).map(l=>
+      '<span style="display:inline-block;border-radius:5px;padding:2px 7px;margin:3px 4px 0 0;'+
+      'font-size:10.5px;font-weight:700;color:#fff;background:'+l.c+'">'+esc(l.n)+'</span>').join('');
     mk.bindPopup('<div class="pop"><b>'+esc(s.n)+'</b>'+
-      '<div class="ar">'+esc(s.ja)+(s.star?'　·　★ '+esc(s.star):'')+'</div>'+
-      (RAIL.USE[id]?'<div class="ls">'+esc(RAIL.USE[id])+'</div>':'')+
-      '<div style="margin-top:7px">'+lines+'</div></div>',{maxWidth:250});
-    const lft=RAIL.LEFT.indexOf(id)>=0, btm=RAIL.BELOW.indexOf(id)>=0;
-    const lbl=L.marker(rxy(s),{interactive:false,
-      icon:L.divIcon({className:'',iconSize:[0,0],iconAnchor:[-11,7],
-        html:'<div class="rlbl'+(big?' big':'')+(s.star?' star':'')+
-             (btm?' btm':(lft?' lft':''))+'">'+esc(s.n)+'</div>'})});
-    railLabels.push({m:lbl,big:big,core:RAIL.L0.indexOf(id)>=0||!!s.star});
+      (s.star?'<div class="ar">★ '+esc(s.star)+'</div>':'')+
+      (RAIL.USE[s.n]?'<div class="ls">'+esc(RAIL.USE[s.n])+'</div>':'')+
+      (lines?'<div style="margin-top:6px">'+lines+'</div>':'')+'</div>',{maxWidth:250});
+    add(L.marker(rxy(s),{interactive:false,icon:L.divIcon({className:'',iconSize:[0,0],
+      iconAnchor:[-13,7],
+      html:'<div class="rlbl'+(big?' big':'')+(s.star?' star':'')+
+        (lay.BELOW.indexOf(id)>=0?' btm':(lay.LEFT.indexOf(id)>=0?' lft':''))+
+        (on?'':' dimmed')+'"><b>'+esc(s.n)+'</b>'+
+        (s.tag?'<small>'+esc(s.tag)+'</small>':'')+'</div>'})}));
   });
-  railMap.on('zoomend',railLabelToggle);
-  railFitAll();
-  setTimeout(()=>{railMap.invalidateSize();railFitAll()},160);
-  // 圖例
-  $('#railLegend').innerHTML='<h4>路線圖例</h4>'+RAIL.L.map(l=>
-    '<div class="li"><i style="background:'+l.c+'"></i><span>'+esc(l.n)+'</span></div>').join('');
+  renderRailMeta(lay,hi);
+  railFit();
+  $('#railNote').innerHTML='可雙指縮放、拖曳，點擊站點可查看此站在行程中的用途。'+
+    (hi?'<br><b style="color:var(--accent)">橘色光圈＝'+DAYS[+railDay].d.slice(5).replace('-','/')+' 當天會經過的站</b>':'');
 }
-function railLabelToggle(){
-  const z=railMap.getZoom();
-  railLabels.forEach(({m,big,core})=>{
-    const show = z>=-1.8 ? true : (z>=-2.45 ? big : core);
-    if(show){ if(!railMap.hasLayer(m))m.addTo(railMap) }
-    else if(railMap.hasLayer(m))railMap.removeLayer(m);
-  });
+/* 密集路線圖不能「縮到全螢幕」——字會疊在一起。改成固定的可讀縮放，讓人拖曳。 */
+const RAILZOOM={osaka:-2, kansai:-2.25, kyoto:-2};
+/* 往外地的虛線標籤在左側，預設視角往左挪一點才不會被切掉 */
+const RAILSHIFT={osaka:-12, kansai:-6, kyoto:-16};
+function railBBox(){
+  const S=RAIL.LAYOUTS[railLay].S;
+  return L.latLngBounds(Object.values(S).map(rxy));
 }
-function railBounds(ids){
-  return L.latLngBounds(ids.map(i=>rxy(RAIL.S[i])));
+function railFit(){
+  const c=railBBox().getCenter();
+  railMap.setView([c.lat, c.lng+(RAILSHIFT[railLay]||0)*RSC], RAILZOOM[railLay]);
 }
-function railFitAll(){
-  railMap.fitBounds(railBounds(Object.keys(RAIL.S)),
-    {paddingTopLeft:[40,30],paddingBottomRight:[74,30]});
-  railLabelToggle();
+function railWhole(){
+  railMap.fitBounds(railBBox(),{paddingTopLeft:[26,20],paddingBottomRight:[34,26]});
+}
+function renderRailChips(){
+  $('#railDayChips').innerHTML='<button class="chip'+(railDay==='all'?' on plain':'')+
+    '" data-rd="all">全部</button>'+DAYS.map((d,i)=>
+    '<button class="chip'+(railDay===i?' on '+d.th:'')+'" data-rd="'+i+'">D'+(i+1)+
+    '<span class="d">'+d.d.slice(5).replace('-','/')+'</span></button>').join('');
+  $$('#railDayChips .chip').forEach(b=>b.onclick=()=>{
+    railDay=b.dataset.rd==='all'?'all':+b.dataset.rd;
+    renderRailChips();drawRail()});
 }
 
 /* ===================== 地圖 ===================== */
@@ -1461,15 +1966,67 @@ function mapPoints(){
   return out;
 }
 function renderMapChips(){
-  $('#mapChips').innerHTML='<button class="chip'+(mapDay==='all'?' on plain':'')+'" data-m="all">全部地點</button>'+
+  $('#mapChips').innerHTML='<button class="chip'+(mapDay==='all'?' on plain':'')+'" data-m="all">'+
+    (mapMode==='google'?'全部日期':'全部地點')+'</button>'+
     DAYS.map((d,i)=>'<button class="chip'+(mapDay===i?' on '+d.th:'')+'" data-m="'+i+'">'+
       d.d.slice(5).replace('-','/')+'<span class="d">'+esc(d.city)+'</span></button>').join('');
   $$('#mapChips .chip').forEach(b=>b.onclick=()=>{
     mapDay=b.dataset.m==='all'?'all':+b.dataset.m;
     if(mapDay!=='all')setTheme(DAYS[mapDay].th);
-    renderMapChips();drawMarkers()});
+    renderMapChips();
+    if(mapMode==='google')renderGoogleHub();else if(mapMode==='geo')drawMarkers();else drawRail()});
   const on=$('#mapChips .chip.on');
   if(on)on.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+}
+function gmStopsForDay(di){
+  const seen=new Set(),out=[];
+  DAYS[di].it.forEach(x=>{
+    if(!x.o||!POI[x.o]||POI[x.o].noMap)return;
+    const o=POI[x.o],key=o.lat.toFixed(4)+','+o.lng.toFixed(4);
+    if(seen.has(key))return;seen.add(key);
+    out.push({o,id:x.o,a:x.a,b:x.b,n:x.n});
+  });
+  return out;
+}
+/* Google Maps 手機版穩定支援 3 個中途點，所以每段最多 5 地點，段與段首尾銜接。 */
+function gmRouteGroups(stops){
+  if(stops.length<=5)return stops.length?[stops]:[];
+  const out=[];for(let i=0;i<stops.length-1;i+=4)out.push(stops.slice(i,i+5));
+  return out;
+}
+function gmDayCard(di,compact){
+  const d=DAYS[di],stops=gmStopsForDay(di),groups=gmRouteGroups(stops);
+  if(!groups.length)return'';
+  const links=groups.map((g,i)=>'<a class="openroute" href="'+gmRoute(g)+'" target="_blank" rel="noopener">'+
+    IC.mapPin+(groups.length>1?'在 Google Maps 開啟第 '+(i+1)+' 段':'在 Google Maps 開啟今日動線')+'</a>').join('');
+  return'<div class="gmroute"><div class="topline"><div><div class="rt">'+
+    (compact?d.d.slice(5).replace('-','/')+'　':'')+esc(d.t)+'</div><div class="rs">'+
+    stops.length+' 個地點'+(groups.length>1?'，已分成 '+groups.length+' 段':'，依行程順序排列')+
+    '</div></div><span class="pill '+d.th+'">D'+(di+1)+'</span></div>'+links+'</div>';
+}
+function renderGoogleHub(){
+  const el=$('#gmRouteBody');if(!el)return;
+  if(mapDay==='all'){
+    el.innerHTML='<div class="gmhero"><div class="eyebrow">GOOGLE MAPS 行程入口</div><h3>一天一鍵開啟，不用逐一找地點</h3>'+
+      '<p>選擇日期可查看每站時間；景點多的日期會自動分段，避免手機版 Google Maps 遺漏中途點。</p></div>'+
+      '<div class="gmall">'+DAYS.map((_,i)=>gmDayCard(i,true)).join('')+'</div>';return;
+  }
+  const di=+mapDay,d=DAYS[di],stops=gmStopsForDay(di),groups=gmRouteGroups(stops);
+  let h='<div class="gmhero"><div class="eyebrow">GOOGLE MAPS · DAY '+(di+1)+'</div><h3>'+esc(d.t)+'</h3>'+
+    '<p>藍色按鈕會把這一天的地點依行程順序一次帶入 Google Maps；開啟後可自行切換大眾運輸、步行或開車。</p></div>';
+  if(!stops.length){el.innerHTML=h+'<div class="empty">這一天沒有可定位的地點。</div>';return}
+  h+=groups.map((g,i)=>'<div class="gmroute"><div class="topline"><div><div class="rt">'+
+    (groups.length>1?'第 '+(i+1)+' 段':'今日完整動線')+'</div><div class="rs">'+g[0].a+' → '+
+    g[g.length-1].b+'　·　'+g.length+' 個地點</div></div></div><a class="openroute" href="'+gmRoute(g)+
+    '" target="_blank" rel="noopener">'+IC.mapPin+'在 Google Maps 開啟'+(groups.length>1?'這一段':'今日動線')+'</a></div>').join('');
+  h+='<div class="sec"><i></i><h2>今日地點順序</h2><span class="cnt">'+stops.length+' 個</span></div><div class="gmstops">'+
+    stops.map((x,i)=>'<div class="gmstop"><div class="num">'+(i+1)+'</div><div class="mid"><div class="time">'+
+      x.a+' – '+x.b+'</div><div class="name">'+esc(x.o.n)+'</div><div class="area">'+esc(x.o.area)+
+      (x.o.hours?'<br>營業：'+esc(x.o.hours):'')+'</div></div><div class="acts">'+
+      '<a href="'+gview(x.o)+'" target="_blank" rel="noopener" title="在 Google Maps 查看">'+IC.mapPin+'</a>'+
+      '<a class="navto" href="'+gnav(x.o)+'" target="_blank" rel="noopener" title="從目前位置導航">'+IC.nav+'</a></div></div>').join('')+
+    '</div><p class="mnote">左邊藍色按鈕：查看地點；右邊箭頭：從目前位置導航。多地點動線不預設交通方式，進入 Google Maps 後再選大眾運輸、步行或開車。</p>';
+  el.innerHTML=h;
 }
 function initMap(){
   if(mapObj){setTimeout(()=>mapObj.invalidateSize(),60);return}
@@ -1503,6 +2060,7 @@ function popHTML(list,no){
   return'<div class="pop"><b>'+(no?no+'. ':'')+
     esc(list.length>1?head.area+'（'+list.length+' 個地點）':head.n)+'</b>'+
     '<div class="ar">'+esc(head.area)+(head.pre==='area'?'　·　位置概略':'')+'</div>'+
+    (head.hours?'<div class="ls"><b>營業</b>　'+esc(head.hours)+'</div>':'')+
     (list.length>1?'<div class="ls">'+list.map(o=>'· '+esc(o.n)+
       (o.p?' <b style="color:#B24630">P'+o.p+'</b>':'')).join('<br>')+'</div>'
       :(head.p?'<div class="ls">優先度 P'+head.p+'</div>':''))+
@@ -1577,6 +2135,8 @@ function renderPlaces(){
         return'<div class="pl"><div class="plh"><div class="idx">'+ki+'</div><div class="mid">'+
           '<div class="n">'+esc(o.n)+'</div>'+
           (o.ja&&o.ja!==o.n?'<div class="ja">'+esc(o.ja)+'</div>':'')+
+          (o.hours?'<div class="plmeta"><b>營業</b>　'+esc(o.hours)+'</div>':'')+
+          (o.unscheduled?'<div class="plmeta"><b>備選</b>　不排固定行程</div>':'')+
           '</div></div>'+
           '<div class="plb"><div class="tags">'+
             (o.p?'<span class="pill p'+o.p+'">P'+o.p+'</span>':'')+
@@ -1592,7 +2152,7 @@ function renderPlaces(){
   $$('#placeBody [data-cp]').forEach(b=>b.onclick=()=>copy(b.dataset.cp,b));
   $$('#placeBody [data-jump]').forEach(b=>b.onclick=()=>{curDay=+b.dataset.jump;go('plan')});
   $$('#placeBody [data-focus]').forEach(b=>b.onclick=()=>{
-    const o=POI[b.dataset.focus];mapDay='all';go('map');
+    const o=POI[b.dataset.focus];mapDay='all';setMapMode('geo');go('map');
     setTimeout(()=>{renderMapChips();drawMarkers(o);
       const m=markers.find(m=>Math.abs(m.getLatLng().lat-o.lat)<2e-3&&
                               Math.abs(m.getLatLng().lng-o.lng)<2e-3);
@@ -1751,7 +2311,12 @@ function go(v){
   window.scrollTo(0,0);
   if(v==='now')renderNow();
   if(v==='plan'){renderChips();renderPlan()}
-  if(v==='map'){ if(mapMode==='rail')initRail(); else {renderMapChips();initMap()} }
+  if(v==='map'){
+    renderMapChips();
+    if(mapMode==='rail'){renderRailChips();initRail()}
+    else if(mapMode==='geo')initMap();
+    else renderGoogleHub();
+  }
   if(v==='place'||v==='near'||v==='util'){
     const i=nowInfo().di;setTheme(DAYS[i>=0?i:curDay].th)}
   if(v==='place'){renderAreaChips();renderPlaces()}
@@ -1762,29 +2327,33 @@ $$('#nav button').forEach(b=>b.onclick=()=>go(b.dataset.v));
 $('#locBtn').onclick=()=>{geo?showMe():askGeo(true)};
 $('#fitBtn').onclick=()=>drawMarkers();
 $('#tileBtn').onclick=()=>useTiles(tileIdx+1,true);
-let mapMode='geo';
-$$('#mapSeg button').forEach(b=>b.onclick=()=>{
-  mapMode=b.dataset.mode;
-  $$('#mapSeg button').forEach(x=>x.classList.toggle('on',x===b));
+let mapMode='google';
+function setMapMode(mode){
+  mapMode=mode;
+  $$('#mapSeg button').forEach(x=>x.classList.toggle('on',x.dataset.mode===mode));
+  $('#mapChips').style.display=mapMode==='rail'?'none':'';
+  $('#modeGoogle').style.display=mapMode==='google'?'':'none';
   $('#modeGeo').style.display = mapMode==='geo'?'':'none';
   $('#modeRail').style.display= mapMode==='rail'?'':'none';
-  if(mapMode==='rail')initRail(); else {renderMapChips();initMap()}
+}
+$$('#mapSeg button').forEach(b=>b.onclick=()=>{
+  setMapMode(b.dataset.mode);renderMapChips();
+  if(mapMode==='rail'){renderRailChips();initRail()}
+  else if(mapMode==='geo')initMap();
+  else renderGoogleHub();
 });
-$('#railFit').onclick=()=>railFitAll();
-$('#railOsaka').onclick=()=>{railMap.fitBounds(railBounds(
-  ['osaka','umeda','higashiumeda','yodoyabashi','honmachi','shinsaibashi','namba',
-   'daikokucho','doubutsuen','shinimamiya','tennoji','sakaisuji','nagahori','nipponbashi',
-   'ebisucho','tanimachi4','morinomiya','tanimachi9','shitennoji','tsuruhashi','nishikujo']),
-  {paddingTopLeft:[54,36],paddingBottomRight:[86,36]});railLabelToggle()};
-$('#railKyoto').onclick=()=>{railMap.fitBounds(railBounds(
-  ['kyoto','tofukuji','inari','sanjo','gionshijo','kiyomizu5','tofukujiK','fushimiK',
-   'karasumaoike','sanjokeihan']),
-  {paddingTopLeft:[46,40],paddingBottomRight:[92,40]});railLabelToggle()};
+$('#railFit').onclick=()=>railFit();
+$('#railWhole').onclick=()=>railWhole();
+$$('#railSeg button').forEach(b=>b.onclick=()=>{
+  railLay=b.dataset.lay;
+  $$('#railSeg button').forEach(x=>x.classList.toggle('on',x===b));
+  drawRail();
+});
 $('#q').oninput=e=>{q=e.target.value;renderPlaces()};
 
 function boot(){
   const info=nowInfo();
-  if(info.di>=0){curDay=info.di;mapDay=info.di}
+  if(info.di>=0){curDay=info.di;mapDay=info.di;railDay=info.di}
   $('#topsub').textContent='11/7（六）- 11/15（日）· 9 天 8 夜';
   renderNow();
 }
