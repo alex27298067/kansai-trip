@@ -968,8 +968,8 @@ input,textarea,select{font:inherit;color:inherit}
   radial-gradient(circle at 14% 82%,rgba(222,136,56,.055),transparent 36%);
   background-size:30px 30px,30px 30px,100% 100%,100% 100%;
   box-shadow:0 16px 34px -24px rgba(24,49,71,.8)}
-.rlbl{display:inline-flex;max-width:132px;padding:3px 6px;border-radius:6px;color:#1B2B37;
-  white-space:normal;overflow-wrap:anywhere;pointer-events:none;line-height:1.25}
+.rlbl{display:inline-flex;width:max-content;max-width:116px;padding:3px 6px;border-radius:6px;color:#1B2B37;
+  white-space:normal;overflow-wrap:break-word;word-break:keep-all;pointer-events:none;line-height:1.25}
 .rlbl b{font-size:9.5px;font-weight:800;letter-spacing:.05px}
 .rlbl.major{border:1px solid rgba(40,55,66,.16);background:rgba(255,255,255,.96);
   box-shadow:0 3px 9px rgba(28,42,52,.12);padding:4px 7px}
@@ -987,6 +987,8 @@ input,textarea,select{font:inherit;color:inherit}
   border-radius:11px;padding:7px 9px;font-size:9.5px;font-weight:700;color:var(--ink2);
   line-height:1.35;min-height:36px;white-space:normal}
 .railli i{display:block;flex:0 0 22px;width:22px;height:5px;border-radius:99px}
+.railbox .leaflet-tooltip{width:max-content;max-width:220px;white-space:normal;overflow-wrap:break-word;
+  line-height:1.35;padding:6px 9px;border-radius:8px;font-size:10px;font-weight:800}
 .railli.walk i{height:0;border-top:2px dashed #9EA5A8;border-radius:0}
 .railli.neutral{grid-column:1/-1;border-style:dashed;color:var(--muted);justify-content:center;text-align:center}
 .legend{background:var(--card);border-radius:14px;padding:13px 14px;margin-top:12px;box-shadow:var(--sh)}
@@ -1069,7 +1071,7 @@ input,textarea,select{font:inherit;color:inherit}
 .pl .mid{flex:1;min-width:0}
 .pl .n{font-size:13.8px;font-weight:700;line-height:1.45;letter-spacing:.1px}
 .pl .ja{font-size:10.5px;color:var(--muted);margin-top:2px;line-height:1.5}
-.pl .plb{display:flex;align-items:center;gap:8px;margin-top:9px;padding-left:43px}
+.pl .plb{display:flex;align-items:center;gap:8px;margin-top:9px;padding-left:0}
 .pl .plb .tags{margin:0;flex:1;min-width:0}
 .pl .act{flex:0 0 auto;display:flex;gap:6px}
 .iconbtn{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;
@@ -1178,9 +1180,21 @@ body[data-enh-theme="night"] .briefsec{background:#151e27;border-color:var(--lin
 body[data-enh-theme="night"] .briefalerts{background:#30271a;border-color:#564429;color:#ead1a4}
 body[data-enh-theme="night"] .briefalert{color:inherit}
 body[data-enh-theme="night"] .decisiondeck{background:var(--card);border-color:var(--line)}
+body[data-enh-theme="night"] .decisionpanel,
+body[data-enh-theme="night"] .card,
+body[data-enh-theme="night"] .route,
+body[data-enh-theme="night"] .legend,
+body[data-enh-theme="night"] .pl,
+body[data-enh-theme="night"] .it,
+body[data-enh-theme="night"] .enh-dialog{background:var(--card);color:var(--ink)}
 body[data-enh-theme="night"] .decisiontab{background:var(--sunk);border-color:var(--line);color:var(--ink2)}
 body[data-enh-theme="night"] .decisiontab.on{background:#24313d;color:var(--ink);border-color:var(--day)}
 body[data-enh-theme="night"] .decisionmetric{background:var(--sunk);border-color:var(--line)}
+body[data-enh-theme="night"] .decisionmetric b,
+body[data-enh-theme="night"] .decisionstep,
+body[data-enh-theme="night"] .decisionwhen,
+body[data-enh-theme="night"] .decisionwhen b,
+body[data-enh-theme="night"] .decisionnote b{color:var(--ink)}
 body[data-enh-theme="night"] .decisionstep:before{background:var(--card)}
 body[data-enh-theme="night"] .decisionbadge{background:#183246;color:#a9d9ee}
 body[data-enh-theme="night"] .decisionresult{background:#183126;border-color:#315440;color:#c9e7d3}
@@ -1193,6 +1207,21 @@ body[data-enh-theme="night"] .enh-system-state.warn{color:#e1bd83}
 body[data-enh-theme="night"] .note:focus,
 body[data-enh-theme="night"] .fx input:focus{background:var(--card)}
 body[data-enh-theme="night"] .enh-delete{background:#3a2322!important;color:#f0b4a8!important;border-color:#653b36!important}
+body[data-enh-theme="night"] .enh-result,
+body[data-enh-theme="night"] .enh-setting,
+body[data-enh-theme="night"] .enh-ops-card,
+body[data-enh-theme="night"] .enh-field input,
+body[data-enh-theme="night"] .enh-field select,
+body[data-enh-theme="night"] .enh-field textarea,
+body[data-enh-theme="night"] .enh-search-input input{background:var(--sunk);border-color:var(--line);color:var(--ink)}
+body[data-enh-theme="night"] .railbox{filter:brightness(.82) saturate(.9)}
+body[data-enh-theme="night"] .enh-live-transit,
+body[data-enh-theme="night"] .enh-day-ledger,
+body[data-enh-theme="night"] .enh-expense-editor,
+body[data-enh-theme="night"] .enh-route-change,
+body[data-enh-theme="night"] .enh-transit-main,
+body[data-enh-theme="night"] .enh-transit-leg,
+body[data-enh-theme="night"] .enh-source-link{background:var(--card);border-color:var(--line);color:var(--ink)}
 
 body[data-enh-font="large"]{font-size:17px}
 body[data-enh-font="large"] .sm{font-size:14px}
@@ -1233,11 +1262,43 @@ body[data-enh-theme="night"] .enh-notice{background:#30271a;border-color:#564429
 .enh-notice div{font-size:11.5px;line-height:1.65}
 .enh-notice b{display:block;color:inherit;font-size:12.5px;margin-bottom:1px}
 
-.enh-plan-tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
-.enh-plan-tools .btn{flex:0 1 auto;padding-inline:14px}
+.enh-plan-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 10px}
+.enh-plan-tools .btn{width:100%;min-width:0;padding-inline:10px;justify-content:center;gap:6px}
+.enh-plan-tools svg{width:16px;height:16px;flex:0 0 16px}
 .enh-custom-badge{display:inline-flex;align-items:center;gap:5px;background:#efe8ff;color:#6950a5;
   border:1px solid #ddd0fb;border-radius:999px;font-size:10px;font-weight:800;padding:3px 8px}
 .enh-delete{background:#fff1ee!important;color:#a44937!important;border-color:#f0cdc6!important}
+
+.enh-live-transit{width:100%;display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:11px;
+  padding:12px 14px;margin:0 0 13px;border:1px solid #cbddee;border-radius:16px;background:linear-gradient(145deg,#f6fbff,#eef6fc);
+  color:var(--ink);text-align:left;box-shadow:var(--sh)}
+.enh-live-transit>svg{width:24px;height:24px;color:#1671b9}.enh-live-transit>span{min-width:0}
+.enh-live-transit small{display:block;color:#1671b9;font-size:8.5px;font-weight:900;letter-spacing:1px}
+.enh-live-transit b{display:block;font-size:13px;margin-top:2px}.enh-live-transit em{display:block;color:var(--muted);
+  font-size:10.5px;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.enh-live-transit>strong{font-size:10.5px;color:#1671b9}
+
+.enh-day-ledger{display:grid;grid-template-columns:24px minmax(0,1fr) minmax(0,1fr) auto;align-items:center;gap:10px;
+  margin:0 0 13px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.enh-day-ledger>svg{width:21px;height:21px;color:#ad6a21}.enh-day-ledger span{min-width:0}
+.enh-day-ledger small{display:block;color:var(--muted);font-size:9px}.enh-day-ledger b{display:block;font-size:13px;margin-top:2px}
+.enh-day-ledger button{min-height:36px;padding:7px 9px;border:1px solid var(--line);border-radius:9px;background:var(--sunk);
+  color:var(--ink2);font-size:9.5px;font-weight:800;white-space:nowrap}
+
+.enh-expense-pill{display:inline-flex;align-items:center;margin-top:6px;min-height:28px;padding:4px 8px;border:1px solid var(--line);border-radius:999px;
+  background:var(--sunk);color:var(--muted);font-size:9.5px;font-weight:850;white-space:nowrap}
+.enh-expense-pill.has-value{background:#fff3dc;border-color:#ead3a7;color:#895918}
+body[data-enh-theme="night"] .enh-expense-pill.has-value{background:#382b1e;border-color:#63492c;color:#e1bd83}
+.enh-expense-editor{margin:10px 0;padding:11px;border:1px solid var(--line2);border-radius:13px;background:var(--sunk)}
+.enh-expense-title{display:flex;align-items:center;gap:8px;margin-bottom:9px}.enh-expense-title svg{width:18px;height:18px;color:#ad6a21}
+.enh-expense-title b{display:block;font-size:11.5px}.enh-expense-title small{display:block;color:var(--muted);font-size:9px;margin-top:1px}
+.enh-expense-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:8px}
+.enh-expense-grid label{display:flex;flex-direction:column;gap:4px;min-width:0}.enh-expense-grid label.full{grid-column:1/-1}
+.enh-expense-grid label>span{font-size:9px;font-weight:800;color:var(--muted)}
+.enh-expense-grid input,.enh-expense-grid select{width:100%;min-width:0;min-height:42px;border:1px solid var(--line);
+  border-radius:10px;background:var(--card);color:var(--ink);padding:8px 10px;font-size:12px;box-sizing:border-box}
+.enh-money-input{position:relative}.enh-money-input i{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-style:normal;
+  color:#ad6a21;font-weight:900}.enh-money-input input{padding-left:27px;font-size:15px;font-weight:800}
 
 .enh-place-filters{display:flex;gap:8px;overflow-x:auto;margin:0 -2px 12px;padding:2px 2px 4px;
   scrollbar-width:none}.enh-place-filters::-webkit-scrollbar{display:none}
@@ -1277,9 +1338,45 @@ body[data-enh-theme="night"] .enh-notice{background:#30271a;border-color:#564429
   background:var(--card);border-radius:12px;padding:11px 12px;min-height:44px;min-width:0;
   max-width:100%;font-size:13px;box-sizing:border-box}
 .enh-time-pair{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;min-width:0}
-.enh-time-pair input[type="time"]{-webkit-appearance:none;appearance:none;text-align:center}
+.enh-time-pair>.enh-field{width:100%;min-width:0}
+.enh-time-pair input[type="time"]{-webkit-appearance:none;appearance:none;text-align:center;width:100%;min-width:0;display:block}
 .enh-field textarea{min-height:82px;resize:vertical;line-height:1.6}
 .enh-form-actions{display:flex;gap:9px;margin-top:15px}.enh-form-actions .btn{min-height:46px}
+.enh-form-actions button:disabled,.btn:disabled{opacity:.42;cursor:not-allowed}
+
+.enh-route-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.enh-route-summary>div{padding:10px;border:1px solid var(--line);border-radius:13px;background:var(--card)}
+.enh-route-summary span{display:block;color:var(--muted);font-size:9px}.enh-route-summary b{display:block;font-size:18px;margin-top:3px}
+.enh-route-summary b small{font-size:9px;color:var(--muted)}
+.enh-route-change{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:9px;align-items:center;padding:10px 11px;
+  margin-bottom:8px;border:1px solid var(--line);border-radius:13px;background:var(--card)}
+.enh-route-change>span{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:var(--dayT);color:var(--day);font-size:9px;font-weight:900}
+.enh-route-change b,.enh-route-change small{display:block;font-size:10.5px;line-height:1.5}.enh-route-change small{color:var(--day);margin-top:3px}
+.enh-route-change em{font-style:normal;font-size:9.5px;font-weight:850;color:#3b7851;white-space:nowrap}
+
+.enh-live-stamp{display:flex;align-items:center;gap:7px;padding:8px 10px;margin-bottom:10px;border-radius:10px;background:var(--sunk);
+  color:var(--muted);font-size:9.5px}.enh-live-stamp i{width:8px;height:8px;border-radius:50%;background:#2f9954}.enh-live-stamp i.off{background:#c56545}
+.enh-live-stamp span{flex:1}.enh-live-stamp time{white-space:nowrap;font-variant-numeric:tabular-nums}
+.enh-transit-main{display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:center;gap:11px;padding:14px;
+  border:1px solid #bcd5e9;border-radius:15px;background:linear-gradient(145deg,#f5fbff,#e9f4fc);color:var(--ink);text-decoration:none}
+.enh-transit-main>svg{width:25px;height:25px;color:#1671b9}.enh-transit-main b,.enh-transit-main small{display:block}
+.enh-transit-main b{font-size:13px}.enh-transit-main small{font-size:9.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+.enh-transit-main strong{font-size:10px;color:#1671b9}.enh-transit-main.disabled{opacity:.7}
+.enh-subhead{font-size:10px;font-weight:900;letter-spacing:.5px;color:var(--muted);margin:16px 0 7px;text-transform:uppercase}
+.enh-transit-legs,.enh-source-grid{display:grid;gap:7px}.enh-transit-leg{display:flex;align-items:center;gap:9px;padding:10px 11px;
+  border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+.enh-transit-leg>span{flex:1;min-width:0}.enh-transit-leg b,.enh-transit-leg small{display:block}.enh-transit-leg b{font-size:11.5px}
+.enh-transit-leg small{font-size:9.5px;color:var(--muted);line-height:1.45;margin-top:2px}.enh-transit-leg svg{width:17px;height:17px;color:var(--day)}
+.enh-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.enh-source-link{display:block;position:relative;padding:11px;
+  border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);min-height:72px}
+.enh-source-link b,.enh-source-link small{display:block}.enh-source-link b{font-size:11px;padding-right:44px}.enh-source-link small{font-size:9px;
+  color:var(--muted);line-height:1.45;margin-top:4px}.enh-source-link span{position:absolute;right:9px;top:10px;font-size:8.5px;color:var(--day);font-weight:850}
+
+.enh-pdf-preview{display:flex;align-items:center;gap:12px;padding:13px;margin-bottom:12px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.enh-pdf-preview>svg{width:31px;height:31px;flex:0 0 31px;color:#ad513f}.enh-pdf-preview b,.enh-pdf-preview small{display:block}
+.enh-pdf-preview b{font-size:13px}.enh-pdf-preview small{font-size:10px;color:var(--muted);line-height:1.55;margin-top:3px}
+.enh-setting input[type="checkbox"]{width:24px;height:24px;accent-color:var(--day)}
+.enh-pdf-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:13px}.enh-pdf-actions .btn{min-height:48px}
 
 .enh-search-input{position:relative;margin-bottom:12px}
 .enh-search-input input{width:100%;height:48px;border-radius:15px;border:1px solid var(--line);
@@ -1299,6 +1396,8 @@ body[data-enh-theme="night"] .enh-notice{background:#30271a;border-color:#564429
 .enh-modal-host[data-enh-kind="search"] .enh-search-input{flex:0 0 auto}
 .enh-modal-host[data-enh-kind="search"] .enh-search-results{flex:1 1 auto;overflow:auto;
   overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+.enh-modal-host[data-enh-kind="search"] .enh-dialog{overflow:hidden}
+.enh-modal-host[data-enh-kind="search"] .enh-dialog-body{min-height:0}
 
 .enh-status-editor{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px;align-items:end;
   margin:10px 0;padding:10px 11px;border:1px solid var(--line2);border-radius:12px;background:var(--sunk)}
@@ -1330,6 +1429,56 @@ body[data-enh-theme="night"] .enh-notice{background:#30271a;border-color:#564429
   background:var(--naraT);color:var(--p2)}
 .enh-system-state.warn{background:var(--accentT);color:#966125}
 
+.enh-nearby-tools{grid-column:1/-1;min-width:0}
+.enh-ledger-tools,.enh-pdf-tools{grid-column:1/-1;min-width:0}
+.enh-ledger-card{margin-bottom:13px}.enh-ledger-hero{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:15px;border-radius:14px;background:linear-gradient(145deg,#fff8ea,#f8ecda);border:1px solid #ead9b9}
+.enh-ledger-hero small,.enh-ledger-hero b,.enh-ledger-hero span{display:block}.enh-ledger-hero small{font-size:9px;color:#8b652f;font-weight:900;letter-spacing:1px}
+.enh-ledger-hero b{font-size:28px;margin-top:4px;color:#6f4718}.enh-ledger-hero span{font-size:9.5px;color:#8b765d;margin-top:3px}
+.enh-ledger-hero svg{width:42px;height:42px;color:#b8782c}.enh-ledger-days{display:grid;gap:5px;margin-top:11px}
+.enh-ledger-day{display:grid;grid-template-columns:44px minmax(80px,1fr) 76px;align-items:center;gap:9px;min-height:38px;
+  padding:4px 6px;border-radius:9px;color:var(--ink);text-align:left}.enh-ledger-day:hover{background:var(--sunk)}
+.enh-ledger-day>span{font-size:10px;font-weight:900}.enh-ledger-day small{display:block;color:var(--muted);font-size:8px;font-weight:650}
+.enh-ledger-day>i{height:6px;border-radius:99px;background:var(--line2);overflow:hidden}.enh-ledger-day>i>b{display:block;height:100%;border-radius:99px;background:#c78639}
+.enh-ledger-day>strong{text-align:right;font-size:10.5px}.enh-ledger-categories{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.enh-ledger-categories>div{display:flex;gap:8px;align-items:center;padding:6px 9px;border:1px solid var(--line);border-radius:99px;background:var(--sunk);font-size:9.5px}
+.enh-ledger-categories span{color:var(--muted)}.enh-ledger-actions{display:flex;gap:8px;margin-top:12px}.enh-ledger-actions .btn{flex:1}
+body[data-enh-theme="night"] .enh-ledger-hero{background:linear-gradient(145deg,#33291d,#2a231a);border-color:#5a462c}
+body[data-enh-theme="night"] .enh-ledger-hero b{color:#ead1a4}
+.enh-pdf-card{display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:12px;margin-bottom:13px}
+.enh-pdf-card>svg{width:31px;height:31px;color:#ad513f}.enh-pdf-card b,.enh-pdf-card small{display:block}
+.enh-pdf-card b{font-size:13px}.enh-pdf-card small{font-size:10px;line-height:1.5;color:var(--muted);margin-top:3px}.enh-pdf-card .btn{white-space:nowrap}
+
+.enh-print-only{display:none}
+.enh-quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:11px}
+.enh-quick-card{display:grid;grid-template-columns:44px minmax(0,1fr) 20px;align-items:center;gap:11px;
+  min-height:82px;padding:13px 14px;border:1px solid var(--line);border-radius:16px;background:var(--card);
+  color:var(--ink);box-shadow:var(--sh);text-decoration:none}
+.enh-quick-card>svg{width:19px;height:19px;color:var(--day)}
+.enh-quick-card b{display:block;font-size:13px;line-height:1.45}
+.enh-quick-card small{display:block;color:var(--muted);font-size:10px;line-height:1.5;margin-top:3px}
+.enh-quick-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:var(--dayT);
+  color:var(--day);font-size:12px;font-weight:900;letter-spacing:.3px}
+.enh-quick-card.toilet .enh-quick-icon{background:#eaf5ec;color:#327047}
+.enh-toilet-card{margin-bottom:13px}
+.enh-toilet-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+.enh-toilet-intro b{display:block;font-size:13px}.enh-toilet-intro small{display:block;color:var(--muted);
+  font-size:10.5px;line-height:1.55;margin-top:3px}
+.enh-toilet-intro a{flex:0 0 auto;font-size:10px;font-weight:800;color:var(--day);padding:6px 8px;
+  border:1px solid var(--line);border-radius:9px;background:var(--sunk)}
+.enh-toilet-days{margin:0 0 10px;padding:2px 1px 4px}
+.enh-toilet-days .enh-filter{min-width:50px;text-align:center;padding:7px 10px}
+.enh-toilet-days small{display:block;font-size:8.5px;margin-top:1px;opacity:.72}
+.enh-toilet-list{border:1px solid var(--line2);border-radius:13px;overflow:hidden;background:var(--sunk)}
+.enh-toilet-head{display:flex;justify-content:space-between;gap:8px;padding:9px 11px;border-bottom:1px solid var(--line2)}
+.enh-toilet-head b{font-size:11px}.enh-toilet-head span{font-size:9.5px;color:var(--muted);text-align:right}
+.enh-toilet-row{display:grid;grid-template-columns:25px minmax(0,1fr) 18px;align-items:center;gap:9px;
+  min-height:46px;padding:8px 10px;color:var(--ink);border-top:1px solid var(--line2)}
+.enh-toilet-row:first-of-type{border-top:0}.enh-toilet-row>span{width:24px;height:24px;border-radius:8px;
+  display:grid;place-items:center;background:var(--card);color:var(--day);font-size:9px;font-weight:850}
+.enh-toilet-row b{font-size:11.5px;line-height:1.45}.enh-toilet-row svg{width:17px;height:17px;color:var(--day)}
+body[data-enh-theme="night"] .enh-quick-card.toilet .enh-quick-icon{background:#193328;color:#9ed2ad}
+
 .enh-toast{position:fixed;left:50%;bottom:calc(var(--nav) + var(--safeb) + 15px);z-index:1200;
   transform:translate(-50%,16px);opacity:0;pointer-events:none;background:#182536;color:white;
   border-radius:12px;padding:10px 14px;font-size:12px;font-weight:750;box-shadow:0 10px 30px rgba(0,0,0,.25);
@@ -1360,11 +1509,11 @@ body[data-enh-theme="night"] .enh-notice{background:#30271a;border-color:#564429
   .chipbar.sticky{top:72px;padding-left:30px;padding-right:30px}
   #nowBody{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);gap:14px 18px;align-items:start}
   #nowBody>.hero,#nowBody>.enh-ops,#nowBody>.enh-notice,#nowBody>.todaybrief,#nowBody>.decisiondeck,
-  #nowBody>.route,#nowBody>.sec,#nowBody>.card,#nowBody>.btns,#nowBody>.chipbar{grid-column:1}
+  #nowBody>.enh-live-transit,#nowBody>.route,#nowBody>.sec,#nowBody>.card,#nowBody>.btns,#nowBody>.chipbar{grid-column:1}
   #nowBody>.enh-ops{grid-row:1 / span 2;grid-column:2;grid-template-columns:repeat(2,minmax(0,1fr));position:sticky;top:97px}
   #nowBody>.hero{min-height:220px;padding:26px 28px}.hero .big{font-size:30px}
   #planBody{display:grid;grid-template-columns:minmax(330px,.78fr) minmax(520px,1.22fr);gap:14px 22px;align-items:start}
-  #planBody>.dayhd,#planBody>.enh-plan-tools,#planBody>.route,#planBody>.decisiondeck,#planBody>.auditcard,#planBody>.walk-card{grid-column:1}
+  #planBody>.dayhd,#planBody>.enh-plan-tools,#planBody>.enh-day-ledger,#planBody>.route,#planBody>.decisiondeck,#planBody>.auditcard,#planBody>.walk-card{grid-column:1}
   #planBody>.tl{grid-column:2;grid-row:1 / span 40;min-width:0;position:relative}
   #planBody>.dayhd{margin-bottom:0}
   #planBody>.enh-plan-tools{margin-bottom:0}
@@ -1395,15 +1544,21 @@ body[data-enh-theme="night"] .enh-notice{background:#30271a;border-color:#564429
   .top .dcount{display:none}.enh-header-actions{gap:5px}.enh-head-btn{width:36px;height:36px}
   .wrap{padding-left:15px;padding-right:15px}
   .chipbar{padding-left:15px;padding-right:15px}
-  .enh-modal-host[data-enh-kind="search"] .enh-dialog{top:max(7px,env(safe-area-inset-top));bottom:7px;
-    height:auto;max-height:none;border-radius:22px;transform:translate(-50%,calc(100% + 16px))}
+  .enh-modal-host[data-enh-kind="search"] .enh-dialog{top:max(7px,env(safe-area-inset-top));bottom:auto;
+    height:calc(100% - max(14px,env(safe-area-inset-top)));max-height:none;border-radius:22px;
+    transform:translate(-50%,calc(100% + 16px))}
   .enh-modal-host.open[data-enh-kind="search"] .enh-dialog{transform:translate(-50%,0)}
   .enh-modal-host[data-enh-kind="search"] .enh-dialog-head{border-radius:22px 22px 0 0}
   .enh-modal-host[data-enh-kind="search"] .enh-dialog-body{padding-bottom:12px}
 }
 
 @media (max-width:600px){
-  .enh-time-pair{grid-template-columns:1fr}
+  .enh-time-pair{grid-template-columns:1fr;gap:10px}
+  .enh-time-pair input[type="time"]{height:52px;font-size:16px}
+  .enh-quick-grid{grid-template-columns:1fr}
+  .enh-source-grid{grid-template-columns:1fr}
+  .enh-route-change{grid-template-columns:27px minmax(0,1fr)}.enh-route-change em{grid-column:2}
+  .enh-pdf-card{grid-template-columns:34px minmax(0,1fr)}.enh-pdf-card .btn{grid-column:1/-1;width:100%}
 }
 
 @media (max-width:420px){
@@ -1412,11 +1567,33 @@ body[data-enh-theme="night"] .enh-notice{background:#30271a;border-color:#564429
   .enh-head-btn[data-enh="settings"]{display:none}
   .enh-backup{grid-template-columns:1fr}
   .enh-focus-row{grid-template-columns:1fr}.enh-focus-row select{min-height:42px}
+  .enh-day-ledger{grid-template-columns:22px minmax(0,1fr) minmax(0,1fr)}.enh-day-ledger button{grid-column:1/-1;width:100%}
+  .enh-expense-grid{grid-template-columns:1fr}.enh-expense-grid label.full{grid-column:1}
+  .enh-transit-main{grid-template-columns:34px minmax(0,1fr)}.enh-transit-main>strong{grid-column:2}
+  .enh-pdf-actions{grid-template-columns:1fr}
 }
 
 @media print{
-  .enh-header-actions,.enh-modal-host,.enh-toast,.enh-plan-tools{display:none!important}
-  #app{padding-left:0!important}.top{position:relative}nav{display:none!important}
+  @page{size:A4 portrait;margin:10mm}
+  html,body{background:#fff!important;color:#111!important;font-size:10pt!important}
+  body>*:not(#enhPrintBook){display:none!important}
+  #enhPrintBook{display:block!important;width:auto!important;max-width:none!important;color:#111!important;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC",Arial,sans-serif}
+  .enh-print-cover{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;padding:0 0 9mm;border-bottom:2px solid #1d3b5f;margin-bottom:7mm}
+  .enh-print-cover small{font-size:8pt;letter-spacing:1.5px;color:#55708c;font-weight:800}.enh-print-cover h1{font-size:22pt;line-height:1.2;margin:2mm 0 1mm}
+  .enh-print-cover p{margin:0;color:#555}.enh-print-total{text-align:right}.enh-print-total span,.enh-print-total b{display:block}.enh-print-total span{font-size:8pt;color:#666}
+  .enh-print-total b{margin-top:2mm;font-size:12pt;color:#8c5422}.enh-print-day{break-before:page;page-break-before:always}
+  .enh-print-day:first-of-type{break-before:auto;page-break-before:auto}.enh-print-day>header{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;
+    padding-bottom:4mm;border-bottom:1px solid #9babb8}.enh-print-day>header small{font-size:8pt;color:#55708c;font-weight:800;letter-spacing:.4px}
+  .enh-print-day>header h2{font-size:17pt;margin:1mm 0}.enh-print-day>header p{font-size:9pt;color:#555;margin:0;max-width:150mm}
+  .enh-print-day>header>strong{white-space:nowrap;font-size:13pt;color:#8c5422}.enh-print-route{display:flex;flex-wrap:wrap;gap:2mm;margin:4mm 0}
+  .enh-print-route span{padding:1.5mm 2.5mm;border:1px solid #cbd4dc;border-radius:99px;font-size:7.5pt;color:#334c65}
+  .enh-print-day table{width:100%;border-collapse:collapse;table-layout:fixed}.enh-print-day th{text-align:left;font-size:7.5pt;color:#667;padding:2mm;border-bottom:1px solid #9babb8}
+  .enh-print-day th:first-child{width:23mm}.enh-print-day th:last-child:not(:nth-child(2)){width:30mm}.enh-print-day td{vertical-align:top;padding:2.2mm;border-bottom:1px solid #e0e4e7;font-size:8.5pt}
+  .enh-print-day tr{break-inside:avoid;page-break-inside:avoid}
+  .enh-print-day td:first-child b,.enh-print-day td:first-child span,.enh-print-day td b,.enh-print-day td small{display:block}.enh-print-day td:first-child span{font-size:7pt;color:#777}
+  .enh-print-day td small{font-size:7.2pt;color:#666;line-height:1.45;margin-top:.8mm}.enh-print-day td p{font-size:7.5pt;color:#374f65;margin:1mm 0 0;padding:1.2mm 1.8mm;background:#eef3f6;border-radius:1.5mm;white-space:pre-wrap}
+  .enh-print-day>footer{font-size:7.5pt;line-height:1.55;color:#555;margin-top:3mm;padding:2.5mm;background:#f2f4f5;border-radius:2mm}
+  .enh-print-foot{margin-top:7mm;padding-top:3mm;border-top:1px solid #ccd2d7;text-align:center;font-size:7pt;color:#777}
 }
 
 </style>
@@ -2128,17 +2305,15 @@ const KIC={transit:IC.train,food:IC.food,shop:IC.shop,hotel:IC.hotel,hub:IC.trai
 
 /* 只「連到 Google Maps 看」的連結（不是導航） */
 function gview(o){
-  if(o.gmUrl)return o.gmUrl;
-  return o.pre==='exact'&&Number.isFinite(o.lat)&&Number.isFinite(o.lng)
-    ?'https://www.google.com/maps/search/?api=1&query='+o.lat+'%2C'+o.lng
-    :'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(o.ja||o.n);
+  const query=o.ja||[o.n,o.area,'日本'].filter(Boolean).join(' ');
+  return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(query);
 }
 function gnav(o){
-  return o.pre==='exact'
-    ?'https://www.google.com/maps/dir/?api=1&destination='+o.lat+'%2C'+o.lng+'&travelmode=transit'
-    :'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(o.ja||o.n)+'&travelmode=transit';
+  const destination=o.ja||[o.n,o.area,'日本'].filter(Boolean).join(' ');
+  return 'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(destination)+
+    '&travelmode=transit&dir_action=navigate';
 }
-function gmPlace(o){return o.pre==='exact'?o.lat+','+o.lng:(o.ja||o.n)}
+function gmPlace(o){return o.ja||[o.n,o.area,'日本'].filter(Boolean).join(' ')}
 function gmRoute(stops){
   if(stops.length<2)return stops.length?gview(stops[0].o):'#';
   const a=stops[0].o,b=stops[stops.length-1].o,mid=stops.slice(1,-1);
@@ -2510,6 +2685,8 @@ function drawRail(){
       (use?'<div class="ls">'+esc(use)+'</div>':'')+
       (lines?'<div style="margin-top:6px">'+lines+'</div>':'')+'</div>',{maxWidth:250});
     if(!on)return;
+    // 地鐵圖總覽只標樞紐與行程重點；選定日期時再顯示當日相關站，避免滿版文字互相遮擋。
+    if(!hi&&!big&&!s.star)return;
     let position='';
     if(lay.BELOW.indexOf(id)>=0)position=' btm';
     else if(s.x>=maxX-8)position=' lft';
@@ -2732,6 +2909,17 @@ function renderAreaChips(){
       esc(a)+'</button>').join('');
   $$('#areaChips .chip').forEach(b=>b.onclick=()=>{areaFilter=b.dataset.a;renderAreaChips();renderPlaces()});
 }
+function masterPriority(o){
+  const explicit=Number(o.priority||o.p);
+  if([1,2,3].includes(explicit))return explicit;
+  if(o.status==='必去')return 1;
+  if(o.status==='已排入'||o.status==='待決定')return 2;
+  return 3;
+}
+function masterMapUrl(o){
+  const area=({'大阪':'大阪府','京都':'京都府','奈良':'奈良県','神戶':'兵庫県','天橋立・伊根':'京都府'}[o.area]||o.area||'日本');
+  return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent([o.n,area,'日本'].filter(Boolean).join(' '));
+}
 function renderPlaces(){
   const kw=q.trim().toLowerCase();
   const rank={"必去":0,"已排入":1,"只經過":2,"待決定":3,"暫不加入":4,"備選":5};
@@ -2740,11 +2928,12 @@ function renderPlaces(){
   const groups={};list.forEach(o=>(groups[o.area]=groups[o.area]||[]).push(o));
   const order=AREAS.filter(a=>groups[a]);
   let h='<div class="sec"><i></i><h2>地點總表</h2><span class="cnt">'+list.length+' / 113 筆</span></div>'+
-    '<div class="card tight"><div class="sm ink2"><b>來源：</b>大阪_地圖清單整理.xlsx。每天行程只顯示已排入地點；其餘保留為附近備選。</div></div>';
+    '<div class="card tight"><div class="sm ink2"><b>優先度：</b>必去＝P1、已排入／待決定＝P2，其餘備選＝P3。每天行程只顯示已排入地點；其餘保留為附近備選。</div></div>';
   if(!list.length){document.getElementById('placeBody').innerHTML=h+'<div class="empty">找不到符合的地點。<br>可搜尋店名、筆記、城市或狀態。</div>';return}
   h+=order.map(a=>'<div class="sec" style="margin-top:20px"><i></i><h2>'+esc(a)+'</h2><span class="cnt">'+groups[a].length+'</span></div>'+groups[a].map(o=>{
     const stClass=(o.status==='必去'||o.status==='已排入')?'g':(o.status==='待決定'||o.status==='暫不加入'?'p2':'');
-    return '<div class="pl"><div class="plh"><div class="idx master-no">#'+String(o.no).padStart(3,'0')+'</div><div class="mid"><div class="n">'+esc(o.n)+'</div>'+(o.note?'<div class="master-note">'+esc(o.note)+'</div>':'')+'</div></div><div class="plb"><div class="tags"><span class="pill '+stClass+'">'+esc(o.status)+'</span><span class="pill g">'+esc(o.kind)+'</span>'+o.days.map(i=>'<span class="pill d" data-jump="'+(i-1)+'">D'+i+'</span>').join('')+'</div><div class="act"><a class="iconbtn" href="'+o.gmUrl+'" target="_blank" rel="noopener" title="在 Google Maps 開啟">'+IC.mapPin+'</a><a class="iconbtn ig" href="'+o.igUrl+'" target="_blank" rel="noopener" title="'+(o.igOfficial?'官方 Instagram':'在 Instagram 搜尋')+'">'+IG_ICON+'</a><button class="iconbtn g" data-cp="'+esc(o.n)+'" title="複製地點名稱">'+IC.copy+'</button></div></div></div>';
+    const priority=masterPriority(o);
+    return '<div class="pl" data-place-no="'+o.no+'"><div class="plh"><div class="mid"><div class="n">'+esc(o.n)+'</div>'+(o.note?'<div class="master-note">'+esc(o.note)+'</div>':'')+'</div></div><div class="plb"><div class="tags"><span class="pill p'+priority+'">P'+priority+'</span><span class="pill '+stClass+'">'+esc(o.status)+'</span><span class="pill g">'+esc(o.kind)+'</span>'+o.days.map(i=>'<span class="pill d" data-jump="'+(i-1)+'">D'+i+'</span>').join('')+'</div><div class="act"><a class="iconbtn" href="'+masterMapUrl(o)+'" target="_blank" rel="noopener" title="在 Google Maps 開啟" aria-label="在 Google Maps 開啟 '+esc(o.n)+'">'+IC.mapPin+'</a><a class="iconbtn ig" href="'+o.igUrl+'" target="_blank" rel="noopener" title="'+(o.igOfficial?'官方 Instagram':'在 Instagram 搜尋')+'">'+IG_ICON+'</a><button class="iconbtn g" data-cp="'+esc(o.n)+'" title="複製地點名稱">'+IC.copy+'</button></div></div></div>';
   }).join('')).join('');
   document.getElementById('placeBody').innerHTML=h;
   document.querySelectorAll('#placeBody [data-cp]').forEach(b=>b.onclick=()=>copy(b.dataset.cp,b));
@@ -3012,10 +3201,24 @@ function igLink(o){return o.igUrl||igSearchUrl(o.ja||o.n)}
 function igTitle(o){return o.igOfficial?'官方 Instagram':'在 Instagram 搜尋'}
 
 let walkMapObj=null,walkLocateMarker=null;
+function walkGoogleLinks(m){
+  const stops=m.markers.map(p=>p.name+' 日本');
+  const first=m.markers[0],lastRoute=m.routes[m.routes.length-1],lastPoint=lastRoute&&lastRoute.points[lastRoute.points.length-1];
+  if(first&&lastPoint&&Math.abs(first.lat-lastPoint[0])<0.0001&&Math.abs(first.lng-lastPoint[1])<0.0001)stops.push(stops[0]);
+  const chunks=[];
+  for(let i=0;i<stops.length-1;i+=4)chunks.push(stops.slice(i,i+5));
+  return chunks.map((chunk,index)=>({
+    label:chunks.length>1?'Google Maps 路線 '+(index+1)+'/'+chunks.length:'Google Maps 備援',
+    url:'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(chunk[0])+
+      '&destination='+encodeURIComponent(chunk[chunk.length-1])+
+      (chunk.length>2?'&waypoints='+encodeURIComponent(chunk.slice(1,-1).join('|')):'')+'&travelmode=walking'
+  }));
+}
 function walkMapPanel(di){
   const m=WALK_MAPS[di];if(!m)return'';
   const legend=m.routes.map(r=>'<span><i style="border-color:'+r.color+';border-top-style:'+(r.dash?'dashed':'solid')+'"></i>'+esc(r.name)+'</span>').join('');
-  return '<details class="card walk-card" id="walkDetails-'+di+'"><summary><div><b>'+esc(m.title)+'</b><span>'+esc(m.meta)+'</span></div><em>點開查看</em></summary><div class="walk-tools"><button class="btn" id="walkFit-'+di+'">回到全圖</button><button class="btn" id="walkLocate-'+di+'">◎ 我的位置</button><a class="btn gm" href="'+m.gm+'" target="_blank" rel="noopener">Google Maps 備援</a></div><div class="walk-map" id="walkMap-'+di+'" aria-label="'+esc(m.title)+'"></div><div class="walk-legend">'+legend+'</div><p class="walk-note" id="walkStatus-'+di+'">上方為北；點編號看時間。'+esc(m.note)+'</p></details>';
+  const gmButtons=walkGoogleLinks(m).map(link=>'<a class="btn gm" href="'+link.url+'" target="_blank" rel="noopener">'+link.label+'</a>').join('');
+  return '<details class="card walk-card" id="walkDetails-'+di+'"><summary><div><b>'+esc(m.title)+'</b><span>'+esc(m.meta)+'</span></div><em>點開查看</em></summary><div class="walk-tools"><button class="btn" id="walkFit-'+di+'">回到全圖</button><button class="btn" id="walkLocate-'+di+'">◎ 我的位置</button>'+gmButtons+'</div><div class="walk-map" id="walkMap-'+di+'" aria-label="'+esc(m.title)+'"></div><div class="walk-legend">'+legend+'</div><p class="walk-note" id="walkStatus-'+di+'">上方為北；點編號看時間。'+esc(m.note)+'</p></details>';
 }
 function bindWalkMap(di){
   const d=document.getElementById('walkDetails-'+di);if(!d)return;
@@ -3125,6 +3328,10 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
     pin: enhSvg('<path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/>'),
     clock: enhSvg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
     tool: enhSvg('<path d="M14.5 5.5a3.5 3.5 0 0 0 4.6 4.6l-8.6 8.6a2.3 2.3 0 0 1-3.2-3.2l8.6-8.6Z"/>'),
+    sort: enhSvg('<path d="M8 6h11M8 12h8M8 18h5M3 5v14m0 0-2.5-2.5M3 19l2.5-2.5"/>'),
+    pdf: enhSvg('<path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M8.5 16h7M8.5 12h7"/>'),
+    transit: enhSvg('<rect x="5" y="3" width="14" height="16" rx="3"/><path d="M8 7h8M8 12h8M8 22l2-3M16 19l2 3"/><circle cx="9" cy="15" r="1"/><circle cx="15" cy="15" r="1"/>'),
+    yen: enhSvg('<path d="m7 4 5 7 5-7M12 11v9M7.5 13h9M7.5 17h9"/>'),
   };
 
   const enhAreaCenter = {
@@ -3137,7 +3344,19 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
   let enhVisualViewportBound = false;
   let enhPlaceStatus = 'all';
   let enhPlaceKind = 'all';
+  let enhPlacePriority = 'all';
   let enhToastTimer = 0;
+
+  const enhBaseItems = DAYS.map((day,di) => day.it.map((item,ii) => {
+    item._enhStableId = `base:${di}:${ii}`;
+    return {item,a:item.a,b:item.b};
+  }));
+  const enhTransitSources = {
+    jr:{label:'JR 西日本運行狀態',sub:'大阪環狀線、奈良線、京都線、HARUKA',url:'https://global.trafficinfo.westjr.co.jp/en/kansai'},
+    metro:{label:'Osaka Metro 運行資訊',sub:'各地鐵路線延誤、停駛資訊（繁中）',url:'https://subway.osakametro.co.jp/tw/guide/subway_information.php/1000'},
+    nankai:{label:'南海電鐵運行狀況',sub:'南海本線、空港線、Rapi:t',url:'https://www.traffic.nankai.co.jp/railinfo/01.html'},
+    kyotobus:{label:'京都市巴士即時位置',sub:'到站資訊、車內擁擠度與即時車輛位置',url:'https://kyotocity.bus-navigation.jp/wgsys/wgs_kyt/search.htm?locale=en'}
+  };
 
   const enhRead = (key, fallback) => store.get(key, fallback);
   const enhWrite = (key, value) => store.set(key, value);
@@ -3147,27 +3366,50 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
   const enhKindLabel = (kind) => ({food:'餐飲',shop:'購物',transit:'交通',spot:'景點'}[kind] || '景點');
   const enhPendingPattern = /(待|未定|尚未|現場選|待公布|待確認|待訂位|待放位)/;
   const enhStatusChoices = ['已確認','已訂位','待確認','待訂位','待放位','待決定','已排入','必去','彈性時段','A/B 現場選','暫緩','取消／不排入'];
+  const enhToiletStops = [
+    ['抵達京都',['關西國際機場 第1航廈 トイレ','京都駅 Porta 地下街 トイレ','京阪 祇園四条駅 トイレ','円山公園 公衆トイレ 京都']],
+    ['清水寺・祇園',['京阪 祇園四条駅 トイレ','清水坂観光駐車場東 公衆トイレ','清水寺 トイレ','円山公園 公衆トイレ 京都','京都河原町 高島屋 トイレ']],
+    ['伏見稻荷・錦市場・大阪',['京阪 祇園四条駅 トイレ','伏見稲荷大社 トイレ','東福寺 トイレ','京都駅 Porta 地下街 トイレ','蛸薬師新京極 公衆トイレ','京橋駅 トイレ 大阪','新今宮駅 トイレ']],
+    ['天橋立・伊根跟團',['近鉄日本橋駅 トイレ','天橋立駅 トイレ','智恩寺 公衆トイレ 天橋立','天橋立ビューランド トイレ','伊根町観光案内所 トイレ','道の駅 舟屋の里伊根 トイレ']],
+    ['USJ',['新今宮駅 トイレ','ユニバーサルシティ駅 トイレ','ユニバーサル・シティウォーク大阪 トイレ','ユニバーサル・スタジオ・ジャパン トイレ']],
+    ['奈良・天滿',['JR奈良駅 トイレ','春日大社 トイレ','若草山 トイレ','東大寺 トイレ','奈良公園 公衆トイレ','近鉄奈良駅 トイレ','JR天満駅 トイレ']],
+    ['大阪城・梅田',['新今宮駅 トイレ','森ノ宮駅 トイレ','大阪城公園 公衆トイレ','MIRAIZA OSAKA-JO トイレ','KITTE大阪 トイレ','HEP FIVE トイレ','梅田スカイビル トイレ']],
+    ['天王寺・日本橋・心齋橋',['新今宮駅 トイレ','あべのハルカス トイレ','てんしば 公衆トイレ','四天王寺 トイレ','日本橋駅 トイレ 大阪','黒門市場 トイレ','心斎橋PARCO トイレ','中座くいだおれビル トイレ','GiGO大阪道頓堀本店 トイレ']],
+    ['返程',['新今宮駅 トイレ','関西国際空港 第1ターミナル トイレ']]
+  ];
 
   function enhStatusMap(){
     const value = enhRead('status_overrides',{});
     return value && typeof value === 'object' && !Array.isArray(value) ? value : {};
   }
 
-  function enhStatusKey(di,item){
+  function enhItemId(di,item){
+    return item._enhStableId || (item._enhCustom ? `custom:${item._enhCustom}` : `legacy:${di}:${item.a || ''}:${item.n || ''}`);
+  }
+
+  function enhLegacyStatusKey(di,item){
     return item._enhCustom ? `custom:${item._enhCustom}` : `${DAYS[di]?.d || di}|${item.a || ''}|${item.b || ''}|${item.n || ''}`;
   }
 
+  function enhStatusKey(di,item){
+    return enhItemId(di,item);
+  }
+
   function enhHasStatusOverride(di,item){
-    return Object.prototype.hasOwnProperty.call(enhStatusMap(),enhStatusKey(di,item));
+    const map=enhStatusMap();
+    return Object.prototype.hasOwnProperty.call(map,enhStatusKey(di,item)) || Object.prototype.hasOwnProperty.call(map,enhLegacyStatusKey(di,item));
   }
 
   function enhItemStatus(di,item){
-    const map = enhStatusMap(), key = enhStatusKey(di,item);
-    return Object.prototype.hasOwnProperty.call(map,key) ? map[key] : (item.status || '未設定');
+    const map = enhStatusMap(), key = enhStatusKey(di,item), legacy = enhLegacyStatusKey(di,item);
+    if(Object.prototype.hasOwnProperty.call(map,key)) return map[key];
+    if(Object.prototype.hasOwnProperty.call(map,legacy)) return map[legacy];
+    return item.status || '未設定';
   }
 
   function enhSetStatus(di,item,status){
-    const map = enhStatusMap(), key = enhStatusKey(di,item);
+    const map = enhStatusMap(), key = enhStatusKey(di,item), legacy = enhLegacyStatusKey(di,item);
+    delete map[legacy];
     if(!status || status === (item.status || '未設定')) delete map[key];
     else map[key] = status;
     enhWrite('status_overrides',map);
@@ -3176,6 +3418,7 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
   function enhResetStatus(di,item){
     const map = enhStatusMap();
     delete map[enhStatusKey(di,item)];
+    delete map[enhLegacyStatusKey(di,item)];
     enhWrite('status_overrides',map);
   }
 
@@ -3187,6 +3430,52 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
   function enhStatusOptions(current){
     const options = [...new Set([current,...enhStatusChoices].filter(Boolean))];
     return options.map((status) => `<option value="${esc(status)}" ${status===current?'selected':''}>${esc(status)}</option>`).join('');
+  }
+
+  function enhExpenseMap(){
+    const value=enhRead('expenses',{});
+    return value && typeof value==='object' && !Array.isArray(value) ? value : {};
+  }
+
+  function enhExpenseFor(di,item){
+    const row=enhExpenseMap()[enhItemId(di,item)];
+    return row && typeof row==='object' ? row : null;
+  }
+
+  function enhDefaultExpenseCategory(item){
+    const poi=item.o&&POI[item.o];
+    if(item.k==='transit')return '交通';
+    if(item.k==='food'||poi?.kind==='food')return '餐飲';
+    if(item.k==='shop'||poi?.kind==='shop')return '購物';
+    if(poi?.kind==='hotel')return '住宿';
+    return '門票';
+  }
+
+  function enhSetExpense(di,item,amount,category,note=''){
+    const map=enhExpenseMap(),key=enhItemId(di,item),value=Math.max(0,Math.round(Number(amount)||0));
+    if(!value) delete map[key];
+    else map[key]={amount:value,category:category||enhDefaultExpenseCategory(item),note:String(note||'').trim(),updatedAt:new Date().toISOString()};
+    enhWrite('expenses',map);
+    return map[key]||null;
+  }
+
+  function enhFmtYen(value){
+    return `¥${Math.round(Number(value)||0).toLocaleString('zh-TW')}`;
+  }
+
+  function enhExpenseRows(){
+    const map=enhExpenseMap(),rows=[];
+    DAYS.forEach((day,di)=>day.it.forEach((item,ii)=>{
+      const expense=map[enhItemId(di,item)];
+      if(expense&&Number(expense.amount)>0)rows.push({day,di,item,ii,expense});
+    }));
+    return rows;
+  }
+
+  function enhExpenseTotals(){
+    const rows=enhExpenseRows(),byDay=DAYS.map(()=>0),byCategory={};let total=0;
+    rows.forEach(({di,expense})=>{const amount=Number(expense.amount)||0;total+=amount;byDay[di]+=amount;const category=expense.category||'其他';byCategory[category]=(byCategory[category]||0)+amount;});
+    return {rows,total,byDay,byCategory};
   }
 
   function enhFixSourceData(){
@@ -3214,8 +3503,32 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
     Object.keys(POI_DAYS).forEach((key) => POI_DAYS[key] = [...new Set(POI_DAYS[key])]);
   }
 
+  function enhRouteOrders(){
+    const value=enhRead('route_orders',{});
+    return value&&typeof value==='object'&&!Array.isArray(value)?value:{};
+  }
+
+  function enhRouteTimes(){
+    const value=enhRead('route_times',{});
+    return value&&typeof value==='object'&&!Array.isArray(value)?value:{};
+  }
+
+  function enhApplyStoredRouteOrders(){
+    const orders=enhRouteOrders(),times=enhRouteTimes();
+    DAYS.forEach((day,di)=>{
+      const order=orders[day.d],timeMap=times[day.d]||{};
+      if(!Array.isArray(order)||!order.length)return;
+      const baseline=day.it.slice(),byId=new Map(baseline.map((item)=>[enhItemId(di,item),item]));
+      const orderSet=new Set(order),ordered=order.map((id)=>byId.get(id)).filter(Boolean);let cursor=0;
+      day.it=baseline.map((item)=>orderSet.has(enhItemId(di,item))&&cursor<ordered.length?ordered[cursor++]:item);
+      day.it.forEach((item)=>{const slot=timeMap[enhItemId(di,item)];if(slot){item.a=slot.a;item.b=slot.b;}});
+    });
+  }
+
   function enhApplyCustomItems(){
-    DAYS.forEach((day) => day.it = day.it.filter((item) => !item._enhCustom));
+    DAYS.forEach((day,di) => {
+      day.it=enhBaseItems[di].map((base)=>{base.item.a=base.a;base.item.b=base.b;return base.item;});
+    });
     Object.keys(POI).filter((id) => id.startsWith('enh_custom_')).forEach((id) => delete POI[id]);
     for(let i=MASTER_PLACES.length-1;i>=0;i--){
       if(MASTER_PLACES[i]._enhCustom) MASTER_PLACES.splice(i,1);
@@ -3234,18 +3547,20 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
       };
       MASTER_PLACES.push({
         no:114 + index,n:record.title,note:record.note || '',gmUrl,area,kind:enhKindLabel(record.kind),
-        status:record.status || '臨時新增',days:record.mode === 'event' && Number.isInteger(record.day) ? [record.day + 1] : [],
+        status:record.status || '臨時新增',priority:record.priority || 2,days:record.mode === 'event' && Number.isInteger(record.day) ? [record.day + 1] : [],
         igUrl:enhIgSearch(record.title),igOfficial:false,_enhCustom:record.id
       });
       if(record.mode === 'event' && DAYS[record.day]){
         DAYS[record.day].it.push({
           a:record.start || '12:00',b:record.end || record.start || '13:00',n:record.title,o:poiId,
           p:record.priority || 2,k:record.kind === 'spot' ? undefined : record.kind,
-          x:record.note || '旅行中臨時新增。',status:record.status || '臨時新增',_enhCustom:record.id
+          x:record.note || '旅行中臨時新增。',status:record.status || '臨時新增',_enhCustom:record.id,
+          _enhStableId:`custom:${record.id}`
         });
       }
     });
     DAYS.forEach((day) => day.it.sort((a,b) => String(a.a).localeCompare(String(b.a))));
+    enhApplyStoredRouteOrders();
     AREAS.splice(0,AREAS.length,...[...new Set(MASTER_PLACES.map((place) => place.area))]);
     enhRebuildPoiDays();
   }
@@ -3274,6 +3589,12 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
     const viewport = window.visualViewport;
     host.style.setProperty('--enh-vtop',`${viewport ? viewport.offsetTop : 0}px`);
     host.style.setProperty('--enh-vvh',`${viewport ? viewport.height : window.innerHeight}px`);
+    if(host.dataset.enhKind === 'search' && host.classList.contains('open')){
+      const body = host.querySelector('.enh-dialog-body');
+      const results = host.querySelector('.enh-search-results');
+      if(body) body.scrollTop = 0;
+      if(results && document.activeElement?.id === 'enhGlobalSearch') results.scrollTop = 0;
+    }
   }
 
   function enhLockPage(){
@@ -3371,8 +3692,202 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
     if(!item) return;
     if(!confirm(`確定刪除「${item.title}」？`)) return;
     const statusMap=enhStatusMap();delete statusMap[`custom:${id}`];enhWrite('status_overrides',statusMap);
+    const expenses=enhExpenseMap();delete expenses[`custom:${id}`];enhWrite('expenses',expenses);
     enhWrite('custom_items',enhCustomItems().filter((record) => record.id !== id));
     enhApplyCustomItems();enhToast('已刪除臨時項目');renderPlan();
+  }
+
+  function enhMigrateLegacyStatusKeys(){
+    const map=enhStatusMap();let changed=false;
+    DAYS.forEach((day,di)=>day.it.forEach((item)=>{
+      const legacy=enhLegacyStatusKey(di,item),stable=enhStatusKey(di,item);
+      if(Object.prototype.hasOwnProperty.call(map,legacy)&&!Object.prototype.hasOwnProperty.call(map,stable)){
+        map[stable]=map[legacy];delete map[legacy];changed=true;
+      }
+    }));
+    if(changed)enhWrite('status_overrides',map);
+  }
+
+  function enhCaptureIndexedState(di){
+    const dn=done(),nt=notes(),state={};
+    DAYS[di].it.forEach((item,ii)=>{state[enhItemId(di,item)]={done:!!dn[`${di}_${ii}`],note:nt[`${di}_${ii}`]||''};});
+    return state;
+  }
+
+  function enhRestoreIndexedState(di,state){
+    const dn=done(),nt=notes(),prefix=`${di}_`;
+    Object.keys(dn).filter((key)=>key.startsWith(prefix)).forEach((key)=>delete dn[key]);
+    Object.keys(nt).filter((key)=>key.startsWith(prefix)).forEach((key)=>delete nt[key]);
+    DAYS[di].it.forEach((item,ii)=>{
+      const saved=state[enhItemId(di,item)];if(!saved)return;
+      if(saved.done)dn[`${di}_${ii}`]=true;
+      if(saved.note)nt[`${di}_${ii}`]=saved.note;
+    });
+    store.set('done',dn);store.set('notes',nt);
+  }
+
+  function enhPoiCoord(item){
+    const poi=item.o&&POI[item.o];
+    return poi&&Number.isFinite(Number(poi.lat))&&Number.isFinite(Number(poi.lng))?{lat:Number(poi.lat),lng:Number(poi.lng),poi}:null;
+  }
+
+  function enhKm(a,b){
+    if(!a||!b)return 0;
+    const rad=(value)=>value*Math.PI/180,dLat=rad(b.lat-a.lat),dLng=rad(b.lng-a.lng);
+    const x=Math.sin(dLat/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dLng/2)**2;
+    return 6371*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+  }
+
+  function enhRouteLocked(di,item){
+    const coord=enhPoiCoord(item),status=enhItemStatus(di,item),text=`${item.n||''} ${item.x||''} ${status}`;
+    if(/跟團/.test(`${DAYS[di]?.t||''} ${DAYS[di]?.s||''}`))return true;
+    if(!coord||coord.poi.pre==='area'||item.k==='transit'||item.k==='food'||coord.poi.kind==='hotel')return true;
+    if(/已確認|已訂位|待訂位|待放位/.test(status))return true;
+    return /(集合|起飛|飛行|報到|安檢|退稅|退房|入住|check.?in|入園|排隊|整理券|表演|跟團|預約|訂位|班次|開園|閉園|越早|截止|最後入館|日落)/i.test(text);
+  }
+
+  function enhPathDistance(items,start,end){
+    const points=items.map(enhPoiCoord).filter(Boolean);let total=0,prev=start||null;
+    points.forEach((point)=>{if(prev)total+=enhKm(prev,point);prev=point;});
+    if(prev&&end)total+=enhKm(prev,end);
+    return total;
+  }
+
+  function enhBestRouteOrder(items,start,end){
+    if(items.length<2)return items.slice();
+    let best=items.slice(),bestDistance=enhPathDistance(best,start,end);
+    if(items.length<=7){
+      const used=Array(items.length).fill(false),path=[];
+      const visit=()=>{
+        if(path.length===items.length){const distance=enhPathDistance(path,start,end);if(distance<bestDistance){best=path.slice();bestDistance=distance;}return;}
+        for(let i=0;i<items.length;i++)if(!used[i]){used[i]=true;path.push(items[i]);visit();path.pop();used[i]=false;}
+      };
+      visit();
+    }else{
+      const remaining=items.slice();let cursor=start||enhPoiCoord(remaining[0]);best=[];
+      while(remaining.length){let pick=0,score=Infinity;remaining.forEach((item,index)=>{const value=enhKm(cursor,enhPoiCoord(item));if(value<score){score=value;pick=index;}});const [item]=remaining.splice(pick,1);best.push(item);cursor=enhPoiCoord(item);}
+      bestDistance=enhPathDistance(best,start,end);
+    }
+    return best;
+  }
+
+  function enhRouteSuggestion(di){
+    const original=DAYS[di].it.slice(),result=original.slice(),blocks=[];let flexible=0,locked=0,index=0;
+    while(index<original.length){
+      if(enhRouteLocked(di,original[index])){locked++;index++;continue;}
+      const startIndex=index,block=[];
+      while(index<original.length&&!enhRouteLocked(di,original[index])){block.push(original[index]);flexible++;index++;}
+      if(block.length<2)continue;
+      const previous=startIndex>0?enhPoiCoord(original[startIndex-1]):enhPoiCoord(block[0]);
+      const next=index<original.length?enhPoiCoord(original[index]):enhPoiCoord(block[block.length-1]);
+      const optimized=enhBestRouteOrder(block,previous,next),before=enhPathDistance(block,previous,next),after=enhPathDistance(optimized,previous,next);
+      const changed=optimized.some((item,offset)=>item!==block[offset])&&before-after>=.05;
+      if(changed){result.splice(startIndex,block.length,...optimized);blocks.push({startIndex,before,after,from:block,to:optimized});}
+    }
+    const timeMap={};
+    result.forEach((item,slot)=>{timeMap[enhItemId(di,item)]={a:original[slot].a,b:original[slot].b};});
+    return {original,items:result,timeMap,blocks,flexible,locked,savedKm:blocks.reduce((sum,block)=>sum+block.before-block.after,0)};
+  }
+
+  function enhApplyRouteSuggestion(di,suggestion){
+    const state=enhCaptureIndexedState(di),orders=enhRouteOrders(),times=enhRouteTimes(),date=DAYS[di].d;
+    orders[date]=suggestion.items.map((item)=>enhItemId(di,item));times[date]=suggestion.timeMap;
+    enhWrite('route_orders',orders);enhWrite('route_times',times);enhApplyCustomItems();enhRestoreIndexedState(di,state);
+    enhCloseModal();renderChips();renderPlan();enhToast(`D${di+1} 已套用智慧路順，可隨時復原`);
+  }
+
+  function enhUndoRouteOrder(di){
+    const state=enhCaptureIndexedState(di),orders=enhRouteOrders(),times=enhRouteTimes(),date=DAYS[di].d;
+    delete orders[date];delete times[date];enhWrite('route_orders',orders);enhWrite('route_times',times);
+    enhApplyCustomItems();enhRestoreIndexedState(di,state);enhCloseModal();renderChips();renderPlan();enhToast(`D${di+1} 已恢復原始路順`);
+  }
+
+  function enhOpenRouteSort(di=curDay){
+    const suggestion=enhRouteSuggestion(di),hasSaved=Array.isArray(enhRouteOrders()[DAYS[di].d]);
+    const changes=suggestion.blocks.map((block,index)=>`<div class="enh-route-change"><span>${index+1}</span><div><b>${block.from.map((item)=>esc(item.n)).join(' → ')}</b><small>建議：${block.to.map((item)=>esc(item.n)).join(' → ')}</small></div><em>約省 ${(block.before-block.after).toFixed(1)} km</em></div>`).join('');
+    const content=`<div class="enh-route-summary"><div><span>可彈性排序</span><b>${suggestion.flexible}</b></div><div><span>已鎖定</span><b>${suggestion.locked}</b></div><div><span>估計少走</span><b>${suggestion.savedKm.toFixed(1)}<small> km</small></b></div></div><div class="enh-notice">${enhIcons.alert}<div><b>不破壞固定行程的排序</b>交通、餐飲、住宿、已訂位／已確認、集合、航班及營業／日落限制會鎖定；只在兩個鎖定點之間，用座標重排連續彈性景點，並沿用原本的時間格。</div></div>${changes||'<div class="enh-empty">目前路順已接近最短，或沒有可安全重排的連續景點。</div>'}<div class="hint">距離為座標直線估算；套用後仍建議用「即時交通」確認實際步行、月台與班次。打勾、筆記與記帳會跟著地點移動。</div><div class="enh-form-actions">${hasSaved?'<button class="btn" type="button" data-enh-route-undo>恢復原始路順</button>':''}<button class="btn pri" type="button" data-enh-route-apply ${suggestion.blocks.length?'':'disabled'}>套用建議順序</button></div>`;
+    enhOpenModal(`D${di+1} 智慧路順`,'保留預約、交通與跨區限制',content,(root)=>{
+      root.querySelector('[data-enh-route-apply]').onclick=()=>enhApplyRouteSuggestion(di,suggestion);
+      const undo=root.querySelector('[data-enh-route-undo]');if(undo)undo.onclick=()=>enhUndoRouteOrder(di);
+    });
+  }
+
+  function enhTransitUrl(destination,origin=''){
+    const params=new URLSearchParams({api:'1',destination,travelmode:'transit',dir_action:'navigate'});
+    if(origin)params.set('origin',origin);
+    return `https://www.google.com/maps/dir/?${params.toString()}`;
+  }
+
+  function enhTransitTarget(di){
+    const day=DAYS[di],info=nowInfo(),dn=done();let start=0;
+    if(info.di===di){
+      const live=day.it.findIndex((item)=>info.mins>=hm(item.a)&&info.mins<hm(item.b));
+      const future=day.it.findIndex((item)=>hm(item.a)>info.mins);
+      start=live>=0&&day.it[live].k==='transit'?live:(future>=0?future:Math.max(0,day.it.length-1));
+    }
+    else{const next=day.it.findIndex((item,ii)=>!dn[`${di}_${ii}`]);start=next<0?0:next;}
+    for(let offset=0;offset<day.it.length;offset++){
+      const ii=(start+offset)%day.it.length,item=day.it[ii],poi=item.o&&POI[item.o];
+      if(poi)return {item,poi,ii};
+    }
+    return null;
+  }
+
+  function enhTransitSourceKeys(di){
+    if(di<=2)return ['jr','kyotobus'];
+    if(di===3)return ['jr'];
+    if(di>=4&&di<=6)return ['jr','metro'];
+    if(di===7)return ['metro'];
+    return ['nankai','jr'];
+  }
+
+  function enhOpenTransit(di=curDay){
+    const day=DAYS[di],target=enhTransitTarget(di),online=navigator.onLine;
+    const destination=target?(target.poi.ja||target.poi.n||target.item.n):day.city;
+    const main=online?`<a class="enh-transit-main" href="${enhTransitUrl(destination)}" target="_blank" rel="noopener">${enhIcons.transit}<span><b>目前位置 → ${esc(target?.item.n||day.city)}</b><small>以現在時間開啟 Google Maps 大眾運輸方案</small></span><strong>即時查詢</strong></a>`:`<div class="enh-transit-main disabled">${enhIcons.transit}<span><b>目前離線</b><small>保留原定交通；連線後才能取得最新班次與轉乘</small></span></div>`;
+    const legs=(day.route||[]).map((route)=>`<a class="enh-transit-leg" href="${enhTransitUrl(`${route.t} 日本`,`${route.f} 日本`)}" target="_blank" rel="noopener"><span><b>${esc(route.f)} → ${esc(route.t)}</b><small>${esc(route.l)} · 原排約 ${esc(route.m)} 分${route.n?` · ${esc(route.n)}`:''}</small></span>${enhIcons.pin}</a>`).join('');
+    const sources=enhTransitSourceKeys(di).map((key)=>enhTransitSources[key]).map((source)=>`<a class="enh-source-link" href="${source.url}" target="_blank" rel="noopener"><b>${source.label}</b><small>${source.sub}</small><span>查看官方</span></a>`).join('');
+    const content=`<div class="enh-live-stamp"><i class="${online?'':'off'}"></i><span>${online?'已連線；點擊後由 Google Maps 依當下班次重新計算':'離線模式；不顯示可能過期的班次'}</span><time>${new Date().toLocaleString('zh-TW',{hour12:false})}</time></div>${main}<div class="enh-subhead">今天預排的交通區段</div><div class="enh-transit-legs">${legs||'<div class="enh-empty">這天沒有預排的大眾運輸區段。</div>'}</div><div class="enh-subhead">營運商官方狀態</div><div class="enh-source-grid">${sources}</div><div class="hint">Google Maps 會顯示當下可用班次、步行與轉乘；官方狀態用來確認大範圍延誤或停駛。跟團巴士、航班與訂位交通仍以業者通知為準。</div>`;
+    enhOpenModal(`D${di+1} 即時大眾運輸`,'現在位置、下一站與官方運行狀態',content);
+  }
+
+  function enhLiveTransitCard(di){
+    const target=enhTransitTarget(di),card=document.createElement('button');card.type='button';card.className='enh-live-transit';
+    card.innerHTML=`${enhIcons.transit}<span><small>LIVE TRANSIT · ${navigator.onLine?'ONLINE':'OFFLINE'}</small><b>${navigator.onLine?'查現在到下一站':'查看原定交通備案'}</b><em>${esc(target?.item.n||DAYS[di].city)}</em></span><strong>開啟</strong>`;
+    card.onclick=()=>enhOpenTransit(di);return card;
+  }
+
+  function enhPrintBook(dayIndexes,{includeNotes=true,includeExpenses=true}={}){
+    document.getElementById('enhPrintBook')?.remove();const nt=notes(),totals=enhExpenseTotals();
+    const days=dayIndexes.map((di)=>{
+      const day=DAYS[di],dayTotal=totals.byDay[di]||0;
+      const rows=day.it.map((item,ii)=>{
+        const expense=enhExpenseFor(di,item),note=nt[`${di}_${ii}`]||'',status=enhItemStatus(di,item);
+        return `<tr><td><b>${esc(item.a)}</b><span>${esc(item.b)}</span></td><td><b>${esc(item.n)}</b><small>${item.p?`P${item.p} · `:''}${esc(status)}${item.x?` · ${esc(item.x)}`:''}</small>${includeNotes&&note?`<p>筆記：${esc(note)}</p>`:''}</td>${includeExpenses?`<td>${expense?`<b>${enhFmtYen(expense.amount)}</b><small>${esc(expense.category||'其他')}${expense.note?` · ${esc(expense.note)}`:''}</small>`:'—'}</td>`:''}</tr>`;
+      }).join('');
+      const routes=(day.route||[]).map((route)=>`<span>${esc(route.f)} → ${esc(route.t)} · ${esc(route.l)} ${esc(route.m)} 分</span>`).join('');
+      return `<article class="enh-print-day"><header><div><small>DAY ${di+1} · ${esc(day.d)}（${esc(day.w)}）· ${esc(day.city)}</small><h2>${esc(day.t)}</h2><p>${esc(day.s)}</p></div>${includeExpenses?`<strong>${enhFmtYen(dayTotal)}</strong>`:''}</header><div class="enh-print-route">${routes||'<span>步行／自由移動</span>'}</div><table><thead><tr><th>時間</th><th>行程</th>${includeExpenses?'<th>支出</th>':''}</tr></thead><tbody>${rows}</tbody></table><footer><b>住宿</b> ${esc(day.stay)}　 <b>提醒</b> ${day.tips.map(esc).join('・')}</footer></article>`;
+    }).join('');
+    const book=document.createElement('main');book.id='enhPrintBook';book.className='enh-print-only';
+    book.innerHTML=`<header class="enh-print-cover"><div><small>KANSAI TRIP COMPANION · 2026</small><h1>關西秋旅 · 京都大阪奈良</h1><p>2026/11/7–11/15 · 9 天 8 夜</p></div><div class="enh-print-total"><span>${dayIndexes.length===DAYS.length?'完整行程':`D${dayIndexes[0]+1} 單日行程`}</span>${includeExpenses?`<b>全程已記 ${enhFmtYen(totals.total)}</b>`:''}</div></header>${days}<footer class="enh-print-foot">由關西旅遊智慧行程手冊產生 · ${new Date().toLocaleString('zh-TW',{hour12:false})} · 即時班次、營業時間與訂位仍以出發當日官方資訊為準</footer>`;
+    document.body.appendChild(book);return book;
+  }
+
+  function enhPrintItinerary(scope,options){
+    const indexes=scope==='day'?[curDay]:DAYS.map((_,index)=>index),oldTitle=document.title;
+    enhPrintBook(indexes,options);document.title=`關西秋旅_${scope==='day'?`D${curDay+1}`:'完整9天'}_${new Date().toISOString().slice(0,10)}`;
+    const cleanup=()=>{document.title=oldTitle;setTimeout(()=>document.getElementById('enhPrintBook')?.remove(),300);};
+    window.addEventListener('afterprint',cleanup,{once:true});window.print();setTimeout(cleanup,30000);
+  }
+
+  function enhOpenPdfExport(){
+    const content=`<div class="enh-pdf-preview">${enhIcons.pdf}<div><b>輸出成真正好用的旅程手冊</b><small>保留每日時間軸、交通、住宿、提醒、狀態，也可帶入筆記與記帳總額；地圖與操作按鈕不會印出。</small></div></div><div class="enh-settings"><label class="enh-setting"><div><b>包含隨手筆記</b><small>候位號碼、置物櫃與自訂提醒</small></div><input type="checkbox" data-enh-pdf-notes checked></label><label class="enh-setting"><div><b>包含記帳</b><small>逐筆金額、每日小計與全程總額</small></div><input type="checkbox" data-enh-pdf-expenses checked></label></div><div class="enh-pdf-actions"><button class="btn pri" type="button" data-enh-pdf-scope="all">完整 9 天 PDF</button><button class="btn" type="button" data-enh-pdf-scope="day">只輸出 D${curDay+1}</button></div><div class="hint">按下後會開啟系統列印畫面：iPhone／iPad 可在預覽頁放大後用分享儲存 PDF；電腦請選「另存為 PDF」。</div>`;
+    enhOpenModal('匯出行程 PDF','A4 友善 · 可離線保存',content,(root)=>{
+      root.querySelectorAll('[data-enh-pdf-scope]').forEach((button)=>button.onclick=()=>{
+        const options={includeNotes:root.querySelector('[data-enh-pdf-notes]').checked,includeExpenses:root.querySelector('[data-enh-pdf-expenses]').checked};
+        const scope=button.dataset.enhPdfScope;enhCloseModal();enhPrintItinerary(scope,options);
+      });
+    });
   }
 
   function enhSearchData(query){
@@ -3392,7 +3907,10 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
       {type:'tool',title:'緊急電話',sub:'110、119、駐大阪辦事處與旅外專線',hay:'緊急 電話 警察 救護 110 119'},
       {type:'tool',title:'日文應急短句',sub:'交通、餐廳、購物與求助',hay:'日文 短句 交通 餐廳 購物 求助'},
       {type:'tool',title:'匯率速查',sub:'JPY 日圓換算 TWD 台幣',hay:'匯率 日圓 台幣 jpy twd'},
-      {type:'tool',title:'出發前確認清單',sub:'交通、票券、訂位、衣物與返程',hay:'清單 確認 交通 票券 訂位 衣物'}
+      {type:'tool',title:'出發前確認清單',sub:'交通、票券、訂位、衣物與返程',hay:'清單 確認 交通 票券 訂位 衣物'},
+      {type:'tool',title:'行程 PDF',sub:'完整 9 天或單日旅程手冊',hay:'pdf 匯出 列印 行程 手冊'},
+      {type:'tool',title:'記帳總覽',sub:'每日、分類與全旅程日圓加總',hay:'記帳 金額 支出 總額 費用 日圓'},
+      {type:'tool',title:'即時大眾運輸',sub:'現在位置到下一站與官方運行狀態',hay:'即時 交通 大眾運輸 班次 延誤 地鐵 jr'}
     ];
     const all = [...schedule,...places,...tools];
     if(!keyword) return all.filter((item) => item.type === 'schedule' && item.pending).slice(0,12);
@@ -3425,8 +3943,9 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
         results.scrollTop = 0;
         if(dialogBody) dialogBody.scrollTop = 0;
       };
-      input.oninput = draw;
-      input.onfocus = () => {enhSyncVisualViewport();results.scrollTop=0;if(dialogBody)dialogBody.scrollTop=0;};
+      input.oninput = () => {draw();requestAnimationFrame(() => {enhSyncVisualViewport();input.scrollIntoView({block:'nearest'});});};
+      input.onfocus = () => {enhSyncVisualViewport();results.scrollTop=0;if(dialogBody)dialogBody.scrollTop=0;
+        requestAnimationFrame(() => input.scrollIntoView({block:'nearest'}));};
       draw();
     },'search');
   }
@@ -3475,7 +3994,9 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
       };
       root.querySelector('[data-enh-clear-v2]').onclick = () => {
         if(confirm('確定清除所有臨時地點、臨時行程、收藏與狀態變更？')){
-          enhWrite('custom_items',[]);enhWrite('favorites',{});enhWrite('status_overrides',{});enhApplyCustomItems();enhCloseModal();enhToast('已清除 v2 自訂資料');renderNow();
+          const expenses=enhExpenseMap();Object.keys(expenses).filter((key)=>key.startsWith('custom:')).forEach((key)=>delete expenses[key]);
+          const orders=enhRouteOrders(),times=enhRouteTimes();Object.keys(orders).forEach((date)=>{if(Array.isArray(orders[date]))orders[date]=orders[date].filter((id)=>!id.startsWith('custom:'));});Object.values(times).forEach((timeMap)=>{if(timeMap&&typeof timeMap==='object')Object.keys(timeMap).filter((id)=>id.startsWith('custom:')).forEach((id)=>delete timeMap[id]);});
+          enhWrite('expenses',expenses);enhWrite('route_orders',orders);enhWrite('route_times',times);enhWrite('custom_items',[]);enhWrite('favorites',{});enhWrite('status_overrides',{});enhApplyCustomItems();enhCloseModal();enhToast('已清除 v2 自訂資料');renderNow();
         }
       };
       root.querySelector('[data-enh-done]').onclick = enhCloseModal;
@@ -3502,18 +4023,51 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
     const notice = document.createElement('div');notice.className='enh-notice';notice.dataset.enhLodging='1';
     notice.innerHTML = `${enhIcons.alert}<div><b>京都住宿仍是暫定動線基準</b>KABIN Gion 的位置已用於所有路線；11/9 退房後保管 31 吋行李到 13:45 仍須向住宿確認。</div>`;
     const ops = body.querySelector('.enh-ops');ops.insertAdjacentElement('afterend',notice);
+    const info=nowInfo();if(info.di>=0){const brief=body.querySelector('.todaybrief');if(brief)brief.insertAdjacentElement('afterend',enhLiveTransitCard(info.di));}
     enhAccessify(body);
+  }
+
+  function enhDayLedgerSummary(di){
+    const totals=enhExpenseTotals(),count=totals.rows.filter((row)=>row.di===di).length,wrap=document.createElement('div');
+    wrap.className='enh-day-ledger';wrap.innerHTML=`${enhIcons.yen}<span><small>D${di+1} 已記 ${count} 筆</small><b data-enh-day-total>${enhFmtYen(totals.byDay[di])}</b></span><span><small>全程合計</small><b data-enh-trip-total>${enhFmtYen(totals.total)}</b></span><button type="button" data-enh-ledger-overview>記帳總覽</button>`;
+    wrap.querySelector('[data-enh-ledger-overview]').onclick=()=>{go('util');setTimeout(()=>document.querySelector('[data-enh-ledger-tools]')?.scrollIntoView({behavior:'smooth',block:'start'}),80);};
+    return wrap;
+  }
+
+  function enhRefreshPlanLedger(di){
+    const totals=enhExpenseTotals(),root=document.getElementById('planBody');if(!root)return;
+    const dayTotal=root.querySelector('[data-enh-day-total]'),tripTotal=root.querySelector('[data-enh-trip-total]');
+    if(dayTotal)dayTotal.textContent=enhFmtYen(totals.byDay[di]);if(tripTotal)tripTotal.textContent=enhFmtYen(totals.total);
+    const small=root.querySelector('.enh-day-ledger small');if(small)small.textContent=`D${di+1} 已記 ${totals.rows.filter((row)=>row.di===di).length} 筆`;
+  }
+
+  function enhEnhanceExpenseRow(di,item,row,detail,head){
+    const current=enhExpenseFor(di,item),category=current?.category||enhDefaultExpenseCategory(item);
+    let pill=head.querySelector('.enh-expense-pill');
+    if(!pill){pill=document.createElement('button');pill.type='button';pill.className='enh-expense-pill';pill.setAttribute('aria-label',`記錄 ${item.n} 的金額`);head.querySelector('.ttl')?.appendChild(pill);}
+    const paint=(expense)=>{pill.textContent=expense?enhFmtYen(expense.amount):'＋金額';pill.classList.toggle('has-value',!!expense);};paint(current);
+    pill.onclick=(event)=>{event.stopPropagation();row.classList.add('open');setTimeout(()=>detail.querySelector('.enh-expense-amount')?.focus({preventScroll:true}),30);};
+    const editor=document.createElement('div');editor.className='enh-expense-editor';
+    editor.innerHTML=`<div class="enh-expense-title">${enhIcons.yen}<span><b>這一站花多少</b><small>直接計入 D${di+1} 與全程總額</small></span></div><div class="enh-expense-grid"><label><span>日圓金額</span><div class="enh-money-input"><i>¥</i><input class="enh-expense-amount" type="number" min="0" step="1" inputmode="numeric" value="${current?Number(current.amount):''}" placeholder="0"></div></label><label><span>分類</span><select class="enh-expense-category">${['交通','餐飲','門票','購物','住宿','其他'].map((value)=>`<option ${value===category?'selected':''}>${value}</option>`).join('')}</select></label><label class="full"><span>記帳備註（選填）</span><input class="enh-expense-note" maxlength="80" value="${esc(current?.note||'')}" placeholder="例如：兩人合計、現金、交通卡"></label></div>`;
+    const note=detail.querySelector('.note');detail.insertBefore(editor,note||null);
+    const amount=editor.querySelector('.enh-expense-amount'),categoryField=editor.querySelector('.enh-expense-category'),noteField=editor.querySelector('.enh-expense-note');
+    const save=()=>{const expense=enhSetExpense(di,item,amount.value,categoryField.value,noteField.value);paint(expense);enhRefreshPlanLedger(di);};
+    amount.oninput=save;categoryField.onchange=save;noteField.onchange=save;
   }
 
   function enhEnhancePlan(){
     const body = document.getElementById('planBody');if(!body) return;
-    body.querySelectorAll('.enh-plan-tools').forEach((node) => node.remove());
+    body.querySelectorAll('.enh-plan-tools,.enh-day-ledger').forEach((node) => node.remove());
     const header = body.querySelector('.dayhd');
     if(header){
       const tools = document.createElement('div');tools.className='enh-plan-tools';
-      tools.innerHTML = `<button class="btn pri" type="button" data-enh-plan-add>${enhIcons.plus}插入臨時行程</button><button class="btn" type="button" data-enh-plan-search>${enhIcons.search}搜尋全部</button><button class="btn" type="button" data-enh-plan-focus>${enhIcons.alert}待確認</button>`;
+      tools.innerHTML = `<button class="btn pri" type="button" data-enh-plan-add>${enhIcons.plus}插入行程</button><button class="btn" type="button" data-enh-plan-sort>${enhIcons.sort}智慧路順</button><button class="btn" type="button" data-enh-plan-transit>${enhIcons.transit}即時交通</button><button class="btn" type="button" data-enh-plan-pdf>${enhIcons.pdf}匯出 PDF</button><button class="btn" type="button" data-enh-plan-search>${enhIcons.search}搜尋全部</button><button class="btn" type="button" data-enh-plan-focus>${enhIcons.alert}待確認</button>`;
       header.insertAdjacentElement('afterend',tools);
+      tools.insertAdjacentElement('afterend',enhDayLedgerSummary(curDay));
       tools.querySelector('[data-enh-plan-add]').onclick = () => enhOpenAdd('event');
+      tools.querySelector('[data-enh-plan-sort]').onclick = () => enhOpenRouteSort(curDay);
+      tools.querySelector('[data-enh-plan-transit]').onclick = () => enhOpenTransit(curDay);
+      tools.querySelector('[data-enh-plan-pdf]').onclick = enhOpenPdfExport;
       tools.querySelector('[data-enh-plan-search]').onclick = enhOpenSearch;
       tools.querySelector('[data-enh-plan-focus]').onclick = enhOpenFocus;
     }
@@ -3531,6 +4085,7 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
       paintStatus(status);
       const detail = row.querySelector('.det');
       if(detail){
+        enhEnhanceExpenseRow(curDay,item,row,detail,head);
         const editor=document.createElement('div');editor.className='enh-status-editor';
         editor.innerHTML=`<label>行程狀態<select aria-label="變更 ${esc(item.n)} 的行程狀態">${enhStatusOptions(status)}</select></label><button class="enh-status-reset" type="button" ${enhHasStatusOverride(curDay,item)?'':'hidden'}>恢復原狀態</button>`;
         const note=detail.querySelector('.note');detail.insertBefore(editor,note || null);
@@ -3561,17 +4116,18 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
   function enhEnsurePlaceFilters(){
     const wrap = document.querySelector('#v-place .wrap');if(!wrap || wrap.querySelector('[data-enh-place-filters]')) return;
     const controls = document.createElement('div');controls.dataset.enhPlaceFilters='1';
-    controls.innerHTML = `<div class="enh-place-filters" aria-label="地點狀態篩選"><button class="enh-filter on" data-enh-status="all">全部狀態</button><button class="enh-filter" data-enh-status="active">已排入／必去</button><button class="enh-filter" data-enh-status="pending">待決定</button><button class="enh-filter" data-enh-status="backup">備選</button><button class="enh-filter" data-enh-status="favorites">★ 收藏</button><button class="enh-filter" data-enh-status="custom">臨時新增</button></div><div class="enh-place-filters" aria-label="地點類型篩選"><button class="enh-filter on" data-enh-kind="all">全部類型</button><button class="enh-filter" data-enh-kind="餐飲">餐飲</button><button class="enh-filter" data-enh-kind="購物">購物</button><button class="enh-filter" data-enh-kind="景點">景點</button><button class="enh-filter" data-enh-kind="交通">交通</button></div>`;
+    controls.innerHTML = `<div class="enh-place-filters" aria-label="地點狀態篩選"><button class="enh-filter on" data-enh-status="all">全部狀態</button><button class="enh-filter" data-enh-status="active">已排入／必去</button><button class="enh-filter" data-enh-status="pending">待決定</button><button class="enh-filter" data-enh-status="backup">備選</button><button class="enh-filter" data-enh-status="favorites">★ 收藏</button><button class="enh-filter" data-enh-status="custom">臨時新增</button></div><div class="enh-place-filters" aria-label="地點類型篩選"><button class="enh-filter on" data-enh-kind="all">全部類型</button><button class="enh-filter" data-enh-kind="餐飲">餐飲</button><button class="enh-filter" data-enh-kind="購物">購物</button><button class="enh-filter" data-enh-kind="景點">景點</button><button class="enh-filter" data-enh-kind="交通">交通</button></div><div class="enh-place-filters" aria-label="優先度篩選"><button class="enh-filter on" data-enh-priority="all">全部優先度</button><button class="enh-filter" data-enh-priority="1">P1 必去</button><button class="enh-filter" data-enh-priority="2">P2 順路</button><button class="enh-filter" data-enh-priority="3">P3 有空再去</button></div>`;
     document.getElementById('areaChips').insertAdjacentElement('afterend',controls);
     controls.querySelectorAll('[data-enh-status]').forEach((button) => button.onclick = () => {enhPlaceStatus=button.dataset.enhStatus;controls.querySelectorAll('[data-enh-status]').forEach((x)=>x.classList.toggle('on',x===button));enhApplyPlaceVisibility();});
     controls.querySelectorAll('[data-enh-kind]').forEach((button) => button.onclick = () => {enhPlaceKind=button.dataset.enhKind;controls.querySelectorAll('[data-enh-kind]').forEach((x)=>x.classList.toggle('on',x===button));enhApplyPlaceVisibility();});
+    controls.querySelectorAll('[data-enh-priority]').forEach((button) => button.onclick = () => {enhPlacePriority=button.dataset.enhPriority;controls.querySelectorAll('[data-enh-priority]').forEach((x)=>x.classList.toggle('on',x===button));enhApplyPlaceVisibility();});
   }
 
   function enhApplyPlaceVisibility(){
     const container = document.getElementById('placeBody');if(!container) return;
     const fav = enhFavoriteMap();let visible = 0;
     container.querySelectorAll('.pl').forEach((row) => {
-      const no = Number((row.querySelector('.master-no')?.textContent || '').replace(/\D/g,''));
+      const no = Number(row.dataset.placeNo);
       const place = MASTER_PLACES.find((item) => item.no === no);if(!place) return;
       const statusOk = enhPlaceStatus === 'all' ||
         (enhPlaceStatus === 'active' && ['必去','已排入'].includes(place.status)) ||
@@ -3580,7 +4136,8 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
         (enhPlaceStatus === 'favorites' && !!fav[place.no]) ||
         (enhPlaceStatus === 'custom' && place.status === '臨時新增');
       const kindOk = enhPlaceKind === 'all' || place.kind === enhPlaceKind;
-      row.hidden = !(statusOk && kindOk);if(!row.hidden) visible++;
+      const priorityOk = enhPlacePriority === 'all' || String(masterPriority(place)) === enhPlacePriority;
+      row.hidden = !(statusOk && kindOk && priorityOk);if(!row.hidden) visible++;
       let star = row.querySelector('.enh-fav');
       if(!star){
         star=document.createElement('button');star.type='button';star.className='iconbtn enh-fav';star.title='收藏地點';
@@ -3600,7 +4157,7 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
   }
 
   function enhExportData(){
-    const payload={version:2,exportedAt:new Date().toISOString(),data:{}};
+    const payload={version:3,exportedAt:new Date().toISOString(),data:{}};
     for(let i=0;i<localStorage.length;i++){
       const key=localStorage.key(i);if(key && key.startsWith('kx_')){
         try{payload.data[key]=JSON.parse(localStorage.getItem(key));}catch{payload.data[key]=localStorage.getItem(key);}
@@ -3615,7 +4172,7 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
     const reader=new FileReader();reader.onload=()=>{
       try{
         const payload=JSON.parse(String(reader.result));if(!payload || typeof payload.data!=='object')throw new Error('invalid');
-        if(!confirm('匯入會覆蓋這個瀏覽器目前的打勾、筆記、路線選擇與自訂地點。確定繼續？'))return;
+        if(!confirm('匯入會覆蓋這個瀏覽器目前的打勾、筆記、路線選擇、智慧路順、記帳與自訂地點。確定繼續？'))return;
         Object.entries(payload.data).forEach(([key,value])=>{if(key.startsWith('kx_'))localStorage.setItem(key,JSON.stringify(value));});
         location.reload();
       }catch{alert('這不是有效的關西行程備份檔。');}
@@ -3632,18 +4189,63 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
       ['注意','YAKINIKU KINOE、牛舌、神樂亭、TSUKADA、両忘仍有訂位／放位工作'],
       ['正常','按鈕最小觸控高度、鍵盤焦點、桌面雙欄與手機底部導覽均已配置'],
       ['正常','每個行程節點皆可變更狀態；待確認工作台會依新狀態即時更新'],
-      ['正常','自訂行程、狀態、收藏、備份及顯示偏好皆存於本機瀏覽器']
+      ['正常','PDF 可輸出完整 9 天或單日，並選擇是否包含筆記與記帳'],
+      ['正常','智慧路順只重排連續彈性景點；交通、餐飲、訂位與跨區節點保持鎖定'],
+      ['正常','即時交通使用 Google Maps 當下大眾運輸方案，並提供 JR、Metro、南海與京都巴士官方狀態'],
+      ['正常','行程節點可直接記錄日圓，並提供每日、分類與全程加總'],
+      ['正常','自訂行程、狀態、收藏、路順、記帳、備份及顯示偏好皆存於本機瀏覽器']
     ];
     return checks.map(([state,text])=>`<div class="enh-system-row"><span class="enh-system-state ${state==='注意'?'warn':''}">${state}</span><span>${esc(text)}</span></div>`).join('');
   }
 
+  function enhToiletLabel(query){
+    return query.replace(/公衆トイレ/g,'公共廁所').replace(/トイレ/g,'廁所').replace(/第1ターミナル/g,'第 1 航廈');
+  }
+
+  function enhRenderToiletStops(root,dayIndex){
+    const target=root.querySelector('[data-enh-toilet-list]'),data=enhToiletStops[dayIndex];
+    if(!target||!data)return;
+    target.innerHTML=`<div class="enh-toilet-head"><b>D${dayIndex+1} · ${esc(DAYS[dayIndex].d.slice(5).replace('-','/'))}</b><span>${esc(data[0])} · ${data[1].length} 個據點</span></div>${data[1].map((query,index)=>`<a class="enh-toilet-row" href="${enhMapSearch(query)}" target="_blank" rel="noopener" aria-label="在 Google Maps 搜尋 ${esc(enhToiletLabel(query))}"><span>${index+1}</span><b>${esc(enhToiletLabel(query))}</b>${enhIcons.pin}</a>`).join('')}`;
+    root.querySelectorAll('[data-enh-toilet-day]').forEach((button)=>button.classList.toggle('on',Number(button.dataset.enhToiletDay)===dayIndex));
+  }
+
+  function enhNearbyUtilityPanel(){
+    const section=document.createElement('section');section.className='enh-nearby-tools';section.dataset.enhNearbyTools='1';
+    const defaultDay=Math.max(0,Math.min(DAYS.length-1,Number(curDay)||0));
+    section.innerHTML=`<div class="sec"><i></i><h2>附近快速找</h2></div><div class="enh-quick-grid"><a class="enh-quick-card store" href="${enhMapSearch('コンビニ')}" target="_blank" rel="noopener"><span class="enh-quick-icon">24</span><span><b>附近便利商店</b><small>依目前位置顯示 7-Eleven、FamilyMart、Lawson 等</small></span>${enhIcons.pin}</a><a class="enh-quick-card toilet" href="${enhMapSearch('公衆トイレ')}" target="_blank" rel="noopener"><span class="enh-quick-icon">WC</span><span><b>一鍵找附近廁所</b><small>直接在 Google Maps 顯示距離最近的公廁</small></span>${enhIcons.pin}</a></div><div class="card enh-toilet-card"><div class="enh-toilet-intro"><div><b>行程沿途可靠廁所據點</b><small>優先整理機場、車站、公園、寺社與大型商場；商場與景點須在開放時間內。</small></div><a href="https://plus.kyoto.travel/entry/toilet" target="_blank" rel="noopener">京都官方資料</a></div><div class="enh-place-filters enh-toilet-days" aria-label="選擇日期">${DAYS.map((day,index)=>`<button class="enh-filter ${index===defaultDay?'on':''}" type="button" data-enh-toilet-day="${index}">D${index+1}<small>${day.d.slice(5).replace('-','/')}</small></button>`).join('')}</div><div class="enh-toilet-list" data-enh-toilet-list></div><div class="hint">「附近廁所」適合臨時急用；上方每日清單適合先記住沿途穩定據點。實際開放、整修或入場規則仍以現場為準。</div></div>`;
+    enhRenderToiletStops(section,defaultDay);
+    section.querySelectorAll('[data-enh-toilet-day]').forEach((button)=>button.onclick=()=>enhRenderToiletStops(section,Number(button.dataset.enhToiletDay)));
+    return section;
+  }
+
+  function enhExpenseOverviewPanel(){
+    const totals=enhExpenseTotals(),rate=Number(enhRead('rate',.21))||.21,maxDay=Math.max(1,...totals.byDay);
+    const section=document.createElement('section');section.className='enh-ledger-tools';section.dataset.enhLedgerTools='1';
+    const days=totals.byDay.map((amount,di)=>`<button type="button" class="enh-ledger-day" data-enh-ledger-day="${di}"><span>D${di+1}<small>${DAYS[di].d.slice(5).replace('-','/')}</small></span><i><b style="width:${amount/maxDay*100}%"></b></i><strong>${enhFmtYen(amount)}</strong></button>`).join('');
+    const categories=Object.entries(totals.byCategory).sort((a,b)=>b[1]-a[1]).map(([category,amount])=>`<div><span>${esc(category)}</span><b>${enhFmtYen(amount)}</b></div>`).join('');
+    section.innerHTML=`<div class="sec"><i></i><h2>旅費記帳總覽</h2><span class="cnt">${totals.rows.length} 筆</span></div><div class="card enh-ledger-card"><div class="enh-ledger-hero"><div><small>TRIP SPEND · JPY</small><b>${enhFmtYen(totals.total)}</b><span>約 NT$ ${Math.round(totals.total*rate).toLocaleString('zh-TW')}（依工具頁匯率 ${rate}）</span></div>${enhIcons.yen}</div>${totals.rows.length?`<div class="enh-ledger-days">${days}</div><div class="enh-ledger-categories">${categories}</div>`:'<div class="enh-empty">尚未記帳。到「行程」展開任一節點，直接輸入日圓金額即可。</div>'}<div class="enh-ledger-actions"><button class="btn" type="button" data-enh-ledger-plan>回行程新增金額</button><button class="btn" type="button" data-enh-ledger-clear ${totals.rows.length?'':'disabled'}>清除全部記帳</button></div></div>`;
+    section.querySelectorAll('[data-enh-ledger-day]').forEach((button)=>button.onclick=()=>{curDay=Number(button.dataset.enhLedgerDay);go('plan');window.scrollTo({top:0,behavior:'smooth'});});
+    section.querySelector('[data-enh-ledger-plan]').onclick=()=>go('plan');
+    section.querySelector('[data-enh-ledger-clear]').onclick=()=>{if(confirm('確定清除全部行程記帳？這不會刪除行程、筆記或打勾。')){enhWrite('expenses',{});renderUtil();enhToast('已清除全部記帳');}};
+    return section;
+  }
+
+  function enhPdfUtilityPanel(){
+    const section=document.createElement('section');section.className='enh-pdf-tools';section.dataset.enhPdfTools='1';
+    section.innerHTML=`<div class="sec"><i></i><h2>離線行程手冊</h2></div><div class="card enh-pdf-card">${enhIcons.pdf}<div><b>匯出行程 PDF</b><small>輸出完整 9 天或目前單日，包含時間軸、交通、住宿、提醒，以及你選擇加入的筆記與記帳。</small></div><button class="btn pri" type="button" data-enh-open-pdf>選擇並匯出</button></div>`;
+    section.querySelector('[data-enh-open-pdf]').onclick=enhOpenPdfExport;return section;
+  }
+
   function enhEnhanceUtil(){
     const body=document.getElementById('utilBody');if(!body)return;
+    body.prepend(enhNearbyUtilityPanel());
+    body.prepend(enhPdfUtilityPanel());
+    body.prepend(enhExpenseOverviewPanel());
     const wrongHint=[...body.querySelectorAll('.hint')].find((node)=>node.textContent.includes('範圍：心齋橋'));
     if(wrongHint)wrongHint.textContent='住宿位置：惠美須西 3-14-13；近動物園前／JR・南海新今宮。';
     if(!body.querySelector('[data-enh-backup]')){
       const section=document.createElement('div');section.dataset.enhBackup='1';section.className='card';
-      section.innerHTML=`<div class="b sm">資料備份與移轉</div><div class="hint">包含打勾、筆記、A/B 路線、住宿地址、匯率、收藏與臨時行程。換手機前先匯出。</div><div class="enh-backup"><button class="btn" type="button" data-enh-export>匯出 JSON 備份</button><button class="btn" type="button" data-enh-import>匯入備份</button><input type="file" accept="application/json,.json" hidden data-enh-import-file></div>`;
+      section.innerHTML=`<div class="b sm">資料備份與移轉</div><div class="hint">包含打勾、筆記、A/B 路線、智慧路順、記帳、住宿地址、匯率、收藏與臨時行程。換手機前先匯出。</div><div class="enh-backup"><button class="btn" type="button" data-enh-export>匯出 JSON 備份</button><button class="btn" type="button" data-enh-import>匯入備份</button><input type="file" accept="application/json,.json" hidden data-enh-import-file></div>`;
       body.insertAdjacentHTML('beforeend','<div class="sec"><i></i><h2>備份與資料完整性</h2></div>');body.appendChild(section);
       const audit=document.createElement('div');audit.className='card';audit.innerHTML=`<div class="b sm">新版回歸檢查摘要</div><div class="enh-system-list">${enhSystemChecks()}</div>`;body.appendChild(audit);
       const input=section.querySelector('[data-enh-import-file]');
@@ -3689,6 +4291,7 @@ window.addEventListener('resize',()=>{if(mapObj)mapObj.invalidateSize();
   }
 
   enhFixSourceData();
+  enhMigrateLegacyStatusKeys();
   enhApplyCustomItems();
 
   const enhBaseRenderNow=renderNow;
